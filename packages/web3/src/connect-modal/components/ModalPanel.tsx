@@ -15,6 +15,7 @@ export type ModalPanelProps = ConnectModalProps;
 
 const ModalPanel: React.FC<ModalPanelProps> = (props) => {
   const { title, footer, walletList, groupOrder, guide, mode, onWalletSelected, locale } = props;
+
   const intl = useIntl('ConnectModal', locale);
 
   const [panelRoute, setPanelRoute] = React.useState<PanelRoute>('init');
@@ -77,6 +78,7 @@ const ModalPanel: React.FC<ModalPanelProps> = (props) => {
         canBack: routeStack.current.length > 1,
         localeMessage: intl.messages,
         getMessage: intl.getMessage,
+        onCancel: props.onCancel || (() => {}),
       }}
     >
       <div

@@ -1,5 +1,3 @@
-'use client';
-
 import type { FC } from 'react';
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import { InfoCircleOutlined } from '@ant-design/icons';
@@ -7,8 +5,6 @@ import { Modal } from 'antd';
 
 import { connectWalletForURL, deCrypto } from '../utils';
 import CommunicationAppProvider from './CommunicationAppProvider';
-
-import './index.css';
 
 export const TOKEN_NAME = 'token';
 export const NODE_ID_NAME = 'nodeId';
@@ -72,7 +68,6 @@ const AccountProvider: FC<ContextProps> = ({
   const initialize = async () => {
     try {
       const urlParams = new URLSearchParams(window.location.search);
-      console.log(urlParams);
       const token = urlParams.get(TOKEN_NAME);
       const nodeId = urlParams.get(NODE_ID_NAME);
       const publicKey = urlParams.get(PUBLIC_KEY);

@@ -16,6 +16,8 @@ export interface ConnectorProps {
   availableChains?: Chain[];
   availableWallets?: Wallet[];
 
+  customWallets?: Wallet[];
+
   connect?: (wallet?: Wallet) => Promise<void>;
   disconnect?: () => Promise<void>;
   switchChain?: (chain: Chain) => Promise<void>;

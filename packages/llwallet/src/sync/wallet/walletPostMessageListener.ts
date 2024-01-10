@@ -3,6 +3,4 @@ export function walletPostMessageListener(event: MessageEvent) {
   if (event.origin !== '*') {
     return;
   }
-
-  console.log('Message received in Wallet:', event.data);
 }

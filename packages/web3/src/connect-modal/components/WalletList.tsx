@@ -10,7 +10,7 @@ export type WalletListProps = Pick<ConnectModalProps, 'walletList' | 'groupOrder
 
 const WalletList: React.FC<WalletListProps> = (props) => {
   const { walletList = [], groupOrder } = props;
-  const { prefixCls, updateSelectedWallet, selectedWallet, updatePanelRoute } =
+  const { prefixCls, updateSelectedWallet, selectedWallet, updatePanelRoute, onCancel } =
     useContext(connectModalContext);
   const dataSource: Record<string, Wallet[]> = useMemo(() => {
     const result: Record<string, Wallet[]> = {};
@@ -48,6 +48,15 @@ const WalletList: React.FC<WalletListProps> = (props) => {
                         : selectedWallet?.name === item.name,
                   })}
                   onClick={async () => {
+                    if (item.onClick) {
+                      onCancel();
+                      setTimeout(() => {
+                        if (item.onClick) {
+                          item.onClick();
+                        }
+                      }, 100);
+                      return;
+                    }
                     const hasWalletReady = await item.hasWalletReady?.();
                     if (hasWalletReady) {
                       // wallet is ready, call ConnectModal's onWalletSelected

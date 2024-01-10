@@ -151,6 +151,12 @@ export type WalletMetadata = {
    * @descEn The name of the group to which the wallet belongs
    */
   group?: string;
+
+  /**
+   * @desc 点击会执行自定义操作
+   * @descEn Clicking will perform custom operations
+   */
+  onClick?: () => void;
 };
 
 export type Balance = BalanceMetadata & {

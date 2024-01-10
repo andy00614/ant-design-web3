@@ -15,6 +15,7 @@ export const Connector: React.FC<ConnectorProps> = (props) => {
     onDisconnect,
     onDisconnected,
     onChainSwitched,
+    customWallets,
   } = props;
   const {
     availableWallets,
@@ -45,6 +46,10 @@ export const Connector: React.FC<ConnectorProps> = (props) => {
     }
   };
 
+  const mergedWallets = React.useMemo(() => {
+    return [...(availableWallets || []), ...(customWallets || [])];
+  }, [availableWallets, customWallets]);
+
   return (
     <>
       {contextHolder}
@@ -74,7 +79,7 @@ export const Connector: React.FC<ConnectorProps> = (props) => {
 
       <ConnectModal
         open={open}
-        walletList={availableWallets}
+        walletList={mergedWallets}
         onWalletSelected={async (wallet) => {
           if (!wallet.getQrCode) {
             // not need show qr code, hide immediately

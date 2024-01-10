@@ -1,0 +1,19 @@
+{
+  "name": "multi-connect",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@ant-design/web3": "workspace:^1.2.0",
+    "@ant-design/web3-wagmi": "workspace:^1.2.0",
+    "@levellink/wallet": "workspace:^0.0.0",
+    "antd": "^5.12.4",
+    "wagmi": "^1.4.12"
+  }
+}
