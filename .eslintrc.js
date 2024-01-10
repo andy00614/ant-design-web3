@@ -2,6 +2,7 @@ module.exports = {
   extends: [require.resolve('@umijs/fabric/dist/eslint')],
   plugins: ['unused-imports'],
   rules: {
+    quotes: ['error', 'single', { avoidEscape: true, allowTemplateLiterals: true }],
     'no-unused-vars': 'off', // or "@typescript-eslint/no-unused-vars": "off",
     'unused-imports/no-unused-imports': 'warn',
     'unused-imports/no-unused-vars': [

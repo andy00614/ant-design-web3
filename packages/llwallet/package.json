@@ -1,0 +1,28 @@
+{
+  "name": "@levellink/wallet",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "main": "dist/main.umd.js",
+  "module": "dist/main.es.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@types/crypto-js": "^4.2.1",
+    "@types/react-dom": "^18.2.17",
+    "@vitejs/plugin-react": "^4.2.1",
+    "vite": "^5.0.8",
+    "vite-plugin-dts": "^3.7.0"
+  },
+  "dependencies": {
+    "@types/js-cookie": "^3.0.6",
+    "axios": "^1.6.5",
+    "crypto-js": "^4.2.0",
+    "js-cookie": "^3.0.5"
+  }
+}
