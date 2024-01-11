@@ -2,8 +2,6 @@ import { ConnectButton, Connector } from '@ant-design/web3';
 import { useAccount } from '@levellink/wallet';
 import { useDisconnect, useAccount as useWasmiAccount } from 'wagmi';
 
-import { Provider } from './Provider';
-
 function renderConnectButton(address: string, disconnectFn: () => void) {
   return (
     <ConnectButton
@@ -25,7 +23,7 @@ function renderConnectButton(address: string, disconnectFn: () => void) {
   );
 }
 
-export function Button() {
+export function MixConnectButton() {
   const { connectWallet, wallet, logout } = useAccount();
   const { isConnected: isConnectedWithLocalWallet, address } = useWasmiAccount();
   const { disconnect } = useDisconnect();
@@ -57,12 +55,4 @@ export function Button() {
   const disconnectFn = isConnectedWithLocalWallet ? disconnect : logout;
 
   return <div>{renderConnectButton(addressToUse, disconnectFn)}</div>;
-}
-
-export function WalletConnectButton() {
-  return (
-    <Provider>
-      <Button />
-    </Provider>
-  );
 }

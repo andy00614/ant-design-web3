@@ -142,6 +142,9 @@ importers:
       '@ant-design/web3-wagmi':
         specifier: workspace:^1.2.0
         version: link:../../packages/wagmi
+      '@levellink/ui':
+        specifier: workspace:^0.0.0
+        version: link:../../packages/ui
       '@levellink/wallet':
         specifier: workspace:^0.0.0
         version: link:../../packages/llwallet
