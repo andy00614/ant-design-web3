@@ -68,13 +68,14 @@ const AccountProvider: FC<ContextProps> = ({
   const initialize = async () => {
     try {
       const urlParams = new URLSearchParams(window.location.search);
-      const token = urlParams.get(TOKEN_NAME);
-      const nodeId = urlParams.get(NODE_ID_NAME);
-      const publicKey = urlParams.get(PUBLIC_KEY);
+      const token = urlParams.get(TOKEN_NAME) && decodeURIComponent(urlParams.get(TOKEN_NAME)!);
+      const nodeId =
+        urlParams.get(NODE_ID_NAME) && decodeURIComponent(urlParams.get(NODE_ID_NAME)!);
+      const publicKey = urlParams.get(PUBLIC_KEY) && decodeURIComponent(urlParams.get(PUBLIC_KEY)!);
 
       if (token && nodeId) {
-        const decodedToken = await deCrypto(decodeURIComponent(token), DECRYPTOKEY);
-        const decodedNodeId = await deCrypto(decodeURIComponent(nodeId), DECRYPTOKEY);
+        const decodedToken = await deCrypto(token, DECRYPTOKEY);
+        const decodedNodeId = await deCrypto(nodeId, DECRYPTOKEY);
         localStorage.setItem(TOKEN_NAME, decodedToken!);
         localStorage.setItem(NODE_ID_NAME, decodedNodeId!);
         localStorage.setItem(PUBLIC_KEY, publicKey!);

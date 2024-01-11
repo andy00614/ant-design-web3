@@ -287,6 +287,15 @@ importers:
         specifier: ^2.1.1
         version: 2.1.1(react@18.2.0)
     devDependencies:
+      '@ant-design/web3':
+        specifier: workspace:^1.2.0
+        version: link:../web3
+      '@ant-design/web3-wagmi':
+        specifier: workspace:^1.2.0
+        version: link:../wagmi
+      '@levellink/wallet':
+        specifier: workspace:^0.0.0
+        version: link:../llwallet
       '@storybook/addon-essentials':
         specifier: ^7.6.7
         version: 7.6.7(react-dom@18.2.0)(react@18.2.0)
