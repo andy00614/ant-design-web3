@@ -1,29 +1,11 @@
 import { ConnectButton, Connector } from '@ant-design/web3';
 import { useAccount } from '@levellink/wallet';
-import type { MenuItemType } from 'antd/es/menu/hooks/useItems';
 import { useAccount as useWasmiAccount } from 'wagmi';
 
 function WalletConnect() {
   const { connectWallet, wallet, logout } = useAccount();
   const { isConnected: isConnectedWithLocalWallet } = useWasmiAccount();
   const _isConnected = isConnectedWithLocalWallet || wallet;
-
-  const menuItems: MenuItemType[] = [
-    {
-      label: '',
-      key: '1',
-      onClick: () => {
-        console.log('Menu Item 1 clicked');
-      },
-    },
-    {
-      label: 'Menu Item 2',
-      key: '2',
-      onClick: () => {
-        console.log('Menu Item 2 clicked');
-      },
-    },
-  ];
 
   if (!_isConnected || isConnectedWithLocalWallet) {
     return (
