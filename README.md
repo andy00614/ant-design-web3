@@ -1,7 +1,5 @@
 <div align="center">
 
-<img height="180" src="https://github.com/ant-design/ant-design/assets/507615/12d2c16d-92b1-4202-ba6f-4da5ee3622ba">
-
 <h1 align="center">Level Link Library</h1>
 
 The Level Link Web3 component toolkit
