@@ -8,7 +8,7 @@ import { contractAddress } from './const';
 import styles from './index.module.css';
 
 function GGC() {
-  const { address } = useAccount();
+  const { address, isConnected } = useAccount();
   const { data: allowance, isLoading } = useContractRead({
     address: contractAddress.ERC20 as `0x${string}`,
     abi: ERC20ABI,
@@ -41,6 +41,10 @@ function GGC() {
       args: ['0xa34357486224151ddfdb291e13194995c22df505', parseGwei('100')],
     });
   };
+
+  if (!isConnected) {
+    return <div />;
+  }
 
   return (
     <Card className={styles.space}>

@@ -8,9 +8,9 @@ import { publicProvider } from 'wagmi/providers/public';
 
 export const CHAINS = [BSCTestNet, BSC, Sepolia];
 export const configChains = [
+  { ...sepolia, ...Sepolia },
   { ...bsc, ...BSC },
   { ...bscTestnet, ...BSCTestNet },
-  { ...sepolia, ...Sepolia },
 ];
 
 const { publicClient, chains } = configureChains(configChains as Chain[], [publicProvider()]);
