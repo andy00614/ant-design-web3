@@ -122,24 +122,32 @@ export const AntDesignWeb3ConfigProvider: React.FC<AntDesignWeb3ConfigProviderPr
   }, [availableChains, assets]);
 
   React.useEffect(() => {
+    // 当没有连接到任何链时保持当前链不变
     if (!chain && currentChain) {
-      // not connected any chain, keep current chain
       return;
     }
+
+    // 选择当前的链或默认链
     const currentWagmiChain = chain ?? availableChains[0];
     if (!currentWagmiChain) {
       return;
     }
+
+    // 检查assets中是否有当前链的信息
     let c = assets?.find((item) => (item as Chain).id === currentWagmiChain?.id) as Chain;
-    if (!c?.id) {
+    if (!c) {
+      // 如果没有找到，使用Wagmi链的数据创建新的链对象
       c = {
         id: currentWagmiChain.id,
         name: currentWagmiChain.name,
       };
     }
-    setCurrentChain(c);
-    return;
-  }, [chain, assets, availableChains, currentChain]);
+
+    // 只有当当前链发生变化时才更新状态
+    if (currentChain?.id !== c.id) {
+      setCurrentChain(c);
+    }
+  }, [chain, assets, availableChains]); // 依赖于 chain, assets 和 availableChains
 
   return (
     <Web3ConfigProvider
