@@ -43,6 +43,8 @@ pnpm-workspace(monorepo)的项目结构如下：-packages/assets: 静态资源�
 
 ## Development
 
+切换到dev分支，main分之是antd web3的源码，我们基于antd web3的源码进行二次开发,放在dev分支
+
 ```bash
 $ git clone http://whyindian.ddns.net:222/gitlab/boyindia/ll-library.git
 $ git checkout dev
