@@ -14,7 +14,7 @@
     "@ant-design/web3-wagmi": "workspace:^1.2.0",
     "@levellink/ui": "workspace:^0.0.0",
     "@levellink/wallet": "workspace:^0.0.0",
-    "antd": "^5.12.4",
+    "viem": "1",
     "wagmi": "^1.4.12"
   }
 }

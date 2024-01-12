@@ -1,14 +1,9 @@
 import { ConnectButton, Connector } from '@ant-design/web3';
 import { useAccount } from '@levellink/wallet';
 import type { Chain } from 'wagmi';
-import {
-  sepolia,
-  useDisconnect,
-  useNetwork,
-  useSwitchNetwork,
-  useAccount as useWasmiAccount,
-} from 'wagmi';
-import { bsc, bscTestnet } from 'wagmi/chains';
+import { useDisconnect, useNetwork, useSwitchNetwork, useAccount as useWasmiAccount } from 'wagmi';
+
+import { CHAINS } from '..';
 
 function RenderConnectButton(
   address: string,
@@ -20,7 +15,7 @@ function RenderConnectButton(
     <div>
       <ConnectButton
         chain={chain}
-        availableChains={[bsc, bscTestnet, sepolia]}
+        availableChains={CHAINS}
         onSwitchChain={async (c) => {
           if (switchNetwork) {
             switchNetwork(c.id);
@@ -34,7 +29,7 @@ function RenderConnectButton(
           src: 'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSU4V4IdJCFgzipxegSL4G9INDy5HshFWPLrJIDUXSHXrKAB9Qh',
         }}
         onDisconnectClick={disconnectFn}
-        actionsMenu
+        // actionsMenu
         // onMenuItemClick={(item) => {
         //   if (item?.key === 'disconnect') {
         //     disconnectFn();

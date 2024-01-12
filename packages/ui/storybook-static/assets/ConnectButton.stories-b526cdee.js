@@ -72218,13 +72218,11 @@ let wz = class extends Lu {
     const n = this.options;
     (this.options = this.client.defaultMutationOptions(t)),
       tv(n, this.options) ||
-        this.client
-          .getMutationCache()
-          .notify({
-            type: 'observerOptionsUpdated',
-            mutation: this.currentMutation,
-            observer: this,
-          }),
+        this.client.getMutationCache().notify({
+          type: 'observerOptionsUpdated',
+          mutation: this.currentMutation,
+          observer: this,
+        }),
       (r = this.currentMutation) == null || r.setOptions(this.options);
   }
   onUnsubscribe() {
@@ -72249,12 +72247,10 @@ let wz = class extends Lu {
     return (
       (this.mutateOptions = r),
       this.currentMutation && this.currentMutation.removeObserver(this),
-      (this.currentMutation = this.client
-        .getMutationCache()
-        .build(this.client, {
-          ...this.options,
-          variables: typeof t < 'u' ? t : this.options.variables,
-        })),
+      (this.currentMutation = this.client.getMutationCache().build(this.client, {
+        ...this.options,
+        variables: typeof t < 'u' ? t : this.options.variables,
+      })),
       this.currentMutation.addObserver(this),
       this.currentMutation.execute()
     );

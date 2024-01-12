@@ -64,7 +64,7 @@
     "@umijs/fabric": "^4.0.1",
     "@vitejs/plugin-react": "4.2.1",
     "@vitest/coverage-v8": "^1.1.0",
-    "antd": "^5.12.4",
+    "antd": "^5.12.8",
     "antd-style": "^3.6.1",
     "classnames": "^2.3.2",
     "dumi": "^2.2.16",
@@ -85,6 +85,7 @@
     "rimraf": "^5.0.5",
     "typescript": "^5.3.3",
     "vite": "^5.0.8",
+    "vite-plugin-dts": "^3.7.0",
     "vite-plugin-svgr": "^4.2.0",
     "vitest": "~1.1.0",
     "wagmi": "^1.4.12"

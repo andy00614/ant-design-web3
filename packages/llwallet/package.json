@@ -12,8 +12,7 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
   },
   "devDependencies": {
-    "@types/crypto-js": "^4.2.1",
-    "vite-plugin-dts": "^3.7.0"
+    "@types/crypto-js": "^4.2.1"
   },
   "dependencies": {
     "@types/js-cookie": "^3.0.6",

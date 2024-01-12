@@ -11,6 +11,8 @@ export enum ChainIds {
   Optimism = 10,
   Goerli = 5,
   Avalanche = 43_114,
+  Sepolia = 11155111,
+  BSCTestNet = 97,
 }
 
 export type BrowserLinkType = 'address' | 'transaction';

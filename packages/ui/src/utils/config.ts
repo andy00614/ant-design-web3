@@ -1,12 +1,19 @@
+import { BSC, BSCTestNet, Sepolia } from '@ant-design/web3-wagmi';
+import type { Chain } from 'wagmi';
 import { configureChains, createConfig } from 'wagmi';
 import { bsc, bscTestnet, sepolia } from 'wagmi/chains';
 import { MetaMaskConnector } from 'wagmi/connectors/metaMask';
 import { WalletConnectConnector } from 'wagmi/connectors/walletConnect';
 import { publicProvider } from 'wagmi/providers/public';
 
-export const CHAINS = [bsc, bscTestnet, sepolia];
+export const CHAINS = [BSCTestNet, BSC, Sepolia];
+export const configChains = [
+  { ...bsc, ...BSC },
+  { ...bscTestnet, ...BSCTestNet },
+  { ...sepolia, ...Sepolia },
+];
 
-const { publicClient, chains } = configureChains(CHAINS, [publicProvider()]);
+const { publicClient, chains } = configureChains(configChains as Chain[], [publicProvider()]);
 // @ts-ignore
 export const config = createConfig({
   autoConnect: true,
