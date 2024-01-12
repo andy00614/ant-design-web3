@@ -1,11 +1,12 @@
 import { configureChains, createConfig } from 'wagmi';
-import { mainnet, polygon } from 'wagmi/chains';
+import { bsc, bscTestnet, sepolia } from 'wagmi/chains';
 import { MetaMaskConnector } from 'wagmi/connectors/metaMask';
 import { WalletConnectConnector } from 'wagmi/connectors/walletConnect';
 import { publicProvider } from 'wagmi/providers/public';
 
-const { publicClient, chains } = configureChains([mainnet, polygon], [publicProvider()]);
+export const CHAINS = [bsc, bscTestnet, sepolia];
 
+const { publicClient, chains } = configureChains(CHAINS, [publicProvider()]);
 // @ts-ignore
 export const config = createConfig({
   autoConnect: true,

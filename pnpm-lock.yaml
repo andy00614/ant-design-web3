@@ -289,6 +289,9 @@ importers:
       '@heroicons/react':
         specifier: ^2.1.1
         version: 2.1.1(react@18.2.0)
+      wagmi:
+        specifier: ^1.4.12
+        version: 1.4.12(react-dom@18.2.0)(react@18.2.0)(typescript@5.3.3)(viem@1.20.3)
     devDependencies:
       '@ant-design/web3':
         specifier: workspace:^1.2.0
@@ -338,12 +341,6 @@ importers:
       prop-types:
         specifier: ^15.8.1
         version: 15.8.1
-      react:
-        specifier: ^18.2.0
-        version: 18.2.0
-      react-dom:
-        specifier: ^18.2.0
-        version: 18.2.0(react@18.2.0)
       storybook:
         specifier: ^7.6.7
         version: 7.6.7
