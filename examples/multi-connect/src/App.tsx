@@ -9,7 +9,7 @@ function App() {
     <Provider applicationName="测试钱包连接">
       <MixConnectButton />
       {/* <MintNft /> */}
-      <GGC />
+      {/* <GGC /> */}
     </Provider>
   );
 }

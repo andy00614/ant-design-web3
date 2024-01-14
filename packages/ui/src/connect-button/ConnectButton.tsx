@@ -11,6 +11,7 @@ function RenderConnectButton(
   chain: Chain | undefined,
   switchNetwork: ((chainId_?: number | undefined) => void) | undefined,
 ) {
+  // 判断当前链接的是哪个钱包
   return (
     <div>
       <ConnectButton
@@ -29,12 +30,6 @@ function RenderConnectButton(
           src: 'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSU4V4IdJCFgzipxegSL4G9INDy5HshFWPLrJIDUXSHXrKAB9Qh',
         }}
         onDisconnectClick={disconnectFn}
-        // actionsMenu
-        // onMenuItemClick={(item) => {
-        //   if (item?.key === 'disconnect') {
-        //     disconnectFn();
-        //   }
-        // }}
       />
     </div>
   );
