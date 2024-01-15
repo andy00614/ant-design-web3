@@ -1,6 +1,6 @@
 {
   "name": "@levellink/web3-wagmi",
-  "version": "0.0.0-alpha-20240115150811",
+  "version": "0.0.0-alpha-20240115151406",
   "main": "dist/lib/index.js",
   "module": "dist/esm/index.js",
   "typings": "dist/esm/index.d.ts",
