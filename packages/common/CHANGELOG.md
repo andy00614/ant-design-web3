@@ -1,5 +1,11 @@
 # @levellink/web3-common
 
+## 0.0.0-alpha-20240115150811
+
+### Patch Changes
+
+- test
+
 ## 0.0.0-alpha-20240115144528
 
 ### Minor Changes

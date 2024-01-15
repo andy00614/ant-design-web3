@@ -1,6 +1,6 @@
 {
   "name": "@levellink/web3-icons",
-  "version": "1.2.0",
+  "version": "0.0.0-alpha-20240115150811",
   "main": "dist/lib/index.js",
   "module": "dist/esm/index.js",
   "typings": "dist/esm/index.d.ts",

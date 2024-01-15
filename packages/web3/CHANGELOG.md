@@ -1,5 +1,15 @@
 # @levellink/web3
 
+## 0.0.0-alpha-20240115150811
+
+### Patch Changes
+
+- test
+- Updated dependencies
+  - @levellink/web3-assets@0.0.0-alpha-20240115150811
+  - @levellink/web3-common@0.0.0-alpha-20240115150811
+  - @levellink/web3-icons@0.0.0-alpha-20240115150811
+
 ## 0.0.0-alpha-20240115144528
 
 ### Minor Changes

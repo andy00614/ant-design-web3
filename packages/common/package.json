@@ -1,6 +1,6 @@
 {
   "name": "@levellink/web3-common",
-  "version": "0.0.0-alpha-20240115144528",
+  "version": "0.0.0-alpha-20240115150811",
   "main": "dist/lib/index.js",
   "module": "dist/esm/index.js",
   "typings": "dist/esm/index.d.ts",
