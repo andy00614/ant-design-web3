@@ -99,5 +99,8 @@
   "engines": {
     "node": ">=16"
   },
-  "repository": "https://github.com/ant-design/ant-design-web3.git"
+  "repository": "https://github.com/ant-design/ant-design-web3.git",
+  "dependencies": {
+    "viem": "1"
+  }
 }

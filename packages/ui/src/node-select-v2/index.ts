@@ -1,1 +1,1 @@
-export * from './NodeSelectV2';
+export * from './ChainSelect';

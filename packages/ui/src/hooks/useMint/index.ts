@@ -13,5 +13,8 @@ export function useMintToken() {
   });
   return {
     write,
+    data,
+    isLoading,
+    isSuccess,
   };
 }

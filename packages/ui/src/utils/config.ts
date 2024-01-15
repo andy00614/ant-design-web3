@@ -7,7 +7,7 @@ import { WalletConnectConnector } from 'wagmi/connectors/walletConnect';
 import { publicProvider } from 'wagmi/providers/public';
 
 export const CHAINS = [BSCTestNet, BSC, Sepolia];
-export const configChains = [
+export const configChains: any[] = [
   { ...sepolia, ...Sepolia },
   { ...bsc, ...BSC },
   { ...bscTestnet, ...BSCTestNet },
