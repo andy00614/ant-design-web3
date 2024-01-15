@@ -32,7 +32,7 @@ The Level Link Web3 component toolkit
 ## Installation
 
 ```shell
-npm i antd @ant-design/web3 @ant-design/web3-wagmi @levellink/wallet wagmi --save
+npm i antd @ant-design/web3 @ant-design/web3-wagmi wagmi --save
 ```
 
 ## 目录结构

@@ -1,10 +1,10 @@
 import { ConnectButton, Connector } from '@ant-design/web3';
-import { useAccount } from '@levellink/core';
 import { Space } from 'antd';
-import type { Chain } from 'wagmi';
 import { useDisconnect, useNetwork, useSwitchNetwork, useAccount as useWasmiAccount } from 'wagmi';
+import type { Chain } from 'wagmi';
 
-import { CHAINS, LLChainSelect } from '..';
+import { CHAINS_FOR_WAGMI, ChainSelectV2 } from '../..';
+import { useAccount } from '../../';
 
 function RenderConnectButton({
   address,
@@ -19,13 +19,14 @@ function RenderConnectButton({
   switchNetwork: ((chainId_?: number | undefined) => void) | undefined;
   isWeb3Wallet: boolean;
 }) {
+  console.log('isWeb3Wallet', isWeb3Wallet);
   // 判断当前链接的是哪个钱包
   if (isWeb3Wallet) {
     return (
       <div>
         <ConnectButton
           chain={chain}
-          availableChains={CHAINS}
+          availableChains={CHAINS_FOR_WAGMI}
           onSwitchChain={async (c) => {
             if (switchNetwork) {
               switchNetwork(c.id);
@@ -45,7 +46,7 @@ function RenderConnectButton({
   }
   return (
     <Space.Compact>
-      <LLChainSelect />
+      <ChainSelectV2 />
       <ConnectButton
         onSwitchChain={async (c) => {
           if (switchNetwork) {
@@ -65,7 +66,7 @@ function RenderConnectButton({
   );
 }
 
-export function MixConnectButton() {
+export function MixConnectButton(): JSX.Element {
   const { connectWallet, wallet, logout } = useAccount();
   const { isConnected: isConnectedWithLocalWallet, address } = useWasmiAccount();
   const { disconnect } = useDisconnect();

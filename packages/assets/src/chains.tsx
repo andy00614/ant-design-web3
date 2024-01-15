@@ -34,7 +34,7 @@ export const Goerli: Chain = {
 
 export const Sepolia: Chain = {
   id: ChainIds.Sepolia,
-  name: 'Sepolia',
+  name: 'eth-sepolia',
   icon: <EthereumCircleColorful />,
   browser: {
     icon: <EthereumCircleColorful />,
@@ -56,7 +56,7 @@ export const Polygon: Chain = {
 
 export const BSC: Chain = {
   id: ChainIds.BSC,
-  name: 'BNB Smart Chain',
+  name: 'BSC MainNet',
   icon: <BSCCircleColorful />,
   browser: {
     icon: <BSCCircleColorful />,
@@ -67,13 +67,24 @@ export const BSC: Chain = {
 
 export const BSCTestNet: Chain = {
   id: ChainIds.BSCTestNet,
-  name: 'BNB Smart Chain TestNet',
+  name: '币安测试网',
   icon: <BSCCircleColorful />,
   browser: {
     icon: <BSCCircleColorful />,
     getBrowserLink: createGetBrowserLink('https://testnet.bscscan.com'),
   },
   nativeCurrency: { decimals: 18, name: 'TBNB', symbol: 'TBNB' },
+};
+
+export const DEVELOP_CHAIN: Chain = {
+  id: ChainIds.DEVELOP,
+  name: 'WDT测网',
+  icon: <BSCCircleColorful />,
+  browser: {
+    icon: <BSCCircleColorful />,
+    getBrowserLink: createGetBrowserLink('https://whyindian.ddns.net'),
+  },
+  nativeCurrency: { decimals: 18, name: 'GGC', symbol: 'GGC' },
 };
 
 export const Arbitrum: Chain = {

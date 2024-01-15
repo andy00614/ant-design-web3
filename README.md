@@ -46,7 +46,7 @@ AntD Web3 是基于 Ant Design 的 DApp 组件库。
 ## Installation
 
 ```shell
-npm i antd @ant-design/web3 @ant-design/web3-wagmi @levellink/wallet wagmi --save
+npm i antd @ant-design/web3 @ant-design/web3-wagmi wagmi --save
 ```
 
 ## 目录结构

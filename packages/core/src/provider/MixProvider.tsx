@@ -1,9 +1,9 @@
 import React from 'react';
 import { WagmiWeb3ConfigProvider, WalletConnect } from '@ant-design/web3-wagmi';
-import { AccountProvider } from '@levellink/core';
 
-import { myConfig } from './config';
-import { getWallet } from './reply';
+import { getWallet } from '../api';
+import { wagmiConfig } from '../config';
+import { AccountProvider } from './';
 
 type TProviderProps = {
   applicationName?: string;
@@ -13,7 +13,6 @@ type TProviderProps = {
 };
 
 export const Provider: React.FC<TProviderProps> = ({ children, applicationName }) => {
-  console.log(applicationName);
   return (
     <div>
       <AccountProvider
@@ -21,7 +20,7 @@ export const Provider: React.FC<TProviderProps> = ({ children, applicationName }
         customToast={() => {}}
         getWallet={getWallet}
       >
-        <WagmiWeb3ConfigProvider config={myConfig} assets={[WalletConnect]}>
+        <WagmiWeb3ConfigProvider config={wagmiConfig} assets={[WalletConnect]}>
           {children}
         </WagmiWeb3ConfigProvider>
       </AccountProvider>

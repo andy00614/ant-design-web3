@@ -1,4 +1,0 @@
-{
-  "main": "../dist/utils/index.js",
-  "module": "../dist/utils/index.esm.js"
-}

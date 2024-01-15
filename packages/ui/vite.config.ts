@@ -14,14 +14,7 @@ export default defineConfig({
       fileName: (format) => `main.${format}.js`,
     },
     rollupOptions: {
-      external: [
-        'react',
-        'react-dom',
-        'wagmi',
-        '@ant-design/web3',
-        '@levellink/wallet',
-        '@ant-design/web3-wagmi',
-      ],
+      external: ['react', 'react-dom', 'wagmi', '@ant-design/web3', '@ant-design/web3-wagmi'],
     },
   },
   resolve: { alias: { src: resolve('src/') } },

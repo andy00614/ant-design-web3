@@ -1,5 +1,5 @@
 import { ConnectButton } from '@ant-design/web3';
-import { LLChainSelect } from '@levellink/ui';
+import { LLChainSelect } from '@levellink/core';
 import { Space } from 'antd';
 
 function ConnectButtonWithLLWallet() {

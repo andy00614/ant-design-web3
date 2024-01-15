@@ -13,6 +13,7 @@ export enum ChainIds {
   Avalanche = 43_114,
   Sepolia = 11155111,
   BSCTestNet = 97,
+  DEVELOP = 141319,
 }
 
 export type BrowserLinkType = 'address' | 'transaction';
