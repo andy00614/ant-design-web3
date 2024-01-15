@@ -70,8 +70,8 @@ export const Sepolia: Chain = {
 };
 
 const chainConfigWithDevChain = defineChain({
-  id: 97,
-  name: 'Develop Chain',
+  id: ChainIds.DEVELOP,
+  name: '开发测试链',
   network: 'develop chain',
   nativeCurrency: {
     decimals: 18,

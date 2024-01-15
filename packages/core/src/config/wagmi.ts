@@ -1,7 +1,7 @@
 import { configureChains, createConfig } from 'wagmi';
-import { MetaMaskConnector } from 'wagmi/dist/connectors/metaMask';
-import { WalletConnectConnector } from 'wagmi/dist/connectors/walletConnect';
-import { publicProvider } from 'wagmi/dist/providers/public';
+import { MetaMaskConnector } from 'wagmi/connectors/metaMask';
+import { WalletConnectConnector } from 'wagmi/connectors/walletConnect';
+import { publicProvider } from 'wagmi/providers/public';
 
 import { CHAINS_FOR_WAGMI } from './chains';
 import { WALLET_CONNECT_ID } from './const';
