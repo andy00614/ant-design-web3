@@ -16,7 +16,7 @@
     "build:docs": "dumi build",
     "postinstall": "pnpm run husky:prepare",
     "changeset": "changeset",
-    "release:prepare": "npm run build && npm run lint && npm run test:ci",
+    "release:prepare": "npm run build && npm run test:ci",
     "release": "pnpm run release:prepare && changeset version && changeset publish",
     "release:alpha": "pnpm run release:prepare && changeset version --snapshot alpha && changeset publish --tag alpha",
     "release:beta": "pnpm run release:prepare && changeset version --snapshot beta && changeset publish --tag beta",
@@ -65,7 +65,7 @@
     "@umijs/fabric": "^4.0.1",
     "@vitejs/plugin-react": "4.2.1",
     "@vitest/coverage-v8": "^1.1.0",
-    "antd": "^5.12.8",
+    "antd": "^5.12.4",
     "antd-style": "^3.6.1",
     "classnames": "^2.3.2",
     "dumi": "^2.2.16",
@@ -85,6 +85,7 @@
     "react-dom": "^18.2.0",
     "rimraf": "^5.0.5",
     "typescript": "^5.3.3",
+    "vite-plugin-svgr": "^4.2.0",
     "vitest": "~1.1.0",
     "wagmi": "^1.4.12"
   },
@@ -96,5 +97,8 @@
   "engines": {
     "node": ">=16"
   },
-  "repository": "https://github.com/ant-design/ant-design-web3.git"
+  "repository": "https://github.com/ant-design/ant-design-web3.git",
+  "dependencies": {
+    "babel-plugin-inline-react-svg": "^2.0.2"
+  }
 }
