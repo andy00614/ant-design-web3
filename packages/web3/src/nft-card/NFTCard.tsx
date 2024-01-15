@@ -6,7 +6,7 @@ import {
   parseNumberToBigint,
   type Locale,
   type Web3ConfigProviderProps,
-} from '@ant-design/web3-common';
+} from '@levellink/web3-common';
 import type { ImageProps } from 'antd';
 import { Button, ConfigProvider, Divider, Image, Skeleton, Space } from 'antd';
 import useToken from 'antd/es/theme/useToken';

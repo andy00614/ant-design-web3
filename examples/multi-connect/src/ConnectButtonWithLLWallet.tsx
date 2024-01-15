@@ -1,5 +1,5 @@
-import { ConnectButton } from '@ant-design/web3';
 import { ChainSelectV2 } from '@levellink/core';
+import { ConnectButton } from '@levellink/web3';
 import { Space } from 'antd';
 
 function ConnectButtonWithLLWallet() {

@@ -1,4 +1,4 @@
-import { ConnectButton, Connector } from '@ant-design/web3';
+import { ConnectButton, Connector } from '@levellink/web3';
 import { Space } from 'antd';
 import { useDisconnect, useNetwork, useSwitchNetwork, useAccount as useWasmiAccount } from 'wagmi';
 import type { Chain } from 'wagmi';

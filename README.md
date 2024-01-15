@@ -10,17 +10,17 @@
 [github-action-url]: https://github.com/ant-design/ant-design-web3/actions/workflows/test.yml
 [codecov-image]: https://img.shields.io/codecov/c/github/ant-design/ant-design-web3/master.svg?style=flat-square
 [codecov-url]: https://codecov.io/gh/ant-design/ant-design-web3/branch/master
-[npm-image]: https://img.shields.io/npm/v/@ant-design/web3.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/@ant-design/web3
-[download-image]: https://img.shields.io/npm/dm/@ant-design/web3.svg?style=flat-square
-[download-url]: https://npmjs.org/package/@ant-design/web3
+[npm-image]: https://img.shields.io/npm/v/@levellink/web3.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/@levellink/web3
+[download-image]: https://img.shields.io/npm/dm/@levellink/web3.svg?style=flat-square
+[download-url]: https://npmjs.org/package/@levellink/web3
 [dumi-image]: https://img.shields.io/badge/docs%20by-dumi-blue?style=flat-square
 [dumi-url]: https://github.com/umijs/dumi
 [antd-image]: https://img.shields.io/badge/-Ant%20Design-blue?labelColor=black&logo=antdesign&style=flat-square
 [antd-url]: https://ant.design
 [twitter-image]: https://img.shields.io/twitter/follow/AntDesignWeb3.svg?label=Ant%20Design%20Web3
 [twitter-url]: https://twitter.com/AntDesignWeb3
-[bundlephobia-image]: https://badgen.net/bundlephobia/minzip/@ant-design/web3?style=flat-square
+[bundlephobia-image]: https://badgen.net/bundlephobia/minzip/@levellink/web3?style=flat-square
 
 </div>
 
@@ -46,7 +46,7 @@ AntD Web3 是基于 Ant Design 的 DApp 组件库。
 ## Installation
 
 ```shell
-npm i antd @ant-design/web3 @ant-design/web3-wagmi wagmi --save
+npm i antd @levellink/web3 @levellink/web3-wagmi wagmi --save
 ```
 
 ## 目录结构

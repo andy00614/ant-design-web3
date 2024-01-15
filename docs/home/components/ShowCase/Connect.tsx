@@ -1,9 +1,9 @@
-import { ConnectModal, type Wallet } from '@ant-design/web3';
+import { ConnectModal, type Wallet } from '@levellink/web3';
 import {
   metadata_CoinbaseWallet,
   metadata_MetaMask,
   metadata_WalletConnect,
-} from '@ant-design/web3-assets';
+} from '@levellink/web3-assets';
 import { ConfigProvider, theme } from 'antd';
 import classNames from 'classnames';
 import { usePrefersColor } from 'dumi';

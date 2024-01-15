@@ -11,21 +11,6 @@ importers:
       '@ant-design/icons':
         specifier: ^5.2.6
         version: 5.2.6(react-dom@18.2.0)(react@18.2.0)
-      '@ant-design/web3':
-        specifier: workspace:*
-        version: link:packages/web3
-      '@ant-design/web3-assets':
-        specifier: workspace:*
-        version: link:packages/assets
-      '@ant-design/web3-common':
-        specifier: workspace:*
-        version: link:packages/common
-      '@ant-design/web3-icons':
-        specifier: workspace:*
-        version: link:packages/icons
-      '@ant-design/web3-wagmi':
-        specifier: workspace:*
-        version: link:packages/wagmi
       '@biomejs/biome':
         specifier: ^1.4.1
         version: 1.4.1
@@ -38,6 +23,21 @@ importers:
       '@ianvs/prettier-plugin-sort-imports':
         specifier: ^4.1.1
         version: 4.1.1(prettier@3.1.1)
+      '@levellink/web3':
+        specifier: workspace:*
+        version: link:packages/web3
+      '@levellink/web3-assets':
+        specifier: workspace:*
+        version: link:packages/assets
+      '@levellink/web3-common':
+        specifier: workspace:*
+        version: link:packages/common
+      '@levellink/web3-icons':
+        specifier: workspace:*
+        version: link:packages/icons
+      '@levellink/web3-wagmi':
+        specifier: workspace:*
+        version: link:packages/wagmi
       '@testing-library/react':
         specifier: ^14.1.2
         version: 14.1.2(react-dom@18.2.0)(react@18.2.0)
@@ -137,15 +137,15 @@ importers:
 
   examples/multi-connect:
     dependencies:
-      '@ant-design/web3':
-        specifier: workspace:^1.2.0
-        version: link:../../packages/web3
-      '@ant-design/web3-wagmi':
-        specifier: workspace:^1.2.0
-        version: link:../../packages/wagmi
       '@levellink/core':
         specifier: workspace:0.0.1-alpha.1
         version: link:../../packages/core
+      '@levellink/web3':
+        specifier: workspace:^1.2.0
+        version: link:../../packages/web3
+      '@levellink/web3-wagmi':
+        specifier: workspace:^1.2.0
+        version: link:../../packages/wagmi
       viem:
         specifier: ^1.20.3
         version: 1.20.3(typescript@5.3.3)
@@ -165,10 +165,10 @@ importers:
 
   packages/assets:
     dependencies:
-      '@ant-design/web3-common':
+      '@levellink/web3-common':
         specifier: workspace:*
         version: link:../common
-      '@ant-design/web3-icons':
+      '@levellink/web3-icons':
         specifier: workspace:*
         version: link:../icons
     devDependencies:
@@ -220,18 +220,18 @@ importers:
 
   packages/core:
     dependencies:
-      '@ant-design/web3':
-        specifier: workspace:^1.2.0
-        version: link:../web3
-      '@ant-design/web3-wagmi':
-        specifier: workspace:^1.2.0
-        version: link:../wagmi
       '@headlessui/react':
         specifier: ^1.7.18
         version: 1.7.18(react-dom@18.2.0)(react@18.2.0)
       '@heroicons/react':
         specifier: ^2.1.1
         version: 2.1.1(react@18.2.0)
+      '@levellink/web3':
+        specifier: workspace:^1.2.0
+        version: link:../web3
+      '@levellink/web3-wagmi':
+        specifier: workspace:^1.2.0
+        version: link:../wagmi
       '@types/crypto-js':
         specifier: ^4.2.1
         version: 4.2.1
@@ -363,10 +363,10 @@ importers:
 
   packages/wagmi:
     dependencies:
-      '@ant-design/web3-assets':
+      '@levellink/web3-assets':
         specifier: workspace:*
         version: link:../assets
-      '@ant-design/web3-common':
+      '@levellink/web3-common':
         specifier: workspace:*
         version: link:../common
       debug:
@@ -397,18 +397,18 @@ importers:
       '@ant-design/icons':
         specifier: ^5.2.6
         version: 5.2.6(react-dom@18.2.0)(react@18.2.0)
-      '@ant-design/web3-assets':
-        specifier: workspace:*
-        version: link:../assets
-      '@ant-design/web3-common':
-        specifier: workspace:*
-        version: link:../common
-      '@ant-design/web3-icons':
-        specifier: workspace:*
-        version: link:../icons
       '@ctrl/tinycolor':
         specifier: ^4.0.2
         version: 4.0.2
+      '@levellink/web3-assets':
+        specifier: workspace:*
+        version: link:../assets
+      '@levellink/web3-common':
+        specifier: workspace:*
+        version: link:../common
+      '@levellink/web3-icons':
+        specifier: workspace:*
+        version: link:../icons
       antd:
         specifier: ^5.12.4
         version: 5.12.4(react-dom@18.2.0)(react@18.2.0)
@@ -422,7 +422,7 @@ importers:
         specifier: '>=17.0.0'
         version: 18.2.0(react@18.2.0)
     devDependencies:
-      '@ant-design/web3-wagmi':
+      '@levellink/web3-wagmi':
         specifier: workspace:*
         version: link:../wagmi
       '@types/react':
@@ -6346,7 +6346,7 @@ packages:
       '@tanstack/react-query': ^4.36.1
     dependencies:
       '@tanstack/query-persist-client-core': 4.36.1
-      '@tanstack/react-query': 4.36.1(react-dom@18.2.0)(react@18.2.0)
+      '@tanstack/react-query': 4.36.1(react@18.2.0)
 
   /@tanstack/react-query@4.36.1(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-y7ySVHFyyQblPl3J3eQBWpXZkliroki3ARnBKsdJchlgt7yJLRDUcf4B8soufgiYt3pEQIkBWBx1N9/ZPIeUWw==}
@@ -6380,7 +6380,6 @@ packages:
       '@tanstack/query-core': 4.36.1
       react: 18.2.0
       use-sync-external-store: 1.2.0(react@18.2.0)
-    dev: false
 
   /@tanstack/react-virtual@3.0.1(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-IFOFuRUTaiM/yibty9qQ9BfycQnYXIDHGP2+cU+0LrFFGNhVxCXSQnaY6wkX8uJVteFEBjUondX0Hmpp7TNcag==}
@@ -22211,7 +22210,7 @@ packages:
       '@rollup/pluginutils': 5.1.0
       '@svgr/core': 8.1.0(typescript@5.3.3)
       '@svgr/plugin-jsx': 8.1.0(@svgr/core@8.1.0)
-      vite: 5.0.10(@types/node@20.10.5)
+      vite: 5.0.10
     transitivePeerDependencies:
       - rollup
       - supports-color

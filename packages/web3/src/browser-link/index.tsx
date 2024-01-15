@@ -1,6 +1,6 @@
 import React from 'react';
-import { Mainnet } from '@ant-design/web3-assets';
-import { fillAddressWith0x, type BrowserLinkType, type Chain } from '@ant-design/web3-common';
+import { Mainnet } from '@levellink/web3-assets';
+import { fillAddressWith0x, type BrowserLinkType, type Chain } from '@levellink/web3-common';
 import { Space, Tooltip } from 'antd';
 
 import { Address } from '../address';

@@ -1,6 +1,6 @@
 import React from 'react';
-import type { UniversalWeb3ProviderInterface } from '@ant-design/web3-common';
-import { getWeb3AssetUrl, parseNumberToBigint } from '@ant-design/web3-common';
+import type { UniversalWeb3ProviderInterface } from '@levellink/web3-common';
+import { getWeb3AssetUrl, parseNumberToBigint } from '@levellink/web3-common';
 import { Image, type ImageProps } from 'antd';
 
 import useNFT from '../hooks/useNFT';

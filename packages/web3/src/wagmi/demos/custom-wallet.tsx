@@ -1,11 +1,11 @@
-import { ConnectButton, Connector } from '@ant-design/web3';
-import { EthereumCircleColorful } from '@ant-design/web3-icons';
+import { ConnectButton, Connector } from '@levellink/web3';
+import { EthereumCircleColorful } from '@levellink/web3-icons';
 import {
   metadata_MetaMask,
   metadata_TokenPocket,
   UniversalWallet,
   WagmiWeb3ConfigProvider,
-} from '@ant-design/web3-wagmi';
+} from '@levellink/web3-wagmi';
 import { configureChains, createConfig, mainnet } from 'wagmi';
 import { InjectedConnector } from 'wagmi/connectors/injected';
 import { MetaMaskConnector } from 'wagmi/connectors/metaMask';

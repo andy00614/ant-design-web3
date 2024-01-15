@@ -1,4 +1,4 @@
-import { TokenPocket } from '@ant-design/web3-wagmi';
+import { TokenPocket } from '@levellink/web3-wagmi';
 import { describe, expect, it } from 'vitest';
 import { InjectedConnector } from 'wagmi/connectors/injected';
 import { WalletConnectConnector } from 'wagmi/connectors/walletConnect';

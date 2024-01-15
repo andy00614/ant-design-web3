@@ -1,4 +1,4 @@
-import { BrowserLink } from '@ant-design/web3';
+import { BrowserLink } from '@levellink/web3';
 
 const App: React.FC = () => {
   return (

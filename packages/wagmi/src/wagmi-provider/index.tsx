@@ -1,7 +1,7 @@
 import React from 'react';
 // Built in popular chains
-import { Goerli, Mainnet } from '@ant-design/web3-assets';
-import type { Chain, Locale } from '@ant-design/web3-common';
+import { Goerli, Mainnet } from '@levellink/web3-assets';
+import type { Chain, Locale } from '@levellink/web3-common';
 import { WagmiConfig } from 'wagmi';
 import type { Config, PublicClient, Chain as WagmiChain, WebSocketPublicClient } from 'wagmi';
 

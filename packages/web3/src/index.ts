@@ -8,5 +8,5 @@ export * from './nft-card';
 export * from './crypto-price';
 export * from './hooks';
 export * from './web3-config-provider';
-export * from '@ant-design/web3-common';
+export * from '@levellink/web3-common';
 export * from './utils';

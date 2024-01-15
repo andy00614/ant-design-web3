@@ -1,5 +1,5 @@
 import React from 'react';
-import { WagmiWeb3ConfigProvider, WalletConnect } from '@ant-design/web3-wagmi';
+import { WagmiWeb3ConfigProvider, WalletConnect } from '@levellink/web3-wagmi';
 
 import { getWallet } from '../api';
 import { wagmiConfig } from '../config';

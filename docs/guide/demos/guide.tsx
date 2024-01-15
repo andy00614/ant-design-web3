@@ -1,10 +1,10 @@
-import { ConnectButton, Connector } from '@ant-design/web3';
+import { ConnectButton, Connector } from '@levellink/web3';
 import {
   CoinbaseWallet,
   TokenPocket,
   WagmiWeb3ConfigProvider,
   WalletConnect,
-} from '@ant-design/web3-wagmi';
+} from '@levellink/web3-wagmi';
 import { configureChains, createConfig } from 'wagmi';
 import { mainnet, polygon } from 'wagmi/chains';
 import { CoinbaseWalletConnector } from 'wagmi/connectors/coinbaseWallet';

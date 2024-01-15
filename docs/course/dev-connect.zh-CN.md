@@ -13,17 +13,17 @@ order: 2
 
 ## 安装依赖
 
-首先，同[快速开始](../guide/quick-start.zh-CN.md)中文档指引的类似，我们需要安装一些依赖。在上一篇课程中，我们已经安装了 `antd` 和 `@ant-design/web3`，所以我们接下来只需要安装 `@ant-design/web3-wagmi` 和 `wagmi`。
+首先，同[快速开始](../guide/quick-start.zh-CN.md)中文档指引的类似，我们需要安装一些依赖。在上一篇课程中，我们已经安装了 `antd` 和 `@levellink/web3`，所以我们接下来只需要安装 `@levellink/web3-wagmi` 和 `wagmi`。
 
 <br />
 
-<NormalInstallDependencies packageNames="@ant-design/web3-wagmi wagmi" save="true"></NormalInstallDependencies>
+<NormalInstallDependencies packageNames="@levellink/web3-wagmi wagmi" save="true"></NormalInstallDependencies>
 
 <br />
 
-`@ant-design/web3` 是一个 UI 组件库，它通过不同的[适配器](../guide/adapter.zh-CN.md)和不同的区块链连接。本课程中，我们主要基于的是[以太坊](https://ethereum.org/zh/)。对应的，我们也将使用[以太坊的适配器](../../packages/web3/src/wagmi/index.zh-CN.md)来实现课程的需求。
+`@levellink/web3` 是一个 UI 组件库，它通过不同的[适配器](../guide/adapter.zh-CN.md)和不同的区块链连接。本课程中，我们主要基于的是[以太坊](https://ethereum.org/zh/)。对应的，我们也将使用[以太坊的适配器](../../packages/web3/src/wagmi/index.zh-CN.md)来实现课程的需求。
 
-> [wagmi](https://wagmi.sh/) 是一个开源的服务以太坊的 React Hooks 库，Ant Design Web3 的适配器 `@ant-design/web3-wagmi` 基于它实现，在本课程的后面部分，如果没有特殊说明，那提到的适配器就是指 `@ant-design/web3-wagmi`。
+> [wagmi](https://wagmi.sh/) 是一个开源的服务以太坊的 React Hooks 库，Ant Design Web3 的适配器 `@levellink/web3-wagmi` 基于它实现，在本课程的后面部分，如果没有特殊说明，那提到的适配器就是指 `@levellink/web3-wagmi`。
 
 ## 配置适配器
 
@@ -34,8 +34,8 @@ order: 2
 ```diff
 + import { createConfig, configureChains, mainnet } from 'wagmi';
 + import { publicProvider } from 'wagmi/providers/public';
-+ import { WagmiWeb3ConfigProvider } from '@ant-design/web3-wagmi';
-import { Address } from "@ant-design/web3";
++ import { WagmiWeb3ConfigProvider } from '@levellink/web3-wagmi';
+import { Address } from "@levellink/web3";
 
 export default () => {
   return (
@@ -64,8 +64,8 @@ export default () => {
 ```diff
 import { createConfig, configureChains, mainnet } from "wagmi";
 import { publicProvider } from "wagmi/providers/public";
-import { WagmiWeb3ConfigProvider } from "@ant-design/web3-wagmi";
-import { Address } from "@ant-design/web3";
+import { WagmiWeb3ConfigProvider } from "@levellink/web3-wagmi";
+import { Address } from "@levellink/web3";
 
 + const { publicClient } = configureChains([mainnet], [publicProvider()]);
 
@@ -97,9 +97,9 @@ export default () => {
 ```diff
 import { createConfig, configureChains, mainnet } from "wagmi";
 import { publicProvider } from "wagmi/providers/public";
-import { WagmiWeb3ConfigProvider } from "@ant-design/web3-wagmi";
-- import { Address } from "@ant-design/web3";
-+ import { NFTCard } from "@ant-design/web3";
+import { WagmiWeb3ConfigProvider } from "@levellink/web3-wagmi";
+- import { Address } from "@levellink/web3";
++ import { NFTCard } from "@levellink/web3";
 
 const { publicClient } = configureChains([mainnet], [publicProvider()]);
 
@@ -141,9 +141,9 @@ export default () => {
 ```diff
 import { createConfig, configureChains, mainnet } from "wagmi";
 import { publicProvider } from "wagmi/providers/public";
-import { WagmiWeb3ConfigProvider } from "@ant-design/web3-wagmi";
+import { WagmiWeb3ConfigProvider } from "@levellink/web3-wagmi";
 + import { MetaMaskConnector } from "wagmi/connectors/metaMask";
-import { Connector, ConnectButton } from "@ant-design/web3";
+import { Connector, ConnectButton } from "@levellink/web3";
 
 - const { publicClient } = configureChains([mainnet], [publicProvider()]);
 + const { publicClient, chains } = configureChains([mainnet], [publicProvider()]);

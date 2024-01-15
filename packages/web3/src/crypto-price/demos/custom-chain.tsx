@@ -1,5 +1,5 @@
-import { CryptoPrice } from '@ant-design/web3';
-import { EthereumCircleFilled } from '@ant-design/web3-icons';
+import { CryptoPrice } from '@levellink/web3';
+import { EthereumCircleFilled } from '@levellink/web3-icons';
 
 const App: React.FC = () => {
   return (

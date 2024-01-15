@@ -1,5 +1,5 @@
 import React from 'react';
-import { useAccount } from '@ant-design/web3';
+import { useAccount } from '@levellink/web3';
 import { Space } from 'antd';
 
 const App: React.FC = () => {

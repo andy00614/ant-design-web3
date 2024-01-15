@@ -1,4 +1,4 @@
-import { ConnectModal } from '@ant-design/web3';
+import { ConnectModal } from '@levellink/web3';
 import { fireEvent, render, waitFor } from '@testing-library/react';
 import { describe, expect, it, vi } from 'vitest';
 

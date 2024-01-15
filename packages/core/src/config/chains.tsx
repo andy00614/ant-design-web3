@@ -1,5 +1,5 @@
-import type { Chain } from '@ant-design/web3-common';
-import { BSCCircleColorful, EthereumCircleColorful } from '@ant-design/web3-icons';
+import type { Chain } from '@levellink/web3-common';
+import { BSCCircleColorful, EthereumCircleColorful } from '@levellink/web3-icons';
 import { defineChain } from 'viem';
 import { bsc, bscTestnet, sepolia } from 'wagmi/chains';
 

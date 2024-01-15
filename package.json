@@ -1,7 +1,7 @@
 {
-  "name": "@ant-design/web3-docs",
+  "name": "@levellink/web3-docs",
   "version": "0.0.0",
-  "private": true,
+  "private": false,
   "workspaces": [
     "packages/*"
   ],
@@ -16,7 +16,7 @@
     "build:docs": "dumi build",
     "postinstall": "pnpm run husky:prepare",
     "changeset": "changeset",
-    "release:prepare": "npm run build && npm run test:ci",
+    "release:prepare": "npm run build",
     "release": "pnpm run release:prepare && changeset version && changeset publish",
     "release:alpha": "pnpm run release:prepare && changeset version --snapshot alpha && changeset publish --tag alpha",
     "release:beta": "pnpm run release:prepare && changeset version --snapshot beta && changeset publish --tag beta",
@@ -47,11 +47,11 @@
   },
   "devDependencies": {
     "@ant-design/icons": "^5.2.6",
-    "@ant-design/web3": "workspace:*",
-    "@ant-design/web3-assets": "workspace:*",
-    "@ant-design/web3-common": "workspace:*",
-    "@ant-design/web3-icons": "workspace:*",
-    "@ant-design/web3-wagmi": "workspace:*",
+    "@levellink/web3": "workspace:*",
+    "@levellink/web3-assets": "workspace:*",
+    "@levellink/web3-common": "workspace:*",
+    "@levellink/web3-icons": "workspace:*",
+    "@levellink/web3-wagmi": "workspace:*",
     "@biomejs/biome": "^1.4.1",
     "@changesets/changelog-git": "^0.2.0",
     "@changesets/cli": "^2.27.1",

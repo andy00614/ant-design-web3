@@ -1,4 +1,4 @@
-import { Address } from '@ant-design/web3';
+import { Address } from '@levellink/web3';
 import { Space } from 'antd';
 
 import styles from './index.module.less';

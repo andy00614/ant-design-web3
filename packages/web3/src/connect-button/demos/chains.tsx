@@ -1,6 +1,6 @@
 import React from 'react';
-import { ConnectButton, type Chain } from '@ant-design/web3';
-import { Mainnet, Polygon } from '@ant-design/web3-assets';
+import { ConnectButton, type Chain } from '@levellink/web3';
+import { Mainnet, Polygon } from '@levellink/web3-assets';
 
 const App: React.FC = () => {
   const [chain, setChain] = React.useState<Chain>(Polygon);

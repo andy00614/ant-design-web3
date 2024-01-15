@@ -1,4 +1,14 @@
-# @ant-design/web3-common
+# @levellink/web3-common
+
+## 0.0.0-alpha-20240115144528
+
+### Minor Changes
+
+- 879548d: feat: Add extendsContextFromParent props for web3-config-provider
+
+### Patch Changes
+
+- ee2159c: add levellink core repo, Made some antd-web3 modifications to adapt to levellink
 
 ## 1.2.0
 
@@ -50,7 +60,7 @@
 - 2d7ae4f: refactor: auto config wagmi provider chains
 - 3fbd1eb: fix: Connect trigger onDisconnectClick type bug
 - 39782e4: feat: ethereum adapter support show balance
-- c15bfdf: feat: BrowserLink support get url from chain in @ant-design/web3-assets
+- c15bfdf: feat: BrowserLink support get url from chain in @levellink/web3-assets
 
 ## 0.1.0
 

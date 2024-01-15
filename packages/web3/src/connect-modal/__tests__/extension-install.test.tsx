@@ -1,5 +1,5 @@
-import { ConnectModal } from '@ant-design/web3';
-import { metadata_MetaMask } from '@ant-design/web3-assets';
+import { ConnectModal } from '@levellink/web3';
+import { metadata_MetaMask } from '@levellink/web3-assets';
 import { fireEvent, render, waitFor } from '@testing-library/react';
 import { describe, expect, it, vi } from 'vitest';
 

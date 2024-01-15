@@ -7,7 +7,7 @@ group:
 
 # Ethereum
 
-Ant Design Web3 officially provides `@ant-design/web3-wagmi` to adapt to Ethereum. It is an Ant Design Web3 Ethereum adapter based on [wagmi](https://wagmi.sh/). It provides the ability to connect to Ethereum and other EVM compatible chains for the components of `@ant-design/web3`.
+Ant Design Web3 officially provides `@levellink/web3-wagmi` to adapt to Ethereum. It is an Ant Design Web3 Ethereum adapter based on [wagmi](https://wagmi.sh/). It provides the ability to connect to Ethereum and other EVM compatible chains for the components of `@levellink/web3`.
 
 Through it, you don't need to handle the connection status of the component, chain data request and other logic by yourself. It will provide relevant global status and interfaces for the components through [Web3ConfigProvider](../web3-config-provider/index.md).
 
@@ -19,7 +19,7 @@ Currently, we officially provide the adapter of Ethereum, and you can also devel
 
 ## Add more wallets
 
-We have built-in wallets with `group` as `Popular`. For other wallets, you need to configure `assets` to import related resources. You can export related resources from `@ant-design/web3-wagmi`. If you don't have the resources you need, you can submit [Github issue](https://github.com/ant-design/ant-design-web3/issues) to tell us. You can also configure it yourself or submit a PR to support it.
+We have built-in wallets with `group` as `Popular`. For other wallets, you need to configure `assets` to import related resources. You can export related resources from `@levellink/web3-wagmi`. If you don't have the resources you need, you can submit [Github issue](https://github.com/ant-design/ant-design-web3/issues) to tell us. You can also configure it yourself or submit a PR to support it.
 
 <code src="./demos/more-wallets.tsx"></code>
 

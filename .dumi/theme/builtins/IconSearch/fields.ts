@@ -1,4 +1,4 @@
-import * as AntdWeb3Icons from '@ant-design/web3-icons';
+import * as AntdWeb3Icons from '@levellink/web3-icons';
 
 const all = Object.keys(AntdWeb3Icons)
   .map((n) => n.replace(/(CircleColorful|Colorful|Filled|CircleFilled)$/, ''))

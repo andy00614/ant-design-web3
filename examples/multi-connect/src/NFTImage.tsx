@@ -1,4 +1,4 @@
-import { NFTImage } from '@ant-design/web3';
+import { NFTImage } from '@levellink/web3';
 import { useAccount } from 'wagmi';
 
 function NFTImageComponent() {

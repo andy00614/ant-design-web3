@@ -1,11 +1,11 @@
-import { ConnectButton, Connector } from '@ant-design/web3';
+import { ConnectButton, Connector } from '@levellink/web3';
 import {
   CoinbaseWallet,
   SafeheronWallet,
   TokenPocket,
   WagmiWeb3ConfigProvider,
   WalletConnect,
-} from '@ant-design/web3-wagmi';
+} from '@levellink/web3-wagmi';
 import { fireEvent, render } from '@testing-library/react';
 import { Grid } from 'antd';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';

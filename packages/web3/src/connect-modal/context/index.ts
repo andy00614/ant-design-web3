@@ -1,5 +1,5 @@
 import React from 'react';
-import { defaultLocale } from '@ant-design/web3-common';
+import { defaultLocale } from '@levellink/web3-common';
 
 import type { IntlType } from '../../hooks/useIntl';
 import type { PanelRoute, Wallet } from '../interface';

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { ConnectModal } from '@ant-design/web3';
+import { ConnectModal } from '@levellink/web3';
 import { fireEvent, render } from '@testing-library/react';
 import { theme as antTheme, ConfigProvider, Grid } from 'antd';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';

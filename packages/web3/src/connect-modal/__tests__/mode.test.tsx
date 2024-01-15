@@ -1,4 +1,4 @@
-import { ConnectModal } from '@ant-design/web3';
+import { ConnectModal } from '@levellink/web3';
 import { render } from '@testing-library/react';
 import { Grid } from 'antd';
 import { describe, expect, it, vi } from 'vitest';

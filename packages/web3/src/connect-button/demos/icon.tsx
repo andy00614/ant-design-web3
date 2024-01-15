@@ -1,5 +1,5 @@
-import { ConnectButton } from '@ant-design/web3';
-import { WalletColorful, WalletWhiteColorful } from '@ant-design/web3-icons';
+import { ConnectButton } from '@levellink/web3';
+import { WalletColorful, WalletWhiteColorful } from '@levellink/web3-icons';
 import { Space } from 'antd';
 
 const App: React.FC = () => {

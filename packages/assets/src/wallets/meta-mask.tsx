@@ -1,5 +1,5 @@
-import type { WalletMetadata } from '@ant-design/web3-common';
-import { ChromeCircleColorful, MetaMaskColorful } from '@ant-design/web3-icons';
+import type { WalletMetadata } from '@levellink/web3-common';
+import { ChromeCircleColorful, MetaMaskColorful } from '@levellink/web3-icons';
 
 export const metadata_MetaMask: WalletMetadata = {
   icon: <MetaMaskColorful />,

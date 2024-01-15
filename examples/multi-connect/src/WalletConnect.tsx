@@ -1,5 +1,5 @@
-import { ConnectButton, Connector } from '@ant-design/web3';
 import { useAccount } from '@levellink/core';
+import { ConnectButton, Connector } from '@levellink/web3';
 import { useAccount as useWasmiAccount } from 'wagmi';
 
 function WalletConnect() {

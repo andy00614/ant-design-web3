@@ -1,6 +1,6 @@
 import React, { isValidElement } from 'react';
-import { ConnectModal } from '@ant-design/web3';
-import type { Chain, ConnectorTriggerProps, Wallet } from '@ant-design/web3-common';
+import { ConnectModal } from '@levellink/web3';
+import type { Chain, ConnectorTriggerProps, Wallet } from '@levellink/web3-common';
 import { message } from 'antd';
 
 import useProvider from '../hooks/useProvider';

@@ -1,4 +1,4 @@
-import type { WalletMetadata } from '@ant-design/web3-common';
+import type { WalletMetadata } from '@levellink/web3-common';
 import type { Connector } from 'wagmi';
 
 import type { WalletFactory, WalletUseInWagmiAdapter } from '../interface';

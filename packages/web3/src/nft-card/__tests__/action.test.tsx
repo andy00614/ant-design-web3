@@ -1,4 +1,4 @@
-import { NFTCard } from '@ant-design/web3';
+import { NFTCard } from '@levellink/web3';
 import { fireEvent, render } from '@testing-library/react';
 import { describe, expect, it, vi } from 'vitest';
 

@@ -1,4 +1,4 @@
-import type { DefaultGuide } from '@ant-design/web3';
+import type { DefaultGuide } from '@levellink/web3';
 
 export const walletList = [
   {

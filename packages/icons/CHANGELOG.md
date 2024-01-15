@@ -1,4 +1,4 @@
-# @ant-design/web3-icons
+# @levellink/web3-icons
 
 ## 1.2.0
 

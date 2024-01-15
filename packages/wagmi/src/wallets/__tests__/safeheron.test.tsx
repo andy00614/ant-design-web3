@@ -1,4 +1,4 @@
-import { SafeheronWallet } from '@ant-design/web3-wagmi';
+import { SafeheronWallet } from '@levellink/web3-wagmi';
 import { describe, expect, it, vi } from 'vitest';
 import { InjectedConnector } from 'wagmi/connectors/injected';
 

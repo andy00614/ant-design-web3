@@ -6,7 +6,7 @@ import {
   type Chain,
   type Locale,
   type Wallet,
-} from '@ant-design/web3-common';
+} from '@levellink/web3-common';
 import {
   useAccount,
   useBalance,
@@ -75,7 +75,7 @@ export const AntDesignWeb3ConfigProvider: React.FC<AntDesignWeb3ConfigProviderPr
       }
     });
 
-    // Generate Wallet for @ant-design/web3
+    // Generate Wallet for @levellink/web3
     const allWallet = walletFactorys
       ?.map((factory) => {
         let connector: WagmiConnector | WagmiConnector[] | undefined;

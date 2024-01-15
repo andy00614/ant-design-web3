@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
-import { Address } from '@ant-design/web3';
-import type { Balance } from '@ant-design/web3-common';
+import { Address } from '@levellink/web3';
+import type { Balance } from '@levellink/web3-common';
 import { Avatar, Button, ConfigProvider, message, Modal, Space, type AvatarProps } from 'antd';
 import type { ModalProps } from 'antd';
 import classNames from 'classnames';

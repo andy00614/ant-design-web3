@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { ChainSelect } from '@ant-design/web3';
-import type { Chain } from '@ant-design/web3-common';
+import { ChainSelect } from '@levellink/web3';
+import type { Chain } from '@levellink/web3-common';
 
 export interface NetworkData {
   id: number;

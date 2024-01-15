@@ -7,7 +7,7 @@ group:
 
 # 以太坊
 
-Ant Design Web3 官方提供了 `@ant-design/web3-wagmi` 来适配以太坊，它是一个基于 [wagmi](https://wagmi.sh/) 的 Ant Design Web3 以太坊适配器。它为 `@ant-design/web3` 的组件提供了连接以太坊等 EVM 兼容链的能力。通过它，你不需要自己处理组件的连接状态，链数据请求等逻辑。它会通过 [Web3ConfigProvider](../web3-config-provider/index.zh-CN.md) 为组件提供相关全局状态和接口。
+Ant Design Web3 官方提供了 `@levellink/web3-wagmi` 来适配以太坊，它是一个基于 [wagmi](https://wagmi.sh/) 的 Ant Design Web3 以太坊适配器。它为 `@levellink/web3` 的组件提供了连接以太坊等 EVM 兼容链的能力。通过它，你不需要自己处理组件的连接状态，链数据请求等逻辑。它会通过 [Web3ConfigProvider](../web3-config-provider/index.zh-CN.md) 为组件提供相关全局状态和接口。
 
 目前，我们官方提供了该以太坊的适配器，你也可以自己开发适配器来支持其它的链，关于适配器，你可以阅读[适配器文档](../../../../docs/guide/adapter.zh-CN.md)了解更多。
 
@@ -17,7 +17,7 @@ Ant Design Web3 官方提供了 `@ant-design/web3-wagmi` 来适配以太坊，�
 
 ## 添加更多钱包
 
-我们内置了 `group` 为 `Popular` 的钱包，对于其它钱包，你需要配置 `assets` 引入相关资源。你可以从 `@ant-design/web3-wagmi` 中导出相关资源，如果没有你需要的资源，你可以通过提交 [Github issue](https://github.com/ant-design/ant-design-web3/issues) 告诉我们。也自己配置或者给我们提交 PR 支持。
+我们内置了 `group` 为 `Popular` 的钱包，对于其它钱包，你需要配置 `assets` 引入相关资源。你可以从 `@levellink/web3-wagmi` 中导出相关资源，如果没有你需要的资源，你可以通过提交 [Github issue](https://github.com/ant-design/ant-design-web3/issues) 告诉我们。也自己配置或者给我们提交 PR 支持。
 
 <code src="./demos/more-wallets.tsx"></code>
 

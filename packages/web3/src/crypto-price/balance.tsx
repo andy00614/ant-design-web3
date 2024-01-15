@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import type { Balance } from '@ant-design/web3-common';
+import type { Balance } from '@levellink/web3-common';
 import { ConfigProvider } from 'antd';
 import classNames from 'classnames';
 

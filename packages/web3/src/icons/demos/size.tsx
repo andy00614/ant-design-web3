@@ -1,4 +1,4 @@
-import { BitcoinCircleColorful, EthereumFilled } from '@ant-design/web3-icons';
+import { BitcoinCircleColorful, EthereumFilled } from '@levellink/web3-icons';
 import { Space } from 'antd';
 
 const App: React.FC = () => {
