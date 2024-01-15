@@ -1,7 +1,6 @@
 {
   "name": "multi-connect",
-  "private": false,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -10,9 +9,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@levellink/web3": "workspace:^1.2.0",
-    "@levellink/web3-wagmi": "workspace:^1.2.0",
-    "@levellink/core": "workspace:0.0.1-alpha.1",
+    "@levellink/web3": "*",
+    "@levellink/web3-wagmi": "*",
+    "@levellink/core": "*",
     "viem": "^1.20.3",
     "wagmi": "^1.4.12"
   },

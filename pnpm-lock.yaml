@@ -138,13 +138,13 @@ importers:
   examples/multi-connect:
     dependencies:
       '@levellink/core':
-        specifier: workspace:0.0.1-alpha.1
+        specifier: '*'
         version: link:../../packages/core
       '@levellink/web3':
-        specifier: workspace:^1.2.0
+        specifier: '*'
         version: link:../../packages/web3
       '@levellink/web3-wagmi':
-        specifier: workspace:^1.2.0
+        specifier: '*'
         version: link:../../packages/wagmi
       viem:
         specifier: ^1.20.3
@@ -227,10 +227,10 @@ importers:
         specifier: ^2.1.1
         version: 2.1.1(react@18.2.0)
       '@levellink/web3':
-        specifier: workspace:^1.2.0
+        specifier: workspace:0.0.0-alpha-20240115144528
         version: link:../web3
       '@levellink/web3-wagmi':
-        specifier: workspace:^1.2.0
+        specifier: workspace:0.0.0-alpha-20240115144528
         version: link:../wagmi
       '@types/crypto-js':
         specifier: ^4.2.1
