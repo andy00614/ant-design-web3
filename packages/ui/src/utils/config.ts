@@ -15,7 +15,7 @@ export const configChains: any[] = [
 
 const { publicClient, chains } = configureChains(configChains as Chain[], [publicProvider()]);
 // @ts-ignore
-export const config = createConfig({
+export const myConfig = createConfig({
   autoConnect: true,
   publicClient,
   connectors: [
