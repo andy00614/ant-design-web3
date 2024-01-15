@@ -24,26 +24,26 @@ export interface NetworkData {
   };
 }
 
-async function fetchData() {
-  try {
-    const response = await fetch('https://whyindian.ddns.net/wallet/network/list', {
-      method: 'GET', // GET 请求
-      headers: {
-        'Content-Type': 'application/json',
-        requestId: Date.now().toString(), // 添加带有时间戳的 requestId 头部
-      },
-    });
+// async function fetchData() {
+//   try {
+//     const response = await fetch('https://whyindian.ddns.net/wallet/network/list', {
+//       method: 'GET', // GET 请求
+//       headers: {
+//         'Content-Type': 'application/json',
+//         requestId: Date.now().toString(), // 添加带有时间戳的 requestId 头部
+//       },
+//     });
 
-    if (!response.ok) {
-      throw new Error(`Error! status: ${response.status}`);
-    }
+//     if (!response.ok) {
+//       throw new Error(`Error! status: ${response.status}`);
+//     }
 
-    const result = await response.json();
-    return result.data; // 返回解析后的 JSON 数据
-  } catch (error) {
-    console.error('There was a problem fetching the data:', error);
-  }
-}
+//     const result = await response.json();
+//     return result.data; // 返回解析后的 JSON 数据
+//   } catch (error) {
+//     console.error('There was a problem fetching the data:', error);
+//   }
+// }
 
 export const LLChainSelect: React.FC<{
   className?: string;
@@ -97,7 +97,7 @@ export const LLChainSelect: React.FC<{
       <ChainSelect
         className={className}
         chains={chains}
-        hashId="chainlistll"
+        hashId="css-dev-only-do-not-override-dkbvqv"
         onSwitchChain={(_chain) => {
           const id = _chain.id;
           handleChange(id);
