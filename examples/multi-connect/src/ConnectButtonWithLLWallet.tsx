@@ -1,12 +1,12 @@
 import { ConnectButton } from '@ant-design/web3';
-import { LLChainSelect } from '@levellink/core';
+import { ChainSelectV2 } from '@levellink/core';
 import { Space } from 'antd';
 
 function ConnectButtonWithLLWallet() {
   return (
     <div style={{ marginTop: '16px' }}>
       <Space.Compact>
-        <LLChainSelect />
+        <ChainSelectV2 />
         <ConnectButton />
       </Space.Compact>
     </div>

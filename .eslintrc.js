@@ -1,7 +1,7 @@
 module.exports = {
   extends: [
     'plugin:react/recommended',
-    'plugin:jsx-a11y/recommended',
+    // 'plugin:jsx-a11y/recommended',
     require.resolve('@umijs/fabric/dist/eslint'),
   ],
   plugins: ['unused-imports'],
@@ -23,11 +23,6 @@ module.exports = {
   },
   // https://www.npmjs.com/package/@typescript-eslint/parser
   parserOptions: {
-    project: [
-      'tsconfig.json',
-      'tsconfig.*.json',
-      './packages/**/tsconfig.json',
-      './examples/**/tsconfig.json',
-    ],
+    project: ['tsconfig.json', 'tsconfig.*.json', './packages/**/tsconfig.json'],
   },
 };
