@@ -9,9 +9,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@levellink/web3": "*",
-    "@levellink/web3-wagmi": "*",
-    "@levellink/core": "*",
+    "@levellink/web3": "workspace:*",
+    "@levellink/web3-wagmi": "workspace:*",
+    "@levellink/core": "workspace:*",
     "viem": "^1.20.3",
     "wagmi": "^1.4.12"
   },
