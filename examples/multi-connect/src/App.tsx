@@ -1,7 +1,7 @@
 import { MixConnectButton, Provider } from '@levellink/core';
 
-import GGC from './components/GGC';
-import Mint from './components/Mint';
+import Mint from './components/Powerups';
+import GGC from './components/Vault';
 
 function App() {
   return (

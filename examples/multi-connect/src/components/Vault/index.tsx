@@ -25,6 +25,8 @@ function GGC() {
     data: resouceInResult,
     write: resourceIn,
     status: resouceInStatus,
+    isError: isResouceInError,
+    error: resouceInError,
   } = useContractWrite({
     address: contractAddresses.develop.Node as `0x${string}`,
     abi: ABI_NODE,
@@ -35,6 +37,8 @@ function GGC() {
     data: approveResult,
     status: approveStatus,
     write: makeApprove,
+    error: approveError,
+    isError: isApproveError,
   } = useContractWrite({
     address: contractAddresses.develop.GGC as `0x${string}`,
     abi: ABI_GGC,
@@ -80,7 +84,7 @@ function GGC() {
 
   const allowanceNumber = allowance ? formatEther(allowance as bigint) : 0;
 
-  console.log('allowance', allowance, allowanceNumber);
+  console.log('allowance', approveError?.message);
   const renderAllowance = (_isLoading: boolean) => {
     if (_isLoading) {
       return 'loading...';
@@ -111,6 +115,12 @@ function GGC() {
       </Button>
       <div className={styles.space}>approveStatus: {approveStatus}</div>
       <div className={styles.space}>resouceInStatus: {resouceInStatus}</div>
+      {(isApproveError || approveError) && (
+        <p style={{ color: 'red' }}>Error: {approveError?.message}</p>
+      )}
+      {(isResouceInError || resouceInError) && (
+        <p style={{ color: 'red' }}>Error: {resouceInError?.message}</p>
+      )}
     </Card>
   );
 }
