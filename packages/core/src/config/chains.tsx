@@ -1,7 +1,7 @@
 import type { Chain } from '@levellink/web3-common';
 import { BSCCircleColorful, EthereumCircleColorful } from '@levellink/web3-icons';
 import { defineChain } from 'viem';
-import { bsc, bscTestnet, sepolia } from 'wagmi/chains';
+import { bscTestnet, sepolia } from 'wagmi/chains';
 
 export const createGetBrowserLink = (url: string) => (address: string, type: string) => {
   if (type === 'address') {
@@ -12,6 +12,7 @@ export const createGetBrowserLink = (url: string) => (address: string, type: str
   throw new Error(`getBrowserLink unsupported type ${type}`);
 };
 
+export const DEFAULT_CHAIN_ID = 141319;
 export enum ChainIds {
   Mainnet = 1,
   Polygon = 137,
@@ -79,8 +80,8 @@ const chainConfigWithDevChain = defineChain({
     symbol: 'GGC',
   },
   rpcUrls: {
-    default: { http: ['https://whyindian.ddns.net/'] },
-    public: { http: ['https://whyindian.ddns.net/'] },
+    default: { http: ['/chain/'] },
+    public: { http: ['/chain/'] },
   },
   blockExplorers: {
     etherscan: { name: 'developScan', url: 'https://testnet.bscscan.com' },
@@ -89,11 +90,10 @@ const chainConfigWithDevChain = defineChain({
   testnet: true,
 });
 
-export const CHAINS_FOR_PROVIDER = [DEVELOP_CHAIN, BSC, BSCTestNet, Sepolia];
+export const CHAINS_FOR_PROVIDER = [DEVELOP_CHAIN, Sepolia, BSCTestNet];
 
 export const CHAINS_FOR_WAGMI: Chain[] = [
   chainConfigWithDevChain,
   { ...sepolia, ...Sepolia },
-  { ...bsc, ...BSC },
   { ...bscTestnet, ...BSCTestNet },
 ];

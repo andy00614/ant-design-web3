@@ -153,6 +153,15 @@ importers:
         specifier: ^1.4.12
         version: 1.4.12(react@18.2.0)(typescript@5.3.3)(viem@1.20.3)
     devDependencies:
+      autoprefixer:
+        specifier: ^10.4.16
+        version: 10.4.16(postcss@8.4.33)
+      postcss:
+        specifier: ^8.4.33
+        version: 8.4.33
+      tailwindcss:
+        specifier: ^3.4.1
+        version: 3.4.1
       vite:
         specifier: ^5.0.8
         version: 5.0.10
