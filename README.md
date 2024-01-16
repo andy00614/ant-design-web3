@@ -55,8 +55,8 @@ npm i antd @levellink/web3 @levellink/web3-wagmi @levellink/core wagmi@1.x.x --s
 pnpm-workspace
 │
 ├── packages
-│   ├── assets
-│   │   └── 静态资源库，例如节点配置信息
+│   ├── **core**
+│   │   └── **依赖LL钱包(线上、线下)的核心库,包括所有公共的方法，组件，和加密函数**
 │   │
 │   ├── common
 │   │   └── 通用工具，如配置 Web3 提供者，数值转换等
@@ -64,8 +64,8 @@ pnpm-workspace
 │   ├── icon
 │   │   └── 图标集合
 │   │
-│   ├── core
-│   │   └── 依赖LL钱包(线上、线下)的核心库,包括所有公共的方法，组件，和加密函数
+│   ├── assets
+│   │   └── 静态资源库，例如节点配置信息
 │   │
 │   ├── wagmi
 │   │   └── Ant Design DApp 提供者
