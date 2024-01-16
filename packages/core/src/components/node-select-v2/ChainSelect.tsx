@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { ChainSelect } from '@levellink/web3';
 import type { Chain } from '@levellink/web3-common';
 
+import { getNetworkList } from '../../api';
+
 export interface NetworkData {
   id: number;
   url: string;
@@ -20,20 +22,8 @@ export interface NetworkData {
 
 async function fetchData() {
   try {
-    const response = await fetch('https://whyindian.ddns.net/wallet/network/list', {
-      method: 'GET', // GET 请求
-      headers: {
-        'Content-Type': 'application/json',
-        requestId: Date.now().toString(), // 添加带有时间戳的 requestId 头部
-      },
-    });
-
-    if (!response.ok) {
-      throw new Error(`Error! status: ${response.status}`);
-    }
-
-    const result = await response.json();
-    return result.data; // 返回解析后的 JSON 数据
+    const response = await getNetworkList();
+    return response;
   } catch (error) {
     console.error('There was a problem fetching the data:', error);
   }
@@ -55,7 +45,6 @@ export const ChainSelectV2: React.FC<{
   useEffect(() => {
     async function fetchNodes() {
       const _nodes = await fetchData();
-      console.log('_nodes', _nodes);
       setNode(_nodes);
       const nodeIdFromStorage = typeof window !== 'undefined' && localStorage?.getItem('nodeId');
       if (nodeIdFromStorage) {
@@ -83,8 +72,6 @@ export const ChainSelectV2: React.FC<{
       window.location.reload();
     }
   };
-
-  console.log(chains);
 
   if (!nodes) return <></>;
   return (

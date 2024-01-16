@@ -43,7 +43,6 @@ function RenderConnectButton({
       </div>
     );
   }
-
   return (
     <Space.Compact>
       <ChainSelectV2 />
