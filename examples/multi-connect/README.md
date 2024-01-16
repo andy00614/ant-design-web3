@@ -1,30 +1,19 @@
-# React + TypeScript + Vite
+## 开发
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+本仓库引入了我们LL钱包的核心开发库，可以作为我们调试环境，来测试我们的库以及最小化运行我们的功能
 
-Currently, two official plugins are available:
+### 开发命令
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. 退回到我们的根目录
+2. 执行 https://whyindian.ddns.net/gitlab/boyindia/ll-library#development
+3. 完成上述执行之后，运行 `pnpm dev:demo`
+4. 开始开发
 
-## Expanding the ESLint configuration
+## TODO
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-};
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- [x] 支持线上线下钱包统一登录 @boyinda
+- [x] 切换区块链的时候动态改变合约地址 @boyindia
+- [x] Mint功能-离线钱包版本 @boyindia @mundo
+- [x] 获取账户ggc余额 @boyindia
+- [x] useAccount的api统一 @boyindia
+- [x] 处理monorepo的依赖，以及打包的问题，引入第三方引用 @boyindia

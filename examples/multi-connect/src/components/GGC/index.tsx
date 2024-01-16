@@ -1,11 +1,9 @@
 import { useEffect } from 'react';
+import { ABI_GGC, ABI_NODE, contractAddresses } from '@levellink/core';
 import { Button, Card, message } from 'antd';
 import { formatEther, parseEther } from 'viem';
 import { useAccount, useContractRead, useContractWrite, useWaitForTransaction } from 'wagmi';
 
-import ERC20ABI from './abi/erc20.json';
-import NODEABI from './abi/node.json';
-import { contractAddress } from './const';
 import styles from './index.module.css';
 
 const gameAddress = '0xa34357486224151ddfdb291e13194995c22df505';
@@ -16,10 +14,11 @@ function GGC() {
     isLoading,
     refetch,
   } = useContractRead({
-    address: contractAddress.ERC20 as `0x${string}`,
-    abi: ERC20ABI,
+    // TODO: 这里的address需要根据选择的链不同，动态的去替换
+    address: contractAddresses.develop.GGC as `0x${string}`,
+    abi: ABI_GGC,
     functionName: 'allowance',
-    args: [address, contractAddress.NODE as `0x${string}`],
+    args: [address, contractAddresses.develop.Node as `0x${string}`],
   });
 
   const {
@@ -27,8 +26,8 @@ function GGC() {
     write: resourceIn,
     status: resouceInStatus,
   } = useContractWrite({
-    address: contractAddress.NODE as `0x${string}`,
-    abi: NODEABI,
+    address: contractAddresses.develop.Node as `0x${string}`,
+    abi: ABI_NODE,
     functionName: 'resourceIn',
   });
 
@@ -37,8 +36,8 @@ function GGC() {
     status: approveStatus,
     write: makeApprove,
   } = useContractWrite({
-    address: contractAddress.ERC20 as `0x${string}`,
-    abi: ERC20ABI,
+    address: contractAddresses.develop.GGC as `0x${string}`,
+    abi: ABI_GGC,
     functionName: 'approve',
   });
 
@@ -66,7 +65,7 @@ function GGC() {
   }, [isSuccessForResourceIn]);
 
   const handleDeposite = async () => {
-    await makeApprove({ args: [contractAddress.NODE, parseEther('100')] });
+    await makeApprove({ args: [contractAddresses.develop.Node, parseEther('100')] });
   };
 
   const handleResourceIn = async () => {

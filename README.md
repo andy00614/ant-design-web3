@@ -46,13 +46,13 @@ AntD Web3 是基于 Ant Design 的 DApp 组件库。
 ## Installation
 
 ```shell
-npm i antd @levellink/web3 @levellink/web3-wagmi wagmi --save
+npm i antd @levellink/web3 @levellink/web3-wagmi @levellink/core wagmi@1.x.x --save
 ```
 
 ## 目录结构
 
 ```
-pnpm-workspace（单体仓库）
+pnpm-workspace
 │
 ├── packages
 │   ├── assets
@@ -64,11 +64,8 @@ pnpm-workspace（单体仓库）
 │   ├── icon
 │   │   └── 图标集合
 │   │
-│   ├── ui
-│   │   └── 市场、官网等公共 UI 组件库
-│   │
-│   ├── llwallet
-│   │   └── LL 在线钱包提供者，包括加密和状态同步方法
+│   ├── core
+│   │   └── 依赖LL钱包(线上、线下)的核心库,包括所有公共的方法，组件，和加密函数
 │   │
 │   ├── wagmi
 │   │   └── Ant Design DApp 提供者
@@ -85,7 +82,7 @@ pnpm-workspace（单体仓库）
 ```bash
 $ git clone http://whyindian.ddns.net:222/gitlab/boyindia/ll-library.git
 $ git checkout dev
+$ nvm use
 $ pnpm i
-$ pnpm dev:lib // 所以monorepo下的报处于调试状态
-$ pnpm dev:demo // 打开一个新的终端，进行调试
+$ pnpm dev:lib // 将所有开发包处于调试和热更新状态
 ```
