@@ -1,5 +1,11 @@
 # @levellink/web3-common
 
+## 0.0.0-alpha-20240116013921
+
+### Major Changes
+
+- update web3-common dep
+
 ## 0.0.0-alpha-20240115151406
 
 ### Minor Changes

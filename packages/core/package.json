@@ -1,7 +1,7 @@
 {
   "name": "@levellink/core",
   "description": "the ui for levellink apps",
-  "version": "0.0.0-alpha-20240115151406",
+  "version": "0.0.0-alpha-20240116013921",
   "main": "dist/lib/index.js",
   "module": "dist/esm/index.js",
   "typings": "dist/esm/index.d.ts",
@@ -38,8 +38,8 @@
     "vite-tsconfig-paths": "^4.2.3"
   },
   "peerDependencies": {
-    "@levellink/web3": "workspace:0.0.0-alpha-20240115151406",
-    "@levellink/web3-wagmi": "workspace:0.0.0-alpha-20240115151406",
+    "@levellink/web3": "workspace:0.0.0-alpha-20240116013921",
+    "@levellink/web3-wagmi": "workspace:0.0.0-alpha-20240116013921",
     "wagmi": "^1.4.12"
   },
   "dependencies": {

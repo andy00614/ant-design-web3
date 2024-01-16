@@ -1,5 +1,13 @@
 # @levellink/web3-wagmi
 
+## 0.0.0-alpha-20240116013921
+
+### Patch Changes
+
+- Updated dependencies
+  - @levellink/web3-common@0.0.0-alpha-20240116013921
+  - @levellink/web3-assets@0.0.0-alpha-20240116013921
+
 ## 0.0.0-alpha-20240115151406
 
 ### Minor Changes
