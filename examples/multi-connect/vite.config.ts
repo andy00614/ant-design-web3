@@ -11,6 +11,12 @@ export default defineConfig({
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ''),
       },
+      '/chain': {
+        // 新增的代理配置
+        target: 'https://whyindian.ddns.net',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/chain/, ''),
+      },
     },
   },
 });

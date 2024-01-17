@@ -1,24 +1,35 @@
 import { useEffect } from 'react';
-import { ABI_GGC, ABI_NODE, contractAddresses } from '@levellink/core';
+import { ABI_GGC, ABI_NODE, contractAddresses, DEFAULT_CHAIN_ID } from '@levellink/core';
 import { Button, Card, message } from 'antd';
 import { formatEther, parseEther } from 'viem';
-import { useAccount, useContractRead, useContractWrite, useWaitForTransaction } from 'wagmi';
+import {
+  useAccount,
+  useContractRead,
+  useContractWrite,
+  useNetwork,
+  useWaitForTransaction,
+} from 'wagmi';
 
 import styles from './index.module.css';
 
 const gameAddress = '0xa34357486224151ddfdb291e13194995c22df505';
+
 function GGC() {
   const { address, isConnected } = useAccount();
+  const { chain } = useNetwork();
+  const chainId = (chain?.id || DEFAULT_CHAIN_ID) as number;
+  const currentAddressObj = contractAddresses[chainId];
+
   const {
     data: allowance,
     isLoading,
     refetch,
   } = useContractRead({
     // TODO: 这里的address需要根据选择的链不同，动态的去替换
-    address: contractAddresses.develop.GGC as `0x${string}`,
+    address: currentAddressObj.GGC as `0x${string}`,
     abi: ABI_GGC,
     functionName: 'allowance',
-    args: [address, contractAddresses.develop.Node as `0x${string}`],
+    args: [address, currentAddressObj.Node as `0x${string}`],
   });
 
   const {
@@ -28,7 +39,7 @@ function GGC() {
     isError: isResouceInError,
     error: resouceInError,
   } = useContractWrite({
-    address: contractAddresses.develop.Node as `0x${string}`,
+    address: currentAddressObj.Node as `0x${string}`,
     abi: ABI_NODE,
     functionName: 'resourceIn',
   });
@@ -40,7 +51,7 @@ function GGC() {
     error: approveError,
     isError: isApproveError,
   } = useContractWrite({
-    address: contractAddresses.develop.GGC as `0x${string}`,
+    address: currentAddressObj.GGC as `0x${string}`,
     abi: ABI_GGC,
     functionName: 'approve',
   });
@@ -69,7 +80,7 @@ function GGC() {
   }, [isSuccessForResourceIn]);
 
   const handleDeposite = async () => {
-    await makeApprove({ args: [contractAddresses.develop.Node, parseEther('100')] });
+    await makeApprove({ args: [currentAddressObj.Node, parseEther('100')] });
   };
 
   const handleResourceIn = async () => {

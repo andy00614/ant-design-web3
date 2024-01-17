@@ -31,22 +31,22 @@
 
 ## Tech Stack
 
-### [Wagmi: Blockchain Frontend Library](<[链接地址](https://1.x.wagmi.sh/)>)
+### Wagmi
 
-Wagmi 是一个用于区块链前端开发的库。
+[Blockchain Frontend Library](https://1.x.wagmi.sh/) Wagmi 是一个用于区块链前端开发的库。
 
-### [Viem: Blockchain Communication Library](<[链接地址](https://viem.sh/)>)
+### Viem
 
-Viem 是一个与区块链沟通的库，类似于 ethers，但与 WAGMI 高度集成。
+[Blockchain Communication Library](https://viem.sh/) Viem 是一个与区块链沟通的库，类似于 ethers，但与 WAGMI 高度集成。
 
-#### [Ant Design Web3: AntD DApp Component Library](<[链接地址](https://web3.ant.design/)>)
+#### Ant Design Web3
 
-AntD Web3 是基于 Ant Design 的 DApp 组件库。
+[AntD DApp Component Library](https://web3.ant.design/) AntD Web3 是基于 Ant Design 的 DApp 组件库。
 
 ## Installation
 
 ```shell
-npm i antd @levellink/web3 @levellink/web3-wagmi @levellink/core wagmi@1.x.x --save
+pnpm install @levellink/web3 @levellink/web3-wagmi @levellink/core wagmi@1.x.x --save
 ```
 
 ## 目录结构

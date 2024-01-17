@@ -9,13 +9,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@levellink/web3": "*",
-    "@levellink/web3-wagmi": "*",
-    "@levellink/core": "*",
+    "@levellink/core": "workspace:*",
+    "@levellink/web3": "workspace:*",
+    "@levellink/web3-wagmi": "workspace:*",
     "viem": "^1.20.3",
     "wagmi": "^1.4.12"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.33",
+    "tailwindcss": "^3.4.1",
     "vite": "^5.0.8",
     "vite-plugin-dts": "^3.7.0",
     "vite-plugin-svgr": "^4.2.0"

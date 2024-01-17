@@ -19,7 +19,6 @@ function RenderConnectButton({
   switchNetwork: ((chainId_?: number | undefined) => void) | undefined;
   isWeb3Wallet: boolean;
 }) {
-  console.log('isWeb3Wallet', isWeb3Wallet);
   // 判断当前链接的是哪个钱包
   if (isWeb3Wallet) {
     return (

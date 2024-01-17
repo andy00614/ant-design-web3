@@ -2,6 +2,7 @@ import { MixConnectButton, Provider } from '@levellink/core';
 
 import Mint from './components/Powerups';
 import GGC from './components/Vault';
+import VaultV2 from './components/VaultV2';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <MixConnectButton />
       <GGC />
       <Mint />
+      <VaultV2 />
     </Provider>
   );
 }
