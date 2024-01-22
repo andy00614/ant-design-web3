@@ -1,5 +1,23 @@
 # @levellink/web3-wagmi
 
+## 0.0.1
+
+### Patch Changes
+
+- 测试是否patch更新
+- Updated dependencies
+  - @levellink/web3-assets@0.0.1
+  - @levellink/web3-common@0.0.1
+
+## 0.0.0
+
+### Patch Changes
+
+- 版本依赖的调整
+- Updated dependencies
+  - @levellink/web3-assets@0.0.0
+  - @levellink/web3-common@0.0.0
+
 ## 0.0.0-alpha-20240116013921
 
 ### Patch Changes
