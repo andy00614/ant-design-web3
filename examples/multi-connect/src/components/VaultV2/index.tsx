@@ -1,6 +1,6 @@
+import { ConnectButtonHOC } from '@levellink/core';
 import { Button, Card, InputNumber } from 'antd';
 
-import { ConnectButtonHOC } from '../(ConnectButton_HOC)';
 import Balance from '../Balance';
 
 function VaultV2() {

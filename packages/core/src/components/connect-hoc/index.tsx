@@ -1,6 +1,7 @@
 import type { ComponentType } from 'react';
 import React from 'react';
-import { MixConnectButton, useUnifiedAccount } from '@levellink/core';
+
+import { MixConnectButton, useUnifiedAccount } from '../..';
 
 export function ConnectButtonHOC<
   P extends JSX.IntrinsicAttributes & { children?: React.ReactNode },

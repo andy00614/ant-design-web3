@@ -1,5 +1,11 @@
 # @levellink/core
 
+## 0.0.3
+
+### Patch Changes
+
+- 增加权限的高阶组件
+
 ## 0.0.2
 
 ### Patch Changes
