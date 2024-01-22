@@ -1,5 +1,16 @@
 # @levellink/web3
 
+## 0.0.2
+
+### Patch Changes
+
+- - 将两个钱包的chains配置都是用同一个配置变量
+  - 统一本地钱包和线上钱包链接按钮的样式
+- Updated dependencies
+  - @levellink/web3-assets@0.0.2
+  - @levellink/web3-common@0.0.2
+  - @levellink/web3-icons@0.0.2
+
 ## 0.0.1
 
 ### Patch Changes
