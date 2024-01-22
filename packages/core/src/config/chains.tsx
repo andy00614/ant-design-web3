@@ -1,5 +1,9 @@
 import type { Chain } from '@levellink/web3-common';
-import { BSCCircleColorful, EthereumCircleColorful } from '@levellink/web3-icons';
+import {
+  BSCCircleColorful,
+  EthereumCircleColorful,
+  WBTCCircleColorful,
+} from '@levellink/web3-icons';
 import { defineChain } from 'viem';
 import { bscTestnet, sepolia } from 'wagmi/chains';
 
@@ -74,6 +78,7 @@ const chainConfigWithDevChain = defineChain({
   id: ChainIds.DEVELOP,
   name: '开发测试链',
   network: 'develop chain',
+  icon: <WBTCCircleColorful />,
   nativeCurrency: {
     decimals: 18,
     name: 'GGC',
@@ -97,3 +102,9 @@ export const CHAINS_FOR_WAGMI: Chain[] = [
   { ...sepolia, ...Sepolia },
   { ...bscTestnet, ...BSCTestNet },
 ];
+
+export const chain2URL = {
+  [ChainIds.DEVELOP]: 'http://whyindian.ddns.net:8545',
+  [ChainIds.Sepolia]: 'https://eth-sepolia.g.alchemy.com/v2/-M-o-KbEuoummTrGar0jq3HewCot9xQ6',
+  [ChainIds.BSCTestNet]: 'https://data-seed-prebsc-1-s1.bnbchain.org:8545',
+};

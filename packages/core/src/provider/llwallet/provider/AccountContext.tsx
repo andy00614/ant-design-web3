@@ -19,6 +19,11 @@ interface MyContextProps {
   connectWallet: (name?: string) => Promise<void>;
   logout: () => void;
   checkWhetherConnectHOC: (fn: Function) => any;
+  // 兼容wagmi
+  isDisconnected: boolean;
+  isConnected: boolean;
+  status: 'connected' | 'disconnected';
+  address: string;
 }
 
 const MyContext = createContext<MyContextProps | undefined>(undefined);
@@ -157,7 +162,18 @@ export const AccountProvider: FC<ContextProps> = ({
   };
 
   return (
-    <MyContext.Provider value={{ wallet, connectWallet, logout, checkWhetherConnectHOC }}>
+    <MyContext.Provider
+      value={{
+        wallet,
+        connectWallet,
+        logout,
+        checkWhetherConnectHOC,
+        isConnected: !!wallet,
+        isDisconnected: !wallet,
+        status: wallet ? 'connected' : 'disconnected',
+        address: wallet?.address,
+      }}
+    >
       <CommunicationAppProvider
         iframeURL={iframeURL}
         events={{

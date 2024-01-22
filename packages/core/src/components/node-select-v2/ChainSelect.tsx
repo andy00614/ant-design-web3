@@ -2,55 +2,51 @@ import React, { useEffect, useState } from 'react';
 import { ChainSelect } from '@levellink/web3';
 import type { Chain } from '@levellink/web3-common';
 
-import { getNetworkList } from '../../api';
+import { chain2URL, CHAINS_FOR_PROVIDER } from '../../config';
 
-export interface NetworkData {
-  id: number;
+type ChainWithURL = Chain & {
   url: string;
-  webSiteUrl: string;
-  chainId: number;
-  name: string;
-  sort: null;
-  createTime: null | string; // 假设这是一个日期字符串或 null
-  updateTime: null | string; // 假设这是一个日期字符串或 null
-  contractAddress: {
-    NODE: string[];
-    ERC20: string[];
-    ERC721: string[];
-  };
-}
+};
 
-async function fetchData() {
-  try {
-    const response = await getNetworkList();
-    return response;
-  } catch (error) {
-    console.error('There was a problem fetching the data:', error);
-  }
+function fetchData(): ChainWithURL[] {
+  const response = CHAINS_FOR_PROVIDER.map((item) => {
+    return {
+      id: item.id,
+      name: item.name,
+      icon: item.icon,
+      browser: {
+        icon: item.icon,
+      },
+      url: chain2URL[item.id as keyof typeof chain2URL],
+    };
+  }) as ChainWithURL[];
+  return response;
 }
 
 export const ChainSelectV2: React.FC<{
   className?: string;
-  onChange?: (v: NetworkData) => void;
+  onChange?: (v: ChainWithURL) => void;
 }> = ({ className, onChange }) => {
-  const [nodes, setNode] = useState<NetworkData[]>();
+  const [nodes, setNodes] = useState<ChainWithURL[]>();
   const [selectId, setSelectId] = useState('');
 
-  const chains: Chain[] =
+  const chains: ChainWithURL[] =
     nodes?.map((item) => ({
+      ...item,
       id: item.id,
       name: item.name,
+      url: chain2URL[item.id as keyof typeof chain2URL],
     })) || [];
 
   useEffect(() => {
     async function fetchNodes() {
       const _nodes = await fetchData();
-      setNode(_nodes);
+      setNodes(_nodes);
       const nodeIdFromStorage = typeof window !== 'undefined' && localStorage?.getItem('nodeId');
       if (nodeIdFromStorage) {
         setSelectId(nodeIdFromStorage);
       } else {
-        setSelectId(_nodes?.[0]?.id.toString());
+        setSelectId(_nodes?.[0]?.id.toString() || '');
       }
     }
     fetchNodes();
@@ -73,7 +69,7 @@ export const ChainSelectV2: React.FC<{
     }
   };
 
-  if (!nodes) return <></>;
+  if (!nodes) return <div />;
   return (
     <div>
       <ChainSelect

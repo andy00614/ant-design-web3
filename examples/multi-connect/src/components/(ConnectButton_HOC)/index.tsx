@@ -1,14 +1,12 @@
 import type { ComponentType } from 'react';
-import { MixConnectButton } from '@levellink/core';
-import { useAccount } from 'wagmi';
+import { MixConnectButton, useUnifiedAccount } from '@levellink/core';
 
 export function ConnectButtonHOC<P extends JSX.IntrinsicAttributes>(
   ButtonComponent: ComponentType<P>,
 ) {
-  const { isConnected } = useAccount();
-
+  const account = useUnifiedAccount();
   return function WrappedComponent(props: P) {
-    if (!isConnected) {
+    if (!account.isConnected) {
       return <MixConnectButton />;
     }
 

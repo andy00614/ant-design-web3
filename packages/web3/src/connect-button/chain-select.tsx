@@ -23,6 +23,7 @@ export const ChainSelect: React.FC<ChainSelectProps> = ({
 }) => {
   const { getPrefixCls } = useContext(ConfigProvider.ConfigContext);
   const prefixCls = getPrefixCls('web3-connect-button-chain-select');
+  console.log(chains);
   return (
     <Button className={`${prefixCls}-button`}>
       <Dropdown
