@@ -1,6 +1,7 @@
 import { MixConnectButton, Provider } from '@levellink/core';
 
 import Mint from './components/Powerups';
+import SignAddress from './components/SignAddress';
 import GGC from './components/Vault';
 import VaultV2 from './components/VaultV2';
 
@@ -11,6 +12,7 @@ function App() {
       <GGC />
       <Mint />
       <VaultV2 />
+      <SignAddress />
     </Provider>
   );
 }
