@@ -27,9 +27,9 @@
 ## TODO
 
 - [x] 支持线上线下钱包统一登录 @boyinda
-- [] 抽离 Vault 中与合约交互的功能方法 @boyindia
-- [] 抽离 Powerups(Mint) 中与合约交互的功能方法 @boyindia @mundo
-- [] 切换区块链的时候动态改变合约地址 @boyindia
-- [] 获取账户ggc余额 @boyindia
-- [] useAccount的api统一 @boyindia
-- [] 处理monorepo的依赖，以及打包的问题，引入第三方引用 @boyindia
+- [ ] 抽离 Vault 中与合约交互的功能方法 @boyindia
+- [ ] 抽离 Powerups(Mint) 中与合约交互的功能方法 @boyindia @mundo
+- [x] 切换区块链的时候动态改变合约地址 @boyindia
+- [x] 获取账户ggc余额 @boyindia
+- [ ] useAccount的api统一 @boyindia
+- [ ] 处理monorepo的依赖，以及打包的问题，引入第三方引用 @boyindia

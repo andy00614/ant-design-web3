@@ -85,8 +85,8 @@ const chainConfigWithDevChain = defineChain({
     symbol: 'GGC',
   },
   rpcUrls: {
-    default: { http: ['/chain/'] },
-    public: { http: ['/chain/'] },
+    default: { http: ['https://whyindian.ddns.net/chain/'] },
+    public: { http: ['https://whyindian.ddns.net/chain/'] },
   },
   blockExplorers: {
     etherscan: { name: 'developScan', url: 'https://testnet.bscscan.com' },

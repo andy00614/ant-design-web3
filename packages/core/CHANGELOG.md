@@ -1,5 +1,11 @@
 # @levellink/core
 
+## 0.0.4
+
+### Patch Changes
+
+- rpc地址修改
+
 ## 0.0.3
 
 ### Patch Changes
