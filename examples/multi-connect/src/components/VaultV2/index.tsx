@@ -5,13 +5,16 @@ import Balance from '../Balance';
 
 function VaultV2() {
   const ButtonWithAuth = ConnectButtonHOC(Button);
+  const handleClick = () => {};
   return (
     <Card className="mt-4">
       <Balance />
       <div className="mt-4">
         <div className="flex items-center">
           <InputNumber min={1} placeholder="amount" />
-          <ButtonWithAuth className="ml-4">Deposit</ButtonWithAuth>
+          <ButtonWithAuth onClick={handleClick} className="ml-4">
+            Deposit
+          </ButtonWithAuth>
         </div>
 
         <div className="flex items-center mt-4">

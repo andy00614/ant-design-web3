@@ -3,11 +3,11 @@ import { ChainIds } from '../chains';
 export type TAddressObj = Record<'Item' | 'GGC' | 'Node' | 'Market' | 'CrossChain', string>;
 export const contractAddresses: Record<number, TAddressObj> = {
   [ChainIds.DEVELOP]: {
-    Item: '0xa660096913E961161c645DCe077bDbb079467500',
-    GGC: '0x08e78c476d9adB51A2EC66f4163f5f3F55650a04',
-    Node: '0x83C22B7E4befa81b55944e605F17E6C0638502D1',
-    Market: '0x08cDA72130cc3d2A5742c9700a228DB9320B9086',
-    CrossChain: '0xDd7A00b075ED504adCe38b71A3A809005778Ff49',
+    Item: '0x708C1e9715077916a2e2D61c38181186d480714C',
+    GGC: '0xf91930b282B0BBE39DfE46b168BBaf6B75bbfb29',
+    Node: '0x6286C1A0C7D06F6a4514BEe90654d72D3Cfb33F5',
+    Market: '0x6eBbA8912a2d61e5588e712a36d913Eec3Eb2097',
+    CrossChain: '0x2883Fc84c4E5d47BC6eF0Fef6DE866cb139dD02b',
   },
   [ChainIds.BSCTestNet]: {
     Item: '0xE796317ad02D500F9704b6dF624D44c3723b117f',

@@ -9,7 +9,6 @@ export default function Balance() {
   const { data, isError, isLoading } = useBalance({
     address,
   });
-
   const { data: balance } = useGGCContractRead('balanceOf', [address]);
 
   if (isLoading) return <div>Fetching balance…</div>;
