@@ -5,7 +5,6 @@ import { useCurrentChain } from './useCurrentChainInfo';
 
 export function useGGCContractRead(functionName: string, args?: any[]) {
   const { currentAddressObj } = useCurrentChain();
-  console.log('currentAddressObj', currentAddressObj);
   const res = useContractRead({
     address: currentAddressObj.GGC as `0x${string}`,
     abi: ABI_GGC,

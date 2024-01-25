@@ -20,8 +20,6 @@ function GGC() {
   const chainId = (chain?.id || DEFAULT_CHAIN_ID) as number;
   const currentAddressObj = contractAddresses[chainId];
 
-  console.log('currentAddressObj222', { currentAddressObj, chainId });
-
   const {
     data: allowance,
     isLoading,
@@ -97,7 +95,6 @@ function GGC() {
 
   const allowanceNumber = allowance ? formatEther(allowance as bigint) : 0;
 
-  console.log('allowance', approveError?.message);
   const renderAllowance = (_isLoading: boolean) => {
     if (_isLoading) {
       return 'loading...';
