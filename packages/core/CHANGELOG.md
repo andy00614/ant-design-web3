@@ -1,5 +1,17 @@
 # @levellink/core
 
+## 0.0.5
+
+### Patch Changes
+
+- d737a87: update contract address
+
+## 0.0.4
+
+### Patch Changes
+
+- rpc地址修改
+
 ## 0.0.3
 
 ### Patch Changes
