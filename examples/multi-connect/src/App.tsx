@@ -7,9 +7,12 @@ import VaultV2 from './components/VaultV2';
 
 import './viem';
 
+import Gas from './components/Gas';
+
 function App() {
   return (
     <Provider applicationName="测试钱包连接">
+      <Gas />
       <MixConnectButton />
       <GGC />
       <Mint />
