@@ -1,5 +1,11 @@
 # @levellink/core
 
+## 0.0.7
+
+### Patch Changes
+
+- 增加chain在wagmi的provider上
+
 ## 0.0.6
 
 ### Patch Changes
