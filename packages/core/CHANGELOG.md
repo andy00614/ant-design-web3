@@ -1,5 +1,11 @@
 # @levellink/core
 
+## 0.0.9
+
+### Patch Changes
+
+- 更换合约地址
+
 ## 0.0.8
 
 ### Patch Changes
