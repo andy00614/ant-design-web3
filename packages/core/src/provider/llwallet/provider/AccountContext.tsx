@@ -11,6 +11,7 @@ export const NODE_ID_NAME = 'nodeId';
 export const DECRYPTOKEY = 'andytest123456auth';
 export const GAME_TOKEN = 'gameToken';
 export const PUBLIC_KEY = 'publicKey';
+export const CHAINID = 'chainId';
 
 type WalletInfo = any; // 定义更具体的类型
 
@@ -77,6 +78,7 @@ export const AccountProvider: FC<ContextProps> = ({
       const nodeId =
         urlParams.get(NODE_ID_NAME) && decodeURIComponent(urlParams.get(NODE_ID_NAME)!);
       const publicKey = urlParams.get(PUBLIC_KEY) && decodeURIComponent(urlParams.get(PUBLIC_KEY)!);
+      const chainId = urlParams.get(CHAINID) && decodeURIComponent(urlParams.get(CHAINID)!);
 
       if (token && nodeId) {
         const decodedToken = await deCrypto(token, DECRYPTOKEY);
@@ -84,12 +86,14 @@ export const AccountProvider: FC<ContextProps> = ({
         localStorage.setItem(TOKEN_NAME, decodedToken!);
         localStorage.setItem(NODE_ID_NAME, decodedNodeId!);
         localStorage.setItem(PUBLIC_KEY, publicKey!);
+        localStorage.setItem(CHAINID, chainId!);
 
         // 移除特定的查询参数，保留其他参数
         urlParams.delete(TOKEN_NAME);
         urlParams.delete(NODE_ID_NAME);
         urlParams.delete(GAME_TOKEN);
         urlParams.delete(PUBLIC_KEY);
+        urlParams.delete(CHAINID);
 
         // 构建新的 URL
         const newUrl = `${window.location.protocol}//${window.location.host}${window.location.pathname}`;
