@@ -47,6 +47,12 @@ export const NodeSelect: React.FC<{
   const [nodes, setNode] = useState<NetworkData[]>();
   const [selectId, setSelectId] = useState('');
 
+  const setNodeToLocalStorage = (id: string, url: string, chainId: string) => {
+    localStorage.setItem('nodeId', id);
+    localStorage.setItem('nodeUrl', url);
+    localStorage.setItem('chainId', chainId);
+  };
+
   useEffect(() => {
     async function fetchNodes() {
       const _nodes = await fetchData();
@@ -55,17 +61,14 @@ export const NodeSelect: React.FC<{
       if (nodeIdFromStorage) {
         setSelectId(nodeIdFromStorage);
       } else {
-        const id = _nodes?.[0]?.chainId.toString() || _nodes?.[0]?.id.toString();
+        const curNode = _nodes[0];
+        const id = curNode?.chainId.toString() || curNode?.id.toString();
         setSelectId(id);
+        setNodeToLocalStorage(id, curNode.url, curNode.chainId.toString());
       }
     }
     fetchNodes();
   }, []);
-
-  const setNodeToLocalStorage = (id: string, url: string) => {
-    localStorage.setItem('nodeId', id);
-    localStorage.setItem('nodeUrl', url);
-  };
 
   const handleChange = (nodeId: string | number) => {
     const node = nodes!.find((n) => n.id.toString() === nodeId.toString());
@@ -73,7 +76,7 @@ export const NodeSelect: React.FC<{
       if (onChange) {
         onChange(node);
       }
-      setNodeToLocalStorage(nodeId.toString(), node.url);
+      setNodeToLocalStorage(nodeId.toString(), node.url, node.chainId.toString());
       setSelectId(node.id.toString());
       window.location.reload();
     }
