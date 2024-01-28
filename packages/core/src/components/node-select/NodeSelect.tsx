@@ -55,7 +55,8 @@ export const NodeSelect: React.FC<{
       if (nodeIdFromStorage) {
         setSelectId(nodeIdFromStorage);
       } else {
-        setSelectId(_nodes?.[0]?.id.toString());
+        const id = _nodes?.[0]?.chainId.toString() || _nodes?.[0]?.id.toString();
+        setSelectId(id);
       }
     }
     fetchNodes();

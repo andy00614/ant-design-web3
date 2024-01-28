@@ -70,6 +70,11 @@ export const ChainSelectV2: React.FC<{
   };
 
   if (!nodes) return <div />;
+  console.log(
+    chains,
+    selectId,
+    chains.find((item) => item.id.toString() === selectId.toString()),
+  );
   return (
     <div>
       <ChainSelect
@@ -80,7 +85,7 @@ export const ChainSelectV2: React.FC<{
           const id = _chain.id;
           handleChange(id);
         }}
-        currentChain={chains.find((item) => item.id.toString() === selectId)}
+        currentChain={chains.find((item) => item.id.toString() === selectId.toString())}
       />
     </div>
   );

@@ -28,7 +28,7 @@ interface MyContextProps {
 
 const MyContext = createContext<MyContextProps | undefined>(undefined);
 
-interface ContextProps {
+export interface ContextProps {
   customToast: any;
   getWallet: () => Promise<WalletInfo>;
   onLogout?: () => void;
