@@ -42,7 +42,7 @@ export const ChainSelectV2: React.FC<{
     async function fetchNodes() {
       const _nodes = await fetchData();
       setNodes(_nodes);
-      const nodeIdFromStorage = typeof window !== 'undefined' && localStorage?.getItem('nodeId');
+      const nodeIdFromStorage = typeof window !== 'undefined' && localStorage?.getItem('chainId');
       if (nodeIdFromStorage) {
         setSelectId(nodeIdFromStorage);
       } else {
@@ -55,6 +55,7 @@ export const ChainSelectV2: React.FC<{
   const setNodeToLocalStorage = (id: string, url: string) => {
     localStorage.setItem('nodeId', id);
     localStorage.setItem('nodeUrl', url);
+    localStorage.setItem('chainId', id);
   };
 
   const handleChange = (nodeId: string | number) => {
