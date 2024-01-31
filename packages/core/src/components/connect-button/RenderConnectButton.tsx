@@ -34,7 +34,6 @@ const RenderConnectButton: React.FC<RenderConnectButtonProps> = ({
     },
     onDisconnectClick: disconnectFn,
   };
-
   if (isWeb3Wallet) {
     return (
       <div>

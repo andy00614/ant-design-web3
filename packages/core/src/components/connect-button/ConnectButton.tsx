@@ -19,6 +19,7 @@ export function MixConnectButton(): JSX.Element {
     <div>
       {!isConnected ? (
         <Connector
+          availableChains={[]}
           customWallets={[
             {
               name: 'LL Wallet',
