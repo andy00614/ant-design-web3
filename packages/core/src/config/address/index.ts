@@ -3,7 +3,7 @@ import { ChainIds } from '../chains';
 export type TAddressObj = Record<'Item' | 'GGC' | 'Node' | 'Market' | 'CrossChain', string>;
 export const contractAddresses: Record<number, TAddressObj> = {
   [ChainIds.DEVELOP]: {
-    Item: '0x708C1e9715077916a2e2D61c38181186d480714C',
+    Item: '0x3461979a90D700A290338957BfB09Fb297694A0e',
     GGC: '0x2bD4b92BE7a436DC043Dfd4710D5cBE52C94d39b',
     Node: '0x7A4d9623B0e9D2F59F8311f6A9D072c5351E57ca',
     Market: '0xd87f89Afaa80f40F6Be59c75a359941F1495768b',

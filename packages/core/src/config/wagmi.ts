@@ -6,7 +6,9 @@ import { publicProvider } from 'wagmi/providers/public';
 import { CHAINS_FOR_WAGMI } from './chains';
 import { WALLET_CONNECT_ID } from './const';
 
-const { publicClient, chains } = configureChains(CHAINS_FOR_WAGMI as any, [publicProvider()]);
+const { publicClient, chains } = configureChains(CHAINS_FOR_WAGMI as any, [publicProvider()], {
+  pollingInterval: 5000,
+});
 
 export const wagmiConfig: any = createConfig({
   autoConnect: true,

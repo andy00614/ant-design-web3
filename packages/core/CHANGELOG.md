@@ -1,5 +1,11 @@
 # @levellink/core
 
+## 0.0.11
+
+### Patch Changes
+
+- 适配chainId
+
 ## 0.0.10
 
 ### Patch Changes
