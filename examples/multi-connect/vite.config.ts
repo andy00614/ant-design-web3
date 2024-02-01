@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://whyindian.ddns.net',
+        target: 'https://whyindian.ddns.net/',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ''),
       },

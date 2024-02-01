@@ -1,6 +1,5 @@
 import { deCrypto } from './utils';
 
-export const URL = 'https://wallet.whyindian.site/';
 const iFrameId = 'info-iframe';
 
 export const genIframe = () => {
@@ -60,8 +59,6 @@ export const listenWallet = (callback: Function, decryptKey: string) => {
   }
 
   window.addEventListener('message', async (event) => {
-    if (event.origin !== URL) return;
-
     const { publicKey, ...authInfo } = event.data;
     const decryptedParams = await Promise.all(
       Object.entries(authInfo).map(async ([key, value]: any) => {

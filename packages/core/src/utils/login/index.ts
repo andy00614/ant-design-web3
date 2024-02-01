@@ -1,5 +1,5 @@
 // 假设你有以下的引入
-import { genIframe, listenWallet, openIframe, URL } from './iframe';
+import { genIframe, listenWallet, openIframe } from './iframe';
 import { deCrypto } from './utils';
 
 export function connectWalletForIframe(key: string, callback: Function): void {
@@ -8,7 +8,10 @@ export function connectWalletForIframe(key: string, callback: Function): void {
   openIframe();
 }
 
-export const connectWalletForURL = (applicationName: string = 'The Application'): void => {
+export const connectWalletForURL = (
+  applicationName: string = 'The Application',
+  URL: string,
+): void => {
   if (typeof window === 'undefined') {
     console.log('This script is running in Node.js');
     return;

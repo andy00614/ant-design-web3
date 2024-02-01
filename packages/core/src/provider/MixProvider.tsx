@@ -12,12 +12,14 @@ type TProviderProps = {
   customToast?: () => void;
   getWallet?: () => void;
   onLineWalletProps?: ContextProps;
+  walletURL: string;
 };
 
 export const Provider: React.FC<TProviderProps> = ({
   children,
   applicationName,
   onLineWalletProps,
+  walletURL,
 }) => {
   return (
     <div>
@@ -25,6 +27,7 @@ export const Provider: React.FC<TProviderProps> = ({
         applicationName={applicationName || ''}
         customToast={() => {}}
         getWallet={getWallet}
+        walletURL={walletURL}
         {...onLineWalletProps}
       >
         <WagmiWeb3ConfigProvider config={wagmiConfig} assets={[...CHAINS_FOR_WAGMI, WalletConnect]}>

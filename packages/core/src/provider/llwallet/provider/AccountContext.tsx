@@ -38,6 +38,7 @@ export interface ContextProps {
   children: React.ReactNode;
   applicationName: string;
   iframeURL?: string;
+  walletURL: string;
 }
 
 export const useAccount = () => {
@@ -57,6 +58,7 @@ export const AccountProvider: FC<ContextProps> = ({
   applicationName,
   customToast,
   iframeURL,
+  walletURL,
 }) => {
   const [wallet, setWallet] = useState<WalletInfo | null>(null);
   const [showDialog, setShowDialog] = useState(false);
@@ -124,7 +126,7 @@ export const AccountProvider: FC<ContextProps> = ({
   };
 
   const connectWallet = async (name?: string) => {
-    await connectWalletForURL(name || applicationName);
+    await connectWalletForURL(name || applicationName, walletURL);
   };
 
   const checkWhetherConnectHOC = (fn: Function, errorFunction?: Function) => {

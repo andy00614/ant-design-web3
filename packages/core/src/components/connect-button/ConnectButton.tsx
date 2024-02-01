@@ -13,7 +13,12 @@ export function MixConnectButton(): JSX.Element {
 
   const isConnected = isConnectedWithLocalWallet || wallet;
   const addressToUse = isConnectedWithLocalWallet ? address : wallet?.address;
-  const disconnectFn = isConnectedWithLocalWallet ? disconnect : logout;
+  const disconnectFn = isConnectedWithLocalWallet
+    ? () => {
+        disconnect();
+        localStorage.removeItem('token');
+      }
+    : logout;
 
   return (
     <div>
