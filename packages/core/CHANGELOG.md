@@ -1,5 +1,11 @@
 # @levellink/core
 
+## 0.0.13
+
+### Patch Changes
+
+- 本地钱包退出时候清空token的localstorage
+
 ## 0.0.12
 
 ### Patch Changes
