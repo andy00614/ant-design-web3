@@ -16,7 +16,7 @@ export function MixConnectButton(): JSX.Element {
   const disconnectFn = isConnectedWithLocalWallet
     ? () => {
         disconnect();
-        localStorage.removeItem('token');
+        localStorage.clear();
       }
     : logout;
 
