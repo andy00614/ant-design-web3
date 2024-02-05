@@ -1,5 +1,11 @@
 # @levellink/core
 
+## 0.0.18
+
+### Patch Changes
+
+- get wallet path error
+
 ## 0.0.17
 
 ### Patch Changes
