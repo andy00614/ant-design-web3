@@ -1,5 +1,11 @@
 # @levellink/core
 
+## 0.0.21
+
+### Patch Changes
+
+- 退出时清空所有storage
+
 ## 0.0.20
 
 ### Patch Changes

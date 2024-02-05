@@ -74,6 +74,7 @@ export const ChainSelectV2: React.FC<{
   return (
     <div>
       <ChainSelect
+        style={{ margin: '0 6px' }}
         className={className}
         chains={chains}
         hashId="css-dev-only-do-not-override-dkbvqv"
