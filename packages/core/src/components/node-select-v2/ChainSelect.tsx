@@ -42,7 +42,7 @@ export const ChainSelectV2: React.FC<{
     async function fetchNodes() {
       const _nodes = await fetchData();
       setNodes(_nodes);
-      const nodeIdFromStorage = typeof window !== 'undefined' && localStorage?.getItem('chainId');
+      const nodeIdFromStorage = typeof window !== 'undefined' && localStorage?.getItem('nodeId');
       if (nodeIdFromStorage) {
         setSelectId(nodeIdFromStorage);
       } else {
@@ -71,11 +71,6 @@ export const ChainSelectV2: React.FC<{
   };
 
   if (!nodes) return <div />;
-  console.log(
-    chains,
-    selectId,
-    chains.find((item) => item.id.toString() === selectId.toString()),
-  );
   return (
     <div>
       <ChainSelect
