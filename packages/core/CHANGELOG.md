@@ -1,5 +1,11 @@
 # @levellink/core
 
+## 0.0.20
+
+### Patch Changes
+
+- chainId fix
+
 ## 0.0.19
 
 ### Patch Changes
