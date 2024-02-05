@@ -39,7 +39,6 @@ export function getAuthorizationAndToken(token: string) {
 
 export function createRequest(config: TConfig) {
   const { baseURL, publicKey, tokenName, toast } = config;
-  console.log('baseURL', baseURL);
 
   return async <T>(
     url: string,
