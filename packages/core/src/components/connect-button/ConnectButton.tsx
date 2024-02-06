@@ -4,7 +4,7 @@ import { useDisconnect, useNetwork, useSwitchNetwork, useAccount as useWasmiAcco
 import { useAccount } from '../../';
 import RenderConnectButton from './RenderConnectButton';
 
-export function MixConnectButton(): JSX.Element {
+export function MixConnectButton({ walletURL }: { walletURL: string }): JSX.Element {
   const { connectWallet, wallet, logout } = useAccount();
   const { isConnected: isConnectedWithLocalWallet, address } = useWasmiAccount();
   const { disconnect } = useDisconnect();
@@ -40,6 +40,7 @@ export function MixConnectButton(): JSX.Element {
         </Connector>
       ) : (
         RenderConnectButton({
+          walletURL,
           address: addressToUse,
           disconnectFn,
           chain,

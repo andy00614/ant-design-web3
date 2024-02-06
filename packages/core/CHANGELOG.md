@@ -1,5 +1,11 @@
 # @levellink/core
 
+## 0.0.22
+
+### Patch Changes
+
+- update style
+
 ## 0.0.21
 
 ### Patch Changes

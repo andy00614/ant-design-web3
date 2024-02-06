@@ -1,7 +1,7 @@
 import React from 'react';
 import { ConnectButton } from '@levellink/web3';
 import type { Chain } from '@levellink/web3-common';
-import { Space } from 'antd';
+import { Button, Space } from 'antd';
 
 import { CHAINS_FOR_WAGMI } from '../../config';
 import { ChainSelectV2 } from '../node-select-v2';
@@ -12,6 +12,7 @@ interface RenderConnectButtonProps {
   chain: Chain | undefined;
   switchNetwork: ((chainId_?: number | undefined) => void) | undefined;
   isWeb3Wallet: boolean;
+  walletURL: string;
 }
 
 const RenderConnectButton: React.FC<RenderConnectButtonProps> = ({
@@ -20,6 +21,7 @@ const RenderConnectButton: React.FC<RenderConnectButtonProps> = ({
   chain,
   switchNetwork,
   isWeb3Wallet,
+  walletURL,
 }) => {
   // 提取公共的 ConnectButton 属性
   const commonConnectButtonProps = {
@@ -50,6 +52,7 @@ const RenderConnectButton: React.FC<RenderConnectButtonProps> = ({
     <Space.Compact>
       <ChainSelectV2 />
       <ConnectButton {...commonConnectButtonProps} />
+      <Button onClick={() => window.open(walletURL, '_blank')}>Go To Wallet</Button>
     </Space.Compact>
   );
 };
