@@ -12,7 +12,7 @@ interface RenderConnectButtonProps {
   chain: Chain | undefined;
   switchNetwork: ((chainId_?: number | undefined) => void) | undefined;
   isWeb3Wallet: boolean;
-  walletURL: string;
+  walletURL?: string;
 }
 
 const RenderConnectButton: React.FC<RenderConnectButtonProps> = ({
@@ -52,7 +52,7 @@ const RenderConnectButton: React.FC<RenderConnectButtonProps> = ({
     <Space.Compact>
       <ChainSelectV2 />
       <ConnectButton {...commonConnectButtonProps} />
-      <Button onClick={() => window.open(walletURL, '_blank')}>Go To Wallet</Button>
+      {walletURL && <Button onClick={() => window.open(walletURL, '_blank')}>Go To Wallet</Button>}
     </Space.Compact>
   );
 };
