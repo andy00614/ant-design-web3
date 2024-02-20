@@ -40,7 +40,10 @@
   "peerDependencies": {
     "@levellink/web3": "workspace:0.0.2",
     "@levellink/web3-wagmi": "workspace:0.0.2",
-    "wagmi": "^1.4.12"
+    "@web3modal/wagmi": "^4.0.5",
+    "@tanstack/react-query": "^5.22.2",
+    "viem": "^2.7.11",
+    "wagmi": "^2.5.7"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.18",
@@ -51,8 +54,7 @@
     "classnames": "^2.3.2",
     "crypto-js": "^4.2.0",
     "js-cookie": "^3.0.5",
-    "jsencrypt": "^3.3.2",
-    "viem": "^1.21.4"
+    "jsencrypt": "^3.3.2"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org",

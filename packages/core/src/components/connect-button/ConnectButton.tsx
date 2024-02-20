@@ -1,5 +1,5 @@
 import { ConnectButton, Connector } from '@levellink/web3';
-import { useDisconnect, useNetwork, useSwitchNetwork, useAccount as useWasmiAccount } from 'wagmi';
+import { useDisconnect, useSwitchChain, useAccount as useWasmiAccount } from 'wagmi';
 
 import { useAccount } from '../../';
 import RenderConnectButton from './RenderConnectButton';
@@ -8,8 +8,8 @@ export function MixConnectButton({ walletURL }: { walletURL?: string }): JSX.Ele
   const { connectWallet, wallet, logout } = useAccount();
   const { isConnected: isConnectedWithLocalWallet, address } = useWasmiAccount();
   const { disconnect } = useDisconnect();
-  const { chain } = useNetwork();
-  const { switchNetwork } = useSwitchNetwork();
+  const { chain } = useWasmiAccount();
+  const { switchChain } = useSwitchChain();
 
   const isConnected = isConnectedWithLocalWallet || wallet;
   const addressToUse = isConnectedWithLocalWallet ? address : wallet?.address;
@@ -45,7 +45,7 @@ export function MixConnectButton({ walletURL }: { walletURL?: string }): JSX.Ele
           address: addressToUse,
           disconnectFn,
           chain,
-          switchNetwork,
+          switchNetwork: switchChain,
           isWeb3Wallet: isConnectedWithLocalWallet,
         })
       )}

@@ -1,20 +1,13 @@
-import { MixConnectButton, Provider } from '@levellink/core';
-
-import Mint from './components/Powerups';
-import SignAddress from './components/SignAddress';
-import GGC from './components/Vault';
-import VaultV2 from './components/VaultV2';
+import { Provider } from '@levellink/core';
 
 import './viem';
+
+import ConnectButton from './ConnectButton';
 
 function App() {
   return (
     <Provider applicationName="测试钱包连接" walletURL="https://wallet-test.whyindian.site/">
-      <MixConnectButton />
-      <GGC />
-      <Mint />
-      <VaultV2 />
-      <SignAddress />
+      <ConnectButton />
     </Provider>
   );
 }

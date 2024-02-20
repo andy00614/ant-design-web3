@@ -1,8 +1,6 @@
 import React from 'react';
-import { WagmiWeb3ConfigProvider, WalletConnect } from '@levellink/web3-wagmi';
 
 import { getWallet } from '../api';
-import { CHAINS_FOR_WAGMI, wagmiConfig } from '../config';
 import type { ContextProps } from './';
 import { AccountProvider } from './';
 
@@ -30,9 +28,7 @@ export const Provider: React.FC<TProviderProps> = ({
         walletURL={walletURL}
         {...onLineWalletProps}
       >
-        <WagmiWeb3ConfigProvider config={wagmiConfig} assets={[...CHAINS_FOR_WAGMI, WalletConnect]}>
-          {children}
-        </WagmiWeb3ConfigProvider>
+        {children}
       </AccountProvider>
     </div>
   );

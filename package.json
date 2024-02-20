@@ -12,7 +12,7 @@
     "dev": "dumi dev",
     "dev:demo": "pnpm --filter multi-connect dev",
     "dev:lib": "pnpm run --parallel --if-present --recursive --filter \"@ant-design/*\" --filter \"@levellink/*\" dev",
-    "build": "pnpm run --recursive build",
+    "build": "pnpm run --recursive --filter \"!examples/**\" build",
     "build:docs": "dumi build",
     "postinstall": "pnpm run husky:prepare",
     "changeset": "changeset",

@@ -10,7 +10,7 @@ interface RenderConnectButtonProps {
   address?: string;
   disconnectFn: () => void;
   chain: Chain | undefined;
-  switchNetwork: ((chainId_?: number | undefined) => void) | undefined;
+  switchNetwork: any;
   isWeb3Wallet: boolean;
   walletURL?: string;
 }
