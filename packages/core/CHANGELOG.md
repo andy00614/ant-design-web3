@@ -1,5 +1,11 @@
 # @levellink/core
 
+## 1.0.0
+
+### Major Changes
+
+- ba658ef: 将本地化钱包的provider剔除
+
 ## 0.0.23
 
 ### Patch Changes
