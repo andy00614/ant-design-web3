@@ -4,34 +4,9 @@
     "inputs": [
       {
         "indexed": true,
-        "internalType": "address",
-        "name": "",
-        "type": "address"
-      },
-      {
-        "indexed": true,
-        "internalType": "address",
-        "name": "",
-        "type": "address"
-      },
-      {
-        "indexed": true,
         "internalType": "uint256",
         "name": "",
         "type": "uint256"
-      }
-    ],
-    "name": "Buy",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": true,
-        "internalType": "address",
-        "name": "",
-        "type": "address"
       },
       {
         "indexed": true,
@@ -52,7 +27,38 @@
         "type": "uint256"
       }
     ],
-    "name": "List",
+    "name": "CrossNFT",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      },
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "CrossTKN",
     "type": "event"
   },
   {
@@ -61,51 +67,67 @@
         "internalType": "address",
         "name": "adr",
         "type": "address"
+      }
+    ],
+    "name": "isOverwritten",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "coi",
+        "type": "bool"
       },
       {
         "internalType": "uint256",
-        "name": "tid",
+        "name": "amt",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bool",
+        "name": "tkn",
+        "type": "bool"
+      },
+      {
+        "internalType": "uint256",
+        "name": "bal",
         "type": "uint256"
       }
     ],
-    "name": "buy",
-    "outputs": [],
-    "stateMutability": "payable",
+    "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [
       {
-        "internalType": "address[]",
-        "name": "adr",
-        "type": "address[]"
+        "internalType": "uint256",
+        "name": "toChain",
+        "type": "uint256"
       },
       {
-        "internalType": "uint256[]",
-        "name": "tid",
-        "type": "uint256[]"
-      }
-    ],
-    "name": "buy",
-    "outputs": [],
-    "stateMutability": "payable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
         "internalType": "address",
-        "name": "adr",
+        "name": "to",
         "type": "address"
       },
       {
         "internalType": "uint256",
-        "name": "tid",
+        "name": "id",
+        "type": "uint256"
+      }
+    ],
+    "name": "transferNFT",
+    "outputs": [],
+    "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "toChain",
         "type": "uint256"
       },
       {
         "internalType": "address",
-        "name": "tkn",
+        "name": "to",
         "type": "address"
       },
       {
@@ -114,22 +136,9 @@
         "type": "uint256"
       }
     ],
-    "name": "list",
+    "name": "transferTKN",
     "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "owner",
-    "outputs": [
-      {
-        "internalType": "address",
-        "name": "adr",
-        "type": "address"
-      }
-    ],
-    "stateMutability": "view",
+    "stateMutability": "payable",
     "type": "function"
   }
 ]

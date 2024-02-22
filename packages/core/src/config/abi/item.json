@@ -236,6 +236,11 @@
         "type": "uint256"
       },
       {
+        "internalType": "uint256",
+        "name": "bid",
+        "type": "uint256"
+      },
+      {
         "internalType": "uint8",
         "name": "v",
         "type": "uint8"
@@ -269,6 +274,11 @@
         "type": "uint256"
       },
       {
+        "internalType": "uint256",
+        "name": "bid",
+        "type": "uint256"
+      },
+      {
         "internalType": "uint8",
         "name": "v",
         "type": "uint8"
@@ -287,6 +297,19 @@
     "name": "mint",
     "outputs": [],
     "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "adr",
+        "type": "address"
+      }
+    ],
+    "name": "mint",
+    "outputs": [],
+    "stateMutability": "nonpayable",
     "type": "function"
   },
   {
@@ -447,7 +470,7 @@
     "outputs": [
       {
         "internalType": "string",
-        "name": "",
+        "name": "str",
         "type": "string"
       }
     ],
@@ -490,6 +513,11 @@
         "type": "uint256"
       },
       {
+        "internalType": "uint256",
+        "name": "bid",
+        "type": "uint256"
+      },
+      {
         "internalType": "uint8",
         "name": "v",
         "type": "uint8"
@@ -509,87 +537,5 @@
     "outputs": [],
     "stateMutability": "payable",
     "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "adr",
-        "type": "address"
-      }
-    ],
-    "stateMutability": "nonpayable",
-    "type": "constructor"
-  },
-  {
-    "stateMutability": "payable",
-    "type": "fallback"
-  },
-  {
-    "inputs": [],
-    "name": "implementation",
-    "outputs": [
-      {
-        "internalType": "address",
-        "name": "adr",
-        "type": "address"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "bytes32",
-        "name": "byt",
-        "type": "bytes32"
-      }
-    ],
-    "name": "mem",
-    "outputs": [
-      {
-        "internalType": "bytes32",
-        "name": "val",
-        "type": "bytes32"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "bytes32",
-        "name": "byt",
-        "type": "bytes32"
-      },
-      {
-        "internalType": "bytes32",
-        "name": "val",
-        "type": "bytes32"
-      }
-    ],
-    "name": "mem",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "owner",
-    "outputs": [
-      {
-        "internalType": "address",
-        "name": "adr",
-        "type": "address"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "stateMutability": "payable",
-    "type": "receive"
   }
 ]
