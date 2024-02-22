@@ -1,5 +1,11 @@
 # @levellink/core
 
+## 1.0.1
+
+### Patch Changes
+
+- 更新abi和合约地址
+
 ## 1.0.0
 
 ### Major Changes

@@ -3,6 +3,7 @@ import axios from 'axios';
 import Cookies from 'js-cookie';
 
 import { encrypt } from './crypto';
+import { getNaMs } from './time';
 
 export interface TConfig {
   baseURL: string;
@@ -65,8 +66,7 @@ export function createRequest(config: TConfig) {
       headers: {
         ...headerWithAuth,
         networkId: localStorage.getItem('nodeId'),
-        requestId:
-          Date.now().toString() + completeUrl.slice(-4) + Math.floor(Math.random() * 100000),
+        requestId: getNaMs(),
       },
       withCredentials: false,
     };
