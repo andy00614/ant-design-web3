@@ -1,5 +1,11 @@
 # @levellink/core
 
+## 1.0.2
+
+### Patch Changes
+
+- requestid获取为纳秒, 更新abi中的mint方法
+
 ## 1.0.1
 
 ### Patch Changes
