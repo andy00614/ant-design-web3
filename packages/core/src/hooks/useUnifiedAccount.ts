@@ -1,4 +1,4 @@
-import { useAccount as useWagmiAccount } from 'wagmi';
+import { useDisconnect, useAccount as useWagmiAccount } from 'wagmi';
 
 import { useAccount as useMyWalletAccount } from '../provider';
 
@@ -19,6 +19,7 @@ export function useUnifiedAccount(): UnifiedAccountType {
   const wagmiAccount = useWagmiAccount();
   const myWalletAccount = useMyWalletAccount();
   const whichWallet = getWhichWallet(wagmiAccount.isConnected, myWalletAccount.isConnected);
+  const { disconnect: _disconnect } = useDisconnect();
 
   const isConnected = someLogicToDetermineIsConnected(
     wagmiAccount.isConnected,
@@ -32,8 +33,17 @@ export function useUnifiedAccount(): UnifiedAccountType {
     account = myWalletAccount;
   }
 
+  const disconnect = () => {
+    if (whichWallet === 'locale') {
+      _disconnect();
+    } else {
+      myWalletAccount.logout();
+    }
+  };
+
   return {
     ...account,
+    disconnect,
     whichWallet,
     // @ts-ignore wagmi1.x的版本这里类型定义的有问题
     isConnected,
