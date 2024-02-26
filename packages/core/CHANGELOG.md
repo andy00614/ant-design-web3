@@ -1,5 +1,11 @@
 # @levellink/core
 
+## 1.0.4
+
+### Patch Changes
+
+- 1.更新connectwallet hoc 2.修复disconnect没有清空token的情况
+
 ## 1.0.3
 
 ### Patch Changes

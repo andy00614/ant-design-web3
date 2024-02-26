@@ -1,5 +1,5 @@
+import { createWeb3Modal } from '@levellink/wagmimodal/react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { createWeb3Modal } from '@web3modal/wagmi/react';
 import { createConfig, http, WagmiProvider } from 'wagmi';
 import { bscTestnet, mainnet, sepolia } from 'wagmi/chains';
 import { coinbaseWallet, injected, walletConnect } from 'wagmi/connectors';

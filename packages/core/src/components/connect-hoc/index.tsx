@@ -1,6 +1,6 @@
 import type { ComponentType } from 'react';
 import React from 'react';
-import { useWeb3Modal } from '@web3modal/wagmi/react';
+import { useWeb3Modal } from '@levellink/wagmimodal/react';
 import { Button } from 'antd';
 
 import { useUnifiedAccount } from '../..';

@@ -1,4 +1,4 @@
-import '@web3modal/wagmi/react';
+import '@levellink/wagmimodal/react';
 
 export default function ConnectButton() {
   // 4. Use modal hook
