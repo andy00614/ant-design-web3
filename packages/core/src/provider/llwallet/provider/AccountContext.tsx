@@ -57,7 +57,6 @@ export const AccountProvider: FC<ContextProps> = ({
   onClose,
   applicationName,
   customToast,
-  iframeURL,
   walletURL,
 }) => {
   const [wallet, setWallet] = useState<WalletInfo | null>(null);
@@ -181,7 +180,7 @@ export const AccountProvider: FC<ContextProps> = ({
       }}
     >
       <CommunicationAppProvider
-        iframeURL={iframeURL}
+        iframeURL={walletURL}
         events={{
           onLogout: logout,
           onLock: logout,
