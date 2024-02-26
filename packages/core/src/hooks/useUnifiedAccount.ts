@@ -36,9 +36,8 @@ export function useUnifiedAccount(): UnifiedAccountType {
   const disconnect = () => {
     if (whichWallet === 'locale') {
       _disconnect();
-    } else {
-      myWalletAccount.logout();
     }
+    myWalletAccount.logout();
   };
 
   return {
