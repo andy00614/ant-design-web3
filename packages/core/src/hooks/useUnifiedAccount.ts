@@ -12,6 +12,8 @@ type UnifiedAccountType = Partial<
   WagmiAccountType &
     MyWalletAccountType & {
       whichWallet: 'locale' | 'myWallet';
+    } & {
+      disconnect: () => void;
     }
 >;
 

@@ -1,5 +1,11 @@
 # @levellink/core
 
+## 1.0.5
+
+### Patch Changes
+
+- 增加 @levellink/wagmimodal 依赖
+
 ## 1.0.4
 
 ### Patch Changes
