@@ -1,17 +1,15 @@
 import React from 'react';
 import { useWeb3Modal } from '@levellink/wagmimodal/react';
-import { ConnectButton, type Chain } from '@levellink/web3';
+import { ConnectButton } from '@levellink/web3';
 import { Button, message, Space } from 'antd';
 
-import { chains } from '../../config';
 import { useCurrentChain } from '../../hooks';
 import { useUnifiedAccount } from '../../hooks/useUnifiedAccount';
 import { ChainSelectV2 } from '../node-select-v2';
 
 const LoginButton: React.FC = () => {
   const { chain: currentChain } = useCurrentChain();
-  const [chain, setChain] = React.useState<Chain>(chains[0]);
-  const { isConnected, isConnecting, address, disconnect, whichWallet } = useUnifiedAccount();
+  const { isConnected, address, disconnect, whichWallet } = useUnifiedAccount();
   const { open } = useWeb3Modal();
 
   if (!isConnected) {
