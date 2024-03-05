@@ -1,5 +1,11 @@
 # @levellink/core
 
+## 1.0.10
+
+### Patch Changes
+
+- add crosschain abi
+
 ## 1.0.9
 
 ### Patch Changes
