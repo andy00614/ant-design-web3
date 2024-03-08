@@ -93,11 +93,7 @@ export function createRequest(config: TConfig) {
     } catch (error) {
       const status = (error as any)?.response?.status;
       if (status === STATUS_CODE.AUTH_FAILED) {
-        toast?.('Authentication failed, redirecting to the homepage.', 'error');
-        setTimeout(() => {
-          localStorage.clear();
-          config.noAuthCallback?.();
-        }, 2000);
+        config.noAuthCallback?.();
       } else if (status >= 400 && status < 600) {
         const message = (error as any)?.response?.data?.message || '未知错误';
         toast?.(`错误 ${status}: ${message}`, 'error');

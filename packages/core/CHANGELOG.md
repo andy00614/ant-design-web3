@@ -1,5 +1,11 @@
 # @levellink/core
 
+## 1.0.11
+
+### Patch Changes
+
+- whichWallet 判断包括free
+
 ## 1.0.10
 
 ### Patch Changes
