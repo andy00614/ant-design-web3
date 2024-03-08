@@ -20,16 +20,14 @@ export const Provider: React.FC<TProviderProps> = ({
   walletURL,
 }) => {
   return (
-    <div>
-      <AccountProvider
-        applicationName={applicationName || ''}
-        customToast={() => {}}
-        getWallet={getWallet}
-        walletURL={walletURL}
-        {...onLineWalletProps}
-      >
-        {children}
-      </AccountProvider>
-    </div>
+    <AccountProvider
+      applicationName={applicationName || ''}
+      customToast={() => {}}
+      getWallet={getWallet}
+      walletURL={walletURL}
+      {...onLineWalletProps}
+    >
+      {children}
+    </AccountProvider>
   );
 };

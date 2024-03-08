@@ -1,5 +1,11 @@
 # @levellink/core
 
+## 1.0.12
+
+### Patch Changes
+
+- 无权限强制的问题修复
+
 ## 1.0.11
 
 ### Patch Changes
