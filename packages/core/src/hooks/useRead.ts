@@ -35,5 +35,3 @@ export const useItemContractRead = (target: UseReadContractParameters) =>
   useContractRead('Item', target);
 export const useNodeContractRead = (target: UseReadContractParameters) =>
   useContractRead('Node', target);
-export const useMarketContractRead = (target: UseReadContractParameters) =>
-  useContractRead('Market', target);

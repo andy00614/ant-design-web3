@@ -1,5 +1,12 @@
 # @levellink/core
 
+## 1.0.14
+
+### Patch Changes
+
+- 修改合约地址和abi
+- dee2406: 更新合约地址
+
 ## 1.0.13
 
 ### Patch Changes
