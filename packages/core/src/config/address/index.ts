@@ -1,6 +1,7 @@
+import type { TContractType } from '../../type';
 import { ChainIds } from '../chains';
 
-export type TAddressObj = Record<'Item' | 'GGC' | 'Node' | 'CrossChain', string>;
+export type TAddressObj = Record<TContractType, string>;
 export const contractAddresses: Record<number, TAddressObj> = {
   [ChainIds.DEVELOP]: {
     Item: '0x9385E72A7Bf34dB6EBcca3AD264c000E19394936',

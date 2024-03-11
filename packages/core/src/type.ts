@@ -1,1 +1,1 @@
-export type TContractType = 'Item' | 'GGC' | 'Node' | 'Market';
+export type TContractType = 'Item' | 'GGC' | 'Node' | 'CrossChain';

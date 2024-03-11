@@ -1,6 +1,6 @@
 import type { Abi } from 'viem';
 
-import { ABI_GGC, ABI_ITEM, ABI_MARKET, ABI_NODE } from '../config';
+import { ABI_CROSSCHAIN, ABI_GGC, ABI_ITEM, ABI_NODE } from '../config';
 import type { TContractType } from '../type';
 import { useCurrentChain } from './useCurrentChain';
 
@@ -11,7 +11,7 @@ export default function useAddressAndAbi(contractType: TContractType) {
     GGC: ABI_GGC,
     Item: ABI_ITEM,
     Node: ABI_NODE,
-    Market: ABI_MARKET,
+    CrossChain: ABI_CROSSCHAIN,
   }[contractType] as Abi;
   return {
     contractAddress,
