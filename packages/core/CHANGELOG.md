@@ -1,5 +1,11 @@
 # @levellink/core
 
+## 1.0.13
+
+### Patch Changes
+
+- 去掉provider中的div
+
 ## 1.0.12
 
 ### Patch Changes
