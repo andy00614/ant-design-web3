@@ -4,10 +4,10 @@ import { ChainIds } from '../chains';
 export type TAddressObj = Record<TContractType, string>;
 export const contractAddresses: Record<number, TAddressObj> = {
   [ChainIds.DEVELOP]: {
-    Node: '0x7557195212c1846640beb486C34797EBBf56DA75',
-    Item: '0xE28177a0874f42bc30244Ae48B65507CB97e902d',
-    GGC: '0x64677E2D9306eB88fbd183Ac13067A1BF56501dE',
-    CrossChain: '0xB74Ac04F3347B27f4105A8b39A04a003937D8Ff3',
+    Node: '0xc384f415B16dB2468fb8A335eD55e5C8779dD3c9',
+    Item: '0xA1D396579F5d8CB5AC114F4e42CbFBdD950266e2',
+    GGC: '0x66C04dE21F242A0A24e0d851E6D396348B3aA23c',
+    CrossChain: '0x8D234675aF7efB79E7Dd158381C662f1963b27F9',
   },
   [ChainIds.BSCTestNet]: {
     Node: '0xA62fcE5B6a8Ee2809fAA4664BC9748018Ddb48E9',
