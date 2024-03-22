@@ -7,7 +7,7 @@ import { useUnifiedAccount } from '../..';
 
 export function ConnectButtonHOC<
   P extends JSX.IntrinsicAttributes & { children?: React.ReactNode },
->(Component: ComponentType<P>): ComponentType<P> {
+>(Component: ComponentType<P>, title: string): ComponentType<P> {
   return function WrappedComponent(props: P) {
     const account = useUnifiedAccount();
     const { open } = useWeb3Modal();
@@ -19,7 +19,7 @@ export function ConnectButtonHOC<
             open();
           }}
         >
-          Wallet Connect
+          {title || 'Wallet Connect'}
         </Button>
       );
     }

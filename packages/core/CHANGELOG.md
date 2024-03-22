@@ -1,5 +1,11 @@
 # @levellink/core
 
+## 1.0.22
+
+### Patch Changes
+
+- connect wallet 支持自定义名称
+
 ## 1.0.21
 
 ### Patch Changes
