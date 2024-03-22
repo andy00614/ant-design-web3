@@ -7,13 +7,13 @@ import { useCurrentChain } from '../../hooks';
 import { useUnifiedAccount } from '../../hooks/useUnifiedAccount';
 import { ChainSelectV2 } from '../node-select-v2';
 
-const LoginButton: React.FC = () => {
+const LoginButton: React.FC<{ title: string }> = ({ title }) => {
   const { chain: currentChain } = useCurrentChain();
   const { isConnected, address, disconnect, whichWallet } = useUnifiedAccount();
   const { open } = useWeb3Modal();
 
   if (!isConnected) {
-    return <Button onClick={() => open()}>Wallect Connect</Button>;
+    return <Button onClick={() => open()}>{title || 'Wallect Connect'}</Button>;
   }
   const _ConnectButton = () => (
     <ConnectButton
