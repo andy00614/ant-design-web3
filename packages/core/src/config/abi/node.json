@@ -86,6 +86,11 @@
     "name": "checkVoting",
     "outputs": [
       {
+        "internalType": "bytes32[5]",
+        "name": "",
+        "type": "bytes32[5]"
+      },
+      {
         "internalType": "uint256",
         "name": "",
         "type": "uint256"
@@ -96,14 +101,14 @@
         "type": "address"
       },
       {
-        "internalType": "bytes32[5]",
-        "name": "",
-        "type": "bytes32[5]"
-      },
-      {
         "internalType": "address",
         "name": "",
         "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
       }
     ],
     "stateMutability": "view",
@@ -152,29 +157,6 @@
         "internalType": "address",
         "name": "adr",
         "type": "address"
-      },
-      {
-        "internalType": "bytes32",
-        "name": "byt",
-        "type": "bytes32"
-      },
-      {
-        "internalType": "bytes32",
-        "name": "val",
-        "type": "bytes32"
-      }
-    ],
-    "name": "execute",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "adr",
-        "type": "address"
       }
     ],
     "name": "games",
@@ -191,6 +173,29 @@
       }
     ],
     "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "adr",
+        "type": "address"
+      },
+      {
+        "internalType": "bytes32",
+        "name": "byt",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "bytes32",
+        "name": "val",
+        "type": "bytes32"
+      }
+    ],
+    "name": "mem",
+    "outputs": [],
+    "stateMutability": "nonpayable",
     "type": "function"
   },
   {

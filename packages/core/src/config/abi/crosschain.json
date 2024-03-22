@@ -73,16 +73,6 @@
     "outputs": [
       {
         "internalType": "bool",
-        "name": "coi",
-        "type": "bool"
-      },
-      {
-        "internalType": "uint256",
-        "name": "amt",
-        "type": "uint256"
-      },
-      {
-        "internalType": "bool",
         "name": "tkn",
         "type": "bool"
       },
@@ -104,12 +94,12 @@
       },
       {
         "internalType": "address",
-        "name": "to",
+        "name": "toa",
         "type": "address"
       },
       {
         "internalType": "uint256",
-        "name": "id",
+        "name": "tid",
         "type": "uint256"
       }
     ],
