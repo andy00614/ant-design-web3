@@ -5,18 +5,6 @@ import { defineConfig } from 'vite';
 export default defineConfig({
   plugins: [react()],
   server: {
-    proxy: {
-      // '/api': {
-      //   target: 'https://whyindian.ddns.net/',
-      //   changeOrigin: true,
-      //   rewrite: (path) => path.replace(/^\/api/, ''),
-      // },
-      // '/chain': {
-      //   // 新增的代理配置
-      //   target: 'https://whyindian.ddns.net',
-      //   changeOrigin: true,
-      //   rewrite: (path) => path.replace(/^\/chain/, ''),
-      // },
-    },
+    proxy: {},
   },
 });

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import classNames from 'classnames';
 
 import { Select } from '..';
+import { WALLET_SERVICE_URL } from '../../config';
 
 export interface NetworkData {
   id: number;
@@ -21,7 +22,7 @@ export interface NetworkData {
 
 async function fetchData() {
   try {
-    const response = await fetch('https://whyindian.ddns.net/wallet/network/list', {
+    const response = await fetch(`${WALLET_SERVICE_URL}/wallet/network/list`, {
       method: 'GET', // GET 请求
       headers: {
         'Content-Type': 'application/json',

@@ -1,7 +1,8 @@
+import { WALLET_SERVICE_URL } from '../config';
 import { createRequest } from '../utils';
 
 export const requestInstance: any = createRequest({
-  baseURL: 'https://whyindian.ddns.net/testnet/wallet',
+  baseURL: `${WALLET_SERVICE_URL}/wallet`,
   tokenName: 'token',
   encryptBlackList: [],
   // TODO: 这里不能hardcode
