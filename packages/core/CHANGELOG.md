@@ -1,5 +1,11 @@
 # @levellink/core
 
+## 1.0.28
+
+### Patch Changes
+
+- update
+
 ## 1.0.27
 
 ### Patch Changes
