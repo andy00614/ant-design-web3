@@ -1,5 +1,17 @@
 # @levellink/core
 
+## 1.0.27
+
+### Patch Changes
+
+- upgrade
+
+## 1.0.26
+
+### Patch Changes
+
+- fix: 纳秒数修改
+
 ## 1.0.25
 
 ### Patch Changes

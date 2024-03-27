@@ -66,7 +66,7 @@ export function createRequest(config: TConfig) {
       headers: {
         ...headerWithAuth,
         networkId: localStorage.getItem('nodeId'),
-        requestId: getNaMs(),
+        requestId: getNaMs().toString(),
       },
       withCredentials: false,
     };
