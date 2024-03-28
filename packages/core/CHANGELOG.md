@@ -1,5 +1,11 @@
 # @levellink/core
 
+## 1.0.31
+
+### Patch Changes
+
+- f2f9af7: update abi
+
 ## 1.0.30
 
 ### Patch Changes
