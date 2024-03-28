@@ -53,6 +53,19 @@
     "anonymous": false,
     "inputs": [
       {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "MetadataUpdate",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
         "indexed": true,
         "internalType": "address",
         "name": "",
@@ -287,6 +300,11 @@
         "internalType": "uint256[]",
         "name": "ids",
         "type": "uint256[]"
+      },
+      {
+        "internalType": "uint256",
+        "name": "num",
+        "type": "uint256"
       },
       {
         "internalType": "uint256",
@@ -563,19 +581,6 @@
     "inputs": [
       {
         "internalType": "uint256",
-        "name": "amt",
-        "type": "uint256"
-      }
-    ],
-    "name": "test",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
         "name": "tid",
         "type": "uint256"
       }
@@ -618,12 +623,12 @@
     "inputs": [
       {
         "internalType": "uint256",
-        "name": "amt",
+        "name": "tid",
         "type": "uint256"
       },
       {
         "internalType": "uint256",
-        "name": "tid",
+        "name": "amt",
         "type": "uint256"
       },
       {
