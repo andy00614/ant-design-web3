@@ -1,5 +1,11 @@
 # @levellink/core
 
+## 1.0.33
+
+### Patch Changes
+
+- update ConnectButtonHOC type
+
 ## 1.0.32
 
 ### Patch Changes
