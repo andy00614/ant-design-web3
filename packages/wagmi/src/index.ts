@@ -1,3 +1,3 @@
 export * from './wagmi-provider';
 export * from './wallets';
-export * from '@ant-design/web3-assets';
+export * from '@levellink/web3-assets';

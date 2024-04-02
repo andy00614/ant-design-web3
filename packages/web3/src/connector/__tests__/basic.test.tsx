@@ -4,8 +4,8 @@ import {
   Connector,
   type Account,
   type ConnectorTriggerProps,
-} from '@ant-design/web3';
-import { metadata_MetaMask } from '@ant-design/web3-assets';
+} from '@levellink/web3';
+import { metadata_MetaMask } from '@levellink/web3-assets';
 import { fireEvent, render } from '@testing-library/react';
 import { Button } from 'antd';
 import { describe, expect, it, vi } from 'vitest';

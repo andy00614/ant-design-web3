@@ -1,6 +1,6 @@
 import React, { CSSProperties, useCallback, useMemo, useState } from 'react';
 import AntdIcon from '@ant-design/icons';
-import * as AntdWeb3Icons from '@ant-design/web3-icons';
+import * as AntdWeb3Icons from '@levellink/web3-icons';
 import { Affix, Empty, Grid, Input, Segmented, type SegmentedProps } from 'antd';
 import { createStyles, useTheme } from 'antd-style';
 import { useIntl } from 'dumi';

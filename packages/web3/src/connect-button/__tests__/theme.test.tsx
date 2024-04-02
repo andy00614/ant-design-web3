@@ -1,4 +1,4 @@
-import { ConnectButton } from '@ant-design/web3';
+import { ConnectButton } from '@levellink/web3';
 import { render } from '@testing-library/react';
 import { ConfigProvider } from 'antd';
 import { describe, expect, it } from 'vitest';

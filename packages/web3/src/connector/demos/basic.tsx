@@ -1,7 +1,7 @@
 import React from 'react';
-import type { Account } from '@ant-design/web3';
-import { ConnectButton, Connector } from '@ant-design/web3';
-import { metadata_MetaMask, metadata_WalletConnect } from '@ant-design/web3-assets';
+import type { Account } from '@levellink/web3';
+import { ConnectButton, Connector } from '@levellink/web3';
+import { metadata_MetaMask, metadata_WalletConnect } from '@levellink/web3-assets';
 
 const App: React.FC = () => {
   const [account, setAccount] = React.useState<Account>();

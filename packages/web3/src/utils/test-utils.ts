@@ -1,4 +1,4 @@
-import type { WalletExtensionItem } from '@ant-design/web3-common';
+import type { WalletExtensionItem } from '@levellink/web3-common';
 
 const oriClipboard = window.navigator.clipboard;
 // 代理 navigator.clipboard 方法用于测试复制文本到粘贴板的功能

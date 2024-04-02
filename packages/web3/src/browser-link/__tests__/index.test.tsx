@@ -1,7 +1,7 @@
 import { LinkOutlined } from '@ant-design/icons';
-import { Mainnet } from '@ant-design/web3-assets';
-import { ChainIds, Web3ConfigProvider } from '@ant-design/web3-common';
-import { BitcoinCircleColorful } from '@ant-design/web3-icons';
+import { Mainnet } from '@levellink/web3-assets';
+import { ChainIds, Web3ConfigProvider } from '@levellink/web3-common';
+import { BitcoinCircleColorful } from '@levellink/web3-icons';
 import { render } from '@testing-library/react';
 import { describe, expect, it, vi } from 'vitest';
 

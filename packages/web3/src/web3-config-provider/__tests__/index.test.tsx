@@ -6,8 +6,8 @@ import {
   useNFT,
   Web3ConfigProvider,
   type Account,
-} from '@ant-design/web3';
-import type { Web3ConfigProviderProps } from '@ant-design/web3-common';
+} from '@levellink/web3';
+import type { Web3ConfigProviderProps } from '@levellink/web3-common';
 import { fireEvent, render } from '@testing-library/react';
 import { Spin } from 'antd';
 import { describe, expect, it, vi } from 'vitest';

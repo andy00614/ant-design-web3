@@ -1,6 +1,6 @@
 import React from 'react';
-import { ConnectModal, type Wallet } from '@ant-design/web3';
-import { metadata_MetaMask, metadata_WalletConnect } from '@ant-design/web3-assets';
+import { ConnectModal, type Wallet } from '@levellink/web3';
+import { metadata_MetaMask, metadata_WalletConnect } from '@levellink/web3-assets';
 import { Card, ConfigProvider, Radio, Space, theme } from 'antd';
 
 const App: React.FC = () => {

@@ -1,4 +1,35 @@
-# @ant-design/web3-icons
+# @levellink/web3-icons
+
+## 0.0.2
+
+### Patch Changes
+
+- - 将两个钱包的chains配置都是用同一个配置变量
+  - 统一本地钱包和线上钱包链接按钮的样式
+
+## 0.0.1
+
+### Patch Changes
+
+- 测试是否patch更新
+
+## 0.0.0
+
+### Patch Changes
+
+- 版本依赖的调整
+
+## 0.0.0-alpha-20240115151406
+
+### Minor Changes
+
+- test alpha 发布
+
+## 0.0.0-alpha-20240115150811
+
+### Patch Changes
+
+- test
 
 ## 1.2.0
 

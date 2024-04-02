@@ -1,5 +1,5 @@
-import { NFTCard } from '@ant-design/web3';
-import { CoinbaseWallet, WagmiWeb3ConfigProvider } from '@ant-design/web3-wagmi';
+import { NFTCard } from '@levellink/web3';
+import { CoinbaseWallet, WagmiWeb3ConfigProvider } from '@levellink/web3-wagmi';
 import { configureChains, createConfig, mainnet } from 'wagmi';
 import { MetaMaskConnector } from 'wagmi/connectors/metaMask';
 import { WalletConnectConnector } from 'wagmi/connectors/walletConnect';

@@ -1,1 +1,1 @@
-export { Web3ConfigProvider } from '@ant-design/web3-common';
+export { Web3ConfigProvider } from '@levellink/web3-common';

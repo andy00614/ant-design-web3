@@ -1,4 +1,4 @@
-import { ConnectButton } from '@ant-design/web3';
+import { ConnectButton } from '@levellink/web3';
 import { Space } from 'antd';
 import type { MenuItemType } from 'antd/es/menu/hooks/useItems';
 

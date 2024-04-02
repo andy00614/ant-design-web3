@@ -1,5 +1,5 @@
 import React from 'react';
-import { useProvider } from '@ant-design/web3';
+import { useProvider } from '@levellink/web3';
 import { fireEvent, render } from '@testing-library/react';
 import { describe, expect, it, vi } from 'vitest';
 

@@ -1,6 +1,6 @@
 {
-  "name": "@ant-design/web3",
-  "version": "1.2.0",
+  "name": "@levellink/web3",
+  "version": "0.0.2",
   "main": "dist/lib/index.js",
   "module": "dist/esm/index.js",
   "typings": "dist/esm/index.d.ts",
@@ -36,15 +36,15 @@
   "dependencies": {
     "@ant-design/cssinjs": "^1.18.1",
     "@ant-design/icons": "^5.2.6",
-    "@ant-design/web3-common": "workspace:*",
-    "@ant-design/web3-icons": "workspace:*",
-    "@ant-design/web3-assets": "workspace:*",
+    "@levellink/web3-common": "workspace:*",
+    "@levellink/web3-icons": "workspace:*",
+    "@levellink/web3-assets": "workspace:*",
     "@ctrl/tinycolor": "^4.0.2",
     "antd": "^5.12.4",
     "classnames": "^2.3.2"
   },
   "devDependencies": {
-    "@ant-design/web3-wagmi": "workspace:*",
+    "@levellink/web3-wagmi": "workspace:*",
     "@types/react": "^18.2.45",
     "@types/react-dom": "^18.2.18",
     "father": "^4.3.8",

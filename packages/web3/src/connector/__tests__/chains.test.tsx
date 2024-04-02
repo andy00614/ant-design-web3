@@ -1,7 +1,7 @@
 import React from 'react';
-import { Connector, type ConnectorTriggerProps } from '@ant-design/web3';
-import { Mainnet, Polygon } from '@ant-design/web3-assets';
-import type { Chain } from '@ant-design/web3-common';
+import { Connector, type ConnectorTriggerProps } from '@levellink/web3';
+import { Mainnet, Polygon } from '@levellink/web3-assets';
+import type { Chain } from '@levellink/web3-common';
 import { fireEvent, render } from '@testing-library/react';
 import { Button } from 'antd';
 import { describe, expect, it, vi } from 'vitest';

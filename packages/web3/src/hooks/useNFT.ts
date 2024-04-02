@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import type { NFTMetadata, Web3ConfigProviderProps } from '@ant-design/web3-common';
+import type { NFTMetadata, Web3ConfigProviderProps } from '@levellink/web3-common';
 
 import useProvider from './useProvider';
 

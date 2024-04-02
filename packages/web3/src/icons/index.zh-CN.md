@@ -8,11 +8,11 @@ order: 1
 
 ## 使用方法
 
-使用图标组件，你需要安装 [@ant-design/web3-icons](https://www.npmjs.com/package/@ant-design/web3-icons) 图标组件包：
+使用图标组件，你需要安装 [@levellink/web3-icons](https://www.npmjs.com/package/@levellink/web3-icons) 图标组件包：
 
 <br />
 
-<NormalInstallDependencies packageNames="@ant-design/web3-icons" save="true"></NormalInstallDependencies>
+<NormalInstallDependencies packageNames="@levellink/web3-icons" save="true"></NormalInstallDependencies>
 
 <br />
 

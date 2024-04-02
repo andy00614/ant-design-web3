@@ -1,8 +1,8 @@
 import type React from 'react';
-import type { Locale, Wallet } from '@ant-design/web3-common';
+import type { Locale, Wallet } from '@levellink/web3-common';
 import type { ModalProps } from 'antd';
 
-export type { Wallet, WalletExtensionItem } from '@ant-design/web3-common';
+export type { Wallet, WalletExtensionItem } from '@levellink/web3-common';
 
 /**
  * @desc 新手指引面板的信息项

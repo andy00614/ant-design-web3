@@ -1,6 +1,6 @@
 import React from 'react';
-import { ConnectModal } from '@ant-design/web3';
-import { metadata_MetaMask, metadata_WalletConnect } from '@ant-design/web3-assets';
+import { ConnectModal } from '@levellink/web3';
+import { metadata_MetaMask, metadata_WalletConnect } from '@levellink/web3-assets';
 import { Card } from 'antd';
 
 import type { Wallet } from '../interface';

@@ -1,5 +1,5 @@
-import { ConnectButton, Connector } from '@ant-design/web3';
-import { Polygon, WagmiWeb3ConfigProvider, WalletConnect } from '@ant-design/web3-wagmi';
+import { ConnectButton, Connector } from '@levellink/web3';
+import { Polygon, WagmiWeb3ConfigProvider, WalletConnect } from '@levellink/web3-wagmi';
 import { configureChains, createConfig } from 'wagmi';
 import { mainnet, polygon } from 'wagmi/chains';
 import { MetaMaskConnector } from 'wagmi/connectors/metaMask';

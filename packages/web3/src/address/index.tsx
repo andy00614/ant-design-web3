@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 import React, { useContext, useEffect, useMemo, useRef, useState } from 'react';
 import { CheckOutlined, CopyOutlined } from '@ant-design/icons';
-import type { Locale } from '@ant-design/web3-common';
+import type { Locale } from '@levellink/web3-common';
 import type { TooltipProps } from 'antd';
 import { ConfigProvider, Space, Tooltip } from 'antd';
 import classNames from 'classnames';

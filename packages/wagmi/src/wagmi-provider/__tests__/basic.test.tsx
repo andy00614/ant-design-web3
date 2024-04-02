@@ -1,6 +1,6 @@
-import { Connector, useProvider, type ConnectorTriggerProps } from '@ant-design/web3';
-import { Mainnet } from '@ant-design/web3-assets';
-import { CoinbaseWallet, Polygon, WagmiWeb3ConfigProvider } from '@ant-design/web3-wagmi';
+import { Connector, useProvider, type ConnectorTriggerProps } from '@levellink/web3';
+import { Mainnet } from '@levellink/web3-assets';
+import { CoinbaseWallet, Polygon, WagmiWeb3ConfigProvider } from '@levellink/web3-wagmi';
 import { fireEvent, render } from '@testing-library/react';
 import { describe, expect, it, vi } from 'vitest';
 import { configureChains, createConfig } from 'wagmi';

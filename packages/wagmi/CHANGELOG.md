@@ -1,4 +1,71 @@
-# @ant-design/web3-wagmi
+# @levellink/web3-wagmi
+
+## 0.0.2
+
+### Patch Changes
+
+- - 将两个钱包的chains配置都是用同一个配置变量
+  - 统一本地钱包和线上钱包链接按钮的样式
+- Updated dependencies
+  - @levellink/web3-assets@0.0.2
+  - @levellink/web3-common@0.0.2
+
+## 0.0.1
+
+### Patch Changes
+
+- 测试是否patch更新
+- Updated dependencies
+  - @levellink/web3-assets@0.0.1
+  - @levellink/web3-common@0.0.1
+
+## 0.0.0
+
+### Patch Changes
+
+- 版本依赖的调整
+- Updated dependencies
+  - @levellink/web3-assets@0.0.0
+  - @levellink/web3-common@0.0.0
+
+## 0.0.0-alpha-20240116013921
+
+### Patch Changes
+
+- Updated dependencies
+  - @levellink/web3-common@0.0.0-alpha-20240116013921
+  - @levellink/web3-assets@0.0.0-alpha-20240116013921
+
+## 0.0.0-alpha-20240115151406
+
+### Minor Changes
+
+- test alpha 发布
+
+### Patch Changes
+
+- Updated dependencies
+  - @levellink/web3-assets@0.0.0-alpha-20240115151406
+  - @levellink/web3-common@0.0.0-alpha-20240115151406
+
+## 0.0.0-alpha-20240115150811
+
+### Patch Changes
+
+- test
+- Updated dependencies
+  - @levellink/web3-assets@0.0.0-alpha-20240115150811
+  - @levellink/web3-common@0.0.0-alpha-20240115150811
+
+## 0.0.0-alpha-20240115144528
+
+### Patch Changes
+
+- ee2159c: add levellink core repo, Made some antd-web3 modifications to adapt to levellink
+- Updated dependencies [ee2159c]
+- Updated dependencies [879548d]
+  - @levellink/web3-assets@0.0.0-alpha-20240115144528
+  - @levellink/web3-common@0.0.0-alpha-20240115144528
 
 ## 1.2.0
 
@@ -12,8 +79,8 @@
 - Updated dependencies [e5db9b7]
 - Updated dependencies [18def13]
 - Updated dependencies [17ca201]
-  - @ant-design/web3-common@1.2.0
-  - @ant-design/web3-assets@1.1.3
+  - @levellink/web3-common@1.2.0
+  - @levellink/web3-assets@1.1.3
 
 ## 1.1.2
 
@@ -21,8 +88,8 @@
 
 - d6a5339: chore: release 1.1.2 for republish
 - Updated dependencies [d6a5339]
-  - @ant-design/web3-assets@1.1.2
-  - @ant-design/web3-common@1.1.2
+  - @levellink/web3-assets@1.1.2
+  - @levellink/web3-common@1.1.2
 
 ## 1.1.1
 
@@ -30,8 +97,8 @@
 
 - 32f276a: chore: 1.1.1
 - Updated dependencies [32f276a]
-  - @ant-design/web3-assets@1.1.1
-  - @ant-design/web3-common@1.1.1
+  - @levellink/web3-assets@1.1.1
+  - @levellink/web3-common@1.1.1
 
 ## 1.1.0
 
@@ -50,8 +117,8 @@
 - Updated dependencies [b3e95c2]
 - Updated dependencies [3547f6b]
 - Updated dependencies [9de319c]
-  - @ant-design/web3-common@1.1.0
-  - @ant-design/web3-assets@1.1.0
+  - @levellink/web3-common@1.1.0
+  - @levellink/web3-assets@1.1.0
 
 ## 1.0.0
 
@@ -62,8 +129,8 @@
 ### Patch Changes
 
 - Updated dependencies [f330908]
-  - @ant-design/web3-assets@1.0.0
-  - @ant-design/web3-common@1.0.0
+  - @levellink/web3-assets@1.0.0
+  - @levellink/web3-common@1.0.0
 
 ## 0.2.0
 
@@ -75,8 +142,8 @@
 
 - f74fb2c: fix: switch chain bug when use with wagmi
 - Updated dependencies [a2119bf]
-  - @ant-design/web3-common@0.2.0
-  - @ant-design/web3-assets@0.1.2
+  - @levellink/web3-common@0.2.0
+  - @levellink/web3-assets@0.1.2
 
 ## 0.1.1
 
@@ -91,8 +158,8 @@
 - Updated dependencies [39782e4]
 - Updated dependencies [c15bfdf]
 - Updated dependencies [e4535ff]
-  - @ant-design/web3-assets@0.1.1
-  - @ant-design/web3-common@0.1.1
+  - @levellink/web3-assets@0.1.1
+  - @levellink/web3-common@0.1.1
 
 ## 0.1.0
 
@@ -100,5 +167,5 @@
 
 - Release new alpha version
 - Updated dependencies
-  - @ant-design/web3-assets@0.1.0
-  - @ant-design/web3-common@0.1.0
+  - @levellink/web3-assets@0.1.0
+  - @levellink/web3-common@0.1.0

@@ -1,5 +1,5 @@
-import { ConnectButton, Connector } from '@ant-design/web3';
-import { Mainnet } from '@ant-design/web3-assets';
+import { ConnectButton, Connector } from '@levellink/web3';
+import { Mainnet } from '@levellink/web3-assets';
 import { render } from '@testing-library/react';
 import { describe, expect, it, vi } from 'vitest';
 import { mainnet } from 'wagmi/chains';

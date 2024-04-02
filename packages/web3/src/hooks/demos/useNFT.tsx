@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNFT } from '@ant-design/web3';
+import { useNFT } from '@levellink/web3';
 import { Spin } from 'antd';
 
 const App: React.FC = () => {

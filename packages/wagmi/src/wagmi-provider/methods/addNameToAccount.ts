@@ -1,4 +1,4 @@
-import type { Account } from '@ant-design/web3-common';
+import type { Account } from '@levellink/web3-common';
 import { fetchEnsName } from '@wagmi/core';
 
 export async function addNameToAccount(account: Account, chainId?: number): Promise<Account> {

@@ -13,12 +13,27 @@ export const mergeReactNodeProps = (
 };
 
 export const defaultGroupOrder = (a: string, b: string) => {
+  if (a === 'Suggestion') {
+    return -1;
+  }
+  if (b === 'Suggestion') {
+    return 1;
+  }
+
   if (a === 'Popular' && b !== 'Popular') {
     return -1;
   }
+  if (b === 'Popular' && a !== 'Popular') {
+    return 1;
+  }
+
   if (a === 'More' && b !== 'More') {
     return 1;
   }
+  if (b === 'More' && a !== 'More') {
+    return -1;
+  }
+
   return a.localeCompare(b);
 };
 

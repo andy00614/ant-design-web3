@@ -13,16 +13,16 @@ group: 基础
 
 <br />
 
-<NormalInstallDependencies packageNames="antd @ant-design/web3 @ant-design/web3-wagmi wagmi" save="true"></NormalInstallDependencies>
+<NormalInstallDependencies packageNames="antd @levellink/web3 @levellink/web3-wagmi wagmi" save="true"></NormalInstallDependencies>
 
 <br />
 
 ## 使用 UI 组件
 
-`@ant-design/web3` 是一个纯 UI 组件，你可以直接使用它，比如你可以用 `Address`：
+`@levellink/web3` 是一个纯 UI 组件，你可以直接使用它，比如你可以用 `Address`：
 
 ```tsx
-import { Address } from '@ant-design/web3';
+import { Address } from '@levellink/web3';
 
 export default () => {
   return <Address ellipsis tooltip address="0x21CDf0974d53a6e96eF05d7B324a9803735fFd3B" />;
@@ -31,9 +31,9 @@ export default () => {
 
 ## 连接以太坊
 
-`@ant-design/web3` 本身不提供连接区块链的能力，它是一个纯粹的 UI 组件库，我们设计之初就考虑了它未来可以适配不同的区块链。但是我们官方基于 [wagmi](https://wagmi.sh/) 实现了一个适配器 `@ant-design/web3-wagmi`，它内置了和 EVM 兼容链的连接能力，你可以通过它来连接上以太坊。
+`@levellink/web3` 本身不提供连接区块链的能力，它是一个纯粹的 UI 组件库，我们设计之初就考虑了它未来可以适配不同的区块链。但是我们官方基于 [wagmi](https://wagmi.sh/) 实现了一个适配器 `@levellink/web3-wagmi`，它内置了和 EVM 兼容链的连接能力，你可以通过它来连接上以太坊。
 
-在 `@ant-design/web3-wagmi` 中，我们暴露了一个组件 `WagmiWeb3ConfigProvider`，它封装了 wagmi 的 `WagmiConfig`。
+在 `@levellink/web3-wagmi` 中，我们暴露了一个组件 `WagmiWeb3ConfigProvider`，它封装了 wagmi 的 `WagmiConfig`。
 
 你只要把 `WagmiWeb3ConfigProvider` 当做 `WagmiConfig` 来使用，这样在你的应用中的 Ant Design Web3 组件就可以自动连接上区块链了。
 

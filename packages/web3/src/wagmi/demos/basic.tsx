@@ -1,5 +1,5 @@
-import { ConnectButton, Connector } from '@ant-design/web3';
-import { WagmiWeb3ConfigProvider } from '@ant-design/web3-wagmi';
+import { ConnectButton, Connector } from '@levellink/web3';
+import { WagmiWeb3ConfigProvider } from '@levellink/web3-wagmi';
 import { configureChains, createConfig, mainnet } from 'wagmi';
 import { MetaMaskConnector } from 'wagmi/connectors/metaMask';
 import { publicProvider } from 'wagmi/providers/public';

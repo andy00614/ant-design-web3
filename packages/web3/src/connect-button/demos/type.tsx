@@ -1,4 +1,4 @@
-import { ConnectButton } from '@ant-design/web3';
+import { ConnectButton } from '@levellink/web3';
 import { ConfigProvider, Space } from 'antd';
 
 const App: React.FC = () => {

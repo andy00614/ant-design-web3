@@ -1,7 +1,7 @@
 import React from 'react';
-import { ConnectButton, type Chain } from '@ant-design/web3';
-import { Mainnet, Polygon } from '@ant-design/web3-assets';
-import { WalletWhiteColorful } from '@ant-design/web3-icons';
+import { ConnectButton, type Chain } from '@levellink/web3';
+import { Mainnet, Polygon } from '@levellink/web3-assets';
+import { WalletWhiteColorful } from '@levellink/web3-icons';
 import { ConfigProvider, Space, theme } from 'antd';
 import classNames from 'classnames';
 

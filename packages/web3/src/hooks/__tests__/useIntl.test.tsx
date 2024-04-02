@@ -1,5 +1,5 @@
 import React from 'react';
-import { Web3ConfigProvider } from '@ant-design/web3';
+import { Web3ConfigProvider } from '@levellink/web3';
 import { render } from '@testing-library/react';
 import { Button } from 'antd';
 import { describe, expect, it } from 'vitest';

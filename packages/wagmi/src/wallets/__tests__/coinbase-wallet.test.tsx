@@ -1,4 +1,4 @@
-import { CoinbaseWallet } from '@ant-design/web3-wagmi';
+import { CoinbaseWallet } from '@levellink/web3-wagmi';
 import { describe, expect, it } from 'vitest';
 import { CoinbaseWalletConnector } from 'wagmi/connectors/coinbaseWallet';
 

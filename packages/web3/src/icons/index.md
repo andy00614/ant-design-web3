@@ -8,11 +8,11 @@ order: 1
 
 ## How to use
 
-Before use icons, you need to install [@ant-design/web3-icons](https://www.npmjs.com/package/@ant-design/web3-icons) package:
+Before use icons, you need to install [@levellink/web3-icons](https://www.npmjs.com/package/@levellink/web3-icons) package:
 
 <br />
 
-<NormalInstallDependencies packageNames="@ant-design/web3-icons" save="true"></NormalInstallDependencies>
+<NormalInstallDependencies packageNames="@levellink/web3-icons" save="true"></NormalInstallDependencies>
 
 <br />
 

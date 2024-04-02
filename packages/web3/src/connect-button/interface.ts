@@ -1,4 +1,4 @@
-import type { ConnectorTriggerProps, Locale } from '@ant-design/web3-common';
+import type { ConnectorTriggerProps, Locale } from '@levellink/web3-common';
 import type { AvatarProps, ButtonProps, MenuProps, TooltipProps } from 'antd';
 import type { MenuItemType } from 'antd/es/menu/hooks/useItems';
 

@@ -1,4 +1,85 @@
-# @ant-design/web3
+# @levellink/web3
+
+## 0.0.2
+
+### Patch Changes
+
+- - 将两个钱包的chains配置都是用同一个配置变量
+  - 统一本地钱包和线上钱包链接按钮的样式
+- Updated dependencies
+  - @levellink/web3-assets@0.0.2
+  - @levellink/web3-common@0.0.2
+  - @levellink/web3-icons@0.0.2
+
+## 0.0.1
+
+### Patch Changes
+
+- 测试是否patch更新
+- Updated dependencies
+  - @levellink/web3-assets@0.0.1
+  - @levellink/web3-common@0.0.1
+  - @levellink/web3-icons@0.0.1
+
+## 0.0.0
+
+### Patch Changes
+
+- 版本依赖的调整
+- Updated dependencies
+  - @levellink/web3-assets@0.0.0
+  - @levellink/web3-common@0.0.0
+  - @levellink/web3-icons@0.0.0
+
+## 0.0.0-alpha-20240116013921
+
+### Patch Changes
+
+- Updated dependencies
+  - @levellink/web3-common@0.0.0-alpha-20240116013921
+  - @levellink/web3-assets@0.0.0-alpha-20240116013921
+
+## 0.0.0-alpha-20240115151406
+
+### Minor Changes
+
+- test alpha 发布
+
+### Patch Changes
+
+- Updated dependencies
+  - @levellink/web3-assets@0.0.0-alpha-20240115151406
+  - @levellink/web3-common@0.0.0-alpha-20240115151406
+  - @levellink/web3-icons@0.0.0-alpha-20240115151406
+
+## 0.0.0-alpha-20240115150811
+
+### Patch Changes
+
+- test
+- Updated dependencies
+  - @levellink/web3-assets@0.0.0-alpha-20240115150811
+  - @levellink/web3-common@0.0.0-alpha-20240115150811
+  - @levellink/web3-icons@0.0.0-alpha-20240115150811
+
+## 0.0.0-alpha-20240115144528
+
+### Minor Changes
+
+- 879548d: feat: Add extendsContextFromParent props for web3-config-provider
+
+### Patch Changes
+
+- ee2159c: add levellink core repo, Made some antd-web3 modifications to adapt to levellink
+- e6368f1: fix: unexpected QRCode after disconnect #457
+- f93aedf: test:Increase ConnectButton test coverage
+- 880d915: type: use ?: instead of undefined
+- 9f62728: fix: fix intl for connect-button
+- 10d5962: test:Increase connector test coverage
+- Updated dependencies [ee2159c]
+- Updated dependencies [879548d]
+  - @levellink/web3-assets@0.0.0-alpha-20240115144528
+  - @levellink/web3-common@0.0.0-alpha-20240115144528
 
 ## 1.2.0
 
@@ -21,9 +102,9 @@
 - Updated dependencies [64a2de3]
 - Updated dependencies [c549a09]
 - Updated dependencies [17ca201]
-  - @ant-design/web3-common@1.2.0
-  - @ant-design/web3-icons@1.2.0
-  - @ant-design/web3-assets@1.1.3
+  - @levellink/web3-common@1.2.0
+  - @levellink/web3-icons@1.2.0
+  - @levellink/web3-assets@1.1.3
 
 ## 1.1.2
 
@@ -31,9 +112,9 @@
 
 - d6a5339: chore: release 1.1.2 for republish
 - Updated dependencies [d6a5339]
-  - @ant-design/web3-assets@1.1.2
-  - @ant-design/web3-common@1.1.2
-  - @ant-design/web3-icons@1.1.2
+  - @levellink/web3-assets@1.1.2
+  - @levellink/web3-common@1.1.2
+  - @levellink/web3-icons@1.1.2
 
 ## 1.1.1
 
@@ -41,9 +122,9 @@
 
 - 32f276a: chore: 1.1.1
 - Updated dependencies [32f276a]
-  - @ant-design/web3-assets@1.1.1
-  - @ant-design/web3-common@1.1.1
-  - @ant-design/web3-icons@1.1.1
+  - @levellink/web3-assets@1.1.1
+  - @levellink/web3-common@1.1.1
+  - @levellink/web3-icons@1.1.1
 
 ## 1.1.0
 
@@ -66,15 +147,15 @@
 - Updated dependencies [b3e95c2]
 - Updated dependencies [3547f6b]
 - Updated dependencies [9de319c]
-  - @ant-design/web3-common@1.1.0
-  - @ant-design/web3-assets@1.1.0
-  - @ant-design/web3-icons@1.1.0
+  - @levellink/web3-common@1.1.0
+  - @levellink/web3-assets@1.1.0
+  - @levellink/web3-icons@1.1.0
 
 ## 1.0.1
 
 ### Patch Changes
 
-- fd51e5d: chore: release @ant-design/web3 1.0.1
+- fd51e5d: chore: release @levellink/web3 1.0.1
 
 ## 1.0.0
 
@@ -84,11 +165,11 @@
 
 ### Patch Changes
 
-- 5a86696: fix: add @ant-design/web3-assets dep in @ant-design/web3
+- 5a86696: fix: add @levellink/web3-assets dep in @levellink/web3
 - Updated dependencies [f330908]
-  - @ant-design/web3-assets@1.0.0
-  - @ant-design/web3-common@1.0.0
-  - @ant-design/web3-icons@1.0.0
+  - @levellink/web3-assets@1.0.0
+  - @levellink/web3-common@1.0.0
+  - @levellink/web3-icons@1.0.0
 
 ## 0.3.0
 
@@ -109,7 +190,7 @@
 - ab50e5a: fix: ConnectModal QrCode link style
 - 5dbecd5: fix: NFTCard action button click not work
 - Updated dependencies [a2119bf]
-  - @ant-design/web3-common@0.2.0
+  - @levellink/web3-common@0.2.0
 
 ## 0.2.0
 
@@ -134,7 +215,7 @@
 - 39782e4: feat: ethereum adapter support show balance
 - 78b9282: feat: New component CryptoPrice 🚀
 - fe42780: fix: chain icon size in avatar
-- c15bfdf: feat: BrowserLink support get url from chain in @ant-design/web3-assets
+- c15bfdf: feat: BrowserLink support get url from chain in @levellink/web3-assets
 - ee9754a: feat: NFTCard show Skeleton when request metadata
 - bf5ec8e: feat: ConnectButton support balance
 - Updated dependencies [2d7ae4f]
@@ -143,8 +224,8 @@
 - Updated dependencies [3fbd1eb]
 - Updated dependencies [39782e4]
 - Updated dependencies [c15bfdf]
-  - @ant-design/web3-common@0.1.1
-  - @ant-design/web3-icons@0.2.0
+  - @levellink/web3-common@0.1.1
+  - @levellink/web3-icons@0.2.0
 
 ## 0.1.0
 
@@ -152,8 +233,8 @@
 
 - Release new alpha version
 - Updated dependencies
-  - @ant-design/web3-common@0.1.0
-  - @ant-design/web3-icons@0.1.0
+  - @levellink/web3-common@0.1.0
+  - @levellink/web3-icons@0.1.0
 
 ## 0.1.0-alpha.1
 
@@ -161,5 +242,5 @@
 
 - First alpha version.
 - Updated dependencies
-  - @ant-design/web3-common@0.1.0-alpha.1
-  - @ant-design/web3-icons@0.1.0-alpha.1
+  - @levellink/web3-common@0.1.0-alpha.1
+  - @levellink/web3-icons@0.1.0-alpha.1

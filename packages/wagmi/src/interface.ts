@@ -1,4 +1,4 @@
-import type { Wallet } from '@ant-design/web3-common';
+import type { Wallet } from '@levellink/web3-common';
 import type { Connector } from 'wagmi';
 
 export interface WalletUseInWagmiAdapter extends Wallet {

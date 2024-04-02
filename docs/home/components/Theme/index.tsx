@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
-import { ConnectModal, type Wallet } from '@ant-design/web3';
+import { ConnectModal, type Wallet } from '@levellink/web3';
 import {
   metadata_CoinbaseWallet,
   metadata_MetaMask,
   metadata_TokenPocket,
   metadata_WalletConnect,
-} from '@ant-design/web3-assets';
+} from '@levellink/web3-assets';
 import { Card, ConfigProvider, Space, theme, Tooltip } from 'antd';
 import classnames from 'classnames';
 import { useIntl, usePrefersColor } from 'dumi';

@@ -1,7 +1,7 @@
 import EventEmitter from 'events';
 import React, { useEffect } from 'react';
-import { useProvider } from '@ant-design/web3';
-import { Mainnet } from '@ant-design/web3-assets';
+import { useProvider } from '@levellink/web3';
+import { Mainnet } from '@levellink/web3-assets';
 import { fireEvent, render } from '@testing-library/react';
 import { describe, expect, it, vi } from 'vitest';
 import type { Connector } from 'wagmi';

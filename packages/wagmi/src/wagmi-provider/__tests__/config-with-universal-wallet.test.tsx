@@ -1,10 +1,10 @@
-import { useProvider } from '@ant-design/web3';
+import { useProvider } from '@levellink/web3';
 import {
   metadata_MetaMask,
   metadata_TokenPocket,
   UniversalWallet,
   WagmiWeb3ConfigProvider,
-} from '@ant-design/web3-wagmi';
+} from '@levellink/web3-wagmi';
 import { render } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
 import { configureChains, createConfig } from 'wagmi';

@@ -1,5 +1,5 @@
-import { metadata_WalletConnect } from '@ant-design/web3-assets';
-import { type Wallet } from '@ant-design/web3-common';
+import { metadata_WalletConnect } from '@levellink/web3-assets';
+import { type Wallet } from '@levellink/web3-common';
 import type { Connector } from 'wagmi';
 
 import type { WalletFactory } from '../interface';

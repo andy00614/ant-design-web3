@@ -1,5 +1,5 @@
 import React from 'react';
-import { Connector, type Account, type ConnectorTriggerProps } from '@ant-design/web3';
+import { Connector, type Account, type ConnectorTriggerProps } from '@levellink/web3';
 import { render } from '@testing-library/react';
 import { Button } from 'antd';
 import { describe, expect, it } from 'vitest';

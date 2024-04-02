@@ -1,4 +1,4 @@
-import { ChainIds, createGetBrowserLink, type Chain } from '@ant-design/web3-common';
+import { ChainIds, createGetBrowserLink, type Chain } from '@levellink/web3-common';
 import {
   ArbitrumCircleColorful,
   AvalancheCircleColorful,
@@ -8,7 +8,7 @@ import {
   EtherscanCircleColorful,
   OptimismCircleColorful,
   PolygonCircleColorful,
-} from '@ant-design/web3-icons';
+} from '@levellink/web3-icons';
 
 export const Mainnet: Chain = {
   id: ChainIds.Mainnet,
@@ -32,6 +32,17 @@ export const Goerli: Chain = {
   nativeCurrency: { name: 'Ether', symbol: 'ETH', decimals: 18 },
 };
 
+export const Sepolia: Chain = {
+  id: ChainIds.Sepolia,
+  name: 'eth-sepolia',
+  icon: <EthereumCircleColorful />,
+  browser: {
+    icon: <EthereumCircleColorful />,
+    getBrowserLink: createGetBrowserLink('https://sepolia.etherscan.io'),
+  },
+  nativeCurrency: { name: 'Sepolia ETH', symbol: 'Sepolia ETH', decimals: 18 },
+};
+
 export const Polygon: Chain = {
   id: ChainIds.Polygon,
   name: 'Polygon',
@@ -45,13 +56,35 @@ export const Polygon: Chain = {
 
 export const BSC: Chain = {
   id: ChainIds.BSC,
-  name: 'BNB Smart Chain',
+  name: 'BSC MainNet',
   icon: <BSCCircleColorful />,
   browser: {
     icon: <BSCCircleColorful />,
     getBrowserLink: createGetBrowserLink('https://bscscan.com'),
   },
   nativeCurrency: { decimals: 18, name: 'BNB', symbol: 'BNB' },
+};
+
+export const BSCTestNet: Chain = {
+  id: ChainIds.BSCTestNet,
+  name: '币安测试网',
+  icon: <BSCCircleColorful />,
+  browser: {
+    icon: <BSCCircleColorful />,
+    getBrowserLink: createGetBrowserLink('https://testnet.bscscan.com'),
+  },
+  nativeCurrency: { decimals: 18, name: 'TBNB', symbol: 'TBNB' },
+};
+
+export const DEVELOP_CHAIN: Chain = {
+  id: ChainIds.DEVELOP,
+  name: 'WDT测网',
+  icon: <BSCCircleColorful />,
+  browser: {
+    icon: <BSCCircleColorful />,
+    getBrowserLink: createGetBrowserLink('https://whyindian.ddns.net'),
+  },
+  nativeCurrency: { decimals: 18, name: 'GGC', symbol: 'GGC' },
 };
 
 export const Arbitrum: Chain = {

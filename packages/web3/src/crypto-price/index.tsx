@@ -1,6 +1,6 @@
 import { useContext } from 'react';
-import { Mainnet } from '@ant-design/web3-assets';
-import type { Chain } from '@ant-design/web3-common';
+import { Mainnet } from '@levellink/web3-assets';
+import type { Chain } from '@levellink/web3-common';
 import { ConfigProvider } from 'antd';
 
 import useProvider from '../hooks/useProvider';

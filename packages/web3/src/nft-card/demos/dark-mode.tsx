@@ -1,4 +1,4 @@
-import { NFTCard } from '@ant-design/web3';
+import { NFTCard } from '@levellink/web3';
 import { ConfigProvider, Space, theme } from 'antd';
 
 const { darkAlgorithm } = theme;

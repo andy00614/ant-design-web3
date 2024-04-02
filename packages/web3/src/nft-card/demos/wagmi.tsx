@@ -1,5 +1,5 @@
-import { NFTCard } from '@ant-design/web3';
-import { WagmiWeb3ConfigProvider } from '@ant-design/web3-wagmi';
+import { NFTCard } from '@levellink/web3';
+import { WagmiWeb3ConfigProvider } from '@levellink/web3-wagmi';
 import { configureChains, createConfig, mainnet } from 'wagmi';
 import { infuraProvider } from 'wagmi/providers/infura';
 

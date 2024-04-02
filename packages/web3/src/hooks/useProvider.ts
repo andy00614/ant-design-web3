@@ -3,7 +3,7 @@ import {
   ConfigContext,
   type ConfigConsumerProps,
   type UniversalWeb3ProviderInterface,
-} from '@ant-design/web3-common';
+} from '@levellink/web3-common';
 
 function mergeObjects<T>(a: T, b?: T): T {
   const result: T = { ...a };

@@ -11,6 +11,9 @@ export enum ChainIds {
   Optimism = 10,
   Goerli = 5,
   Avalanche = 43_114,
+  Sepolia = 11155111,
+  BSCTestNet = 97,
+  DEVELOP = 141319,
 }
 
 export type BrowserLinkType = 'address' | 'transaction';
@@ -151,6 +154,12 @@ export type WalletMetadata = {
    * @descEn The name of the group to which the wallet belongs
    */
   group?: string;
+
+  /**
+   * @desc 点击会执行自定义操作
+   * @descEn Clicking will perform custom operations
+   */
+  onClick?: () => void;
 };
 
 export type Balance = BalanceMetadata & {

@@ -60,7 +60,7 @@ npm i
 接下来，我们安装 Ant Design 和 Ant Design Web3 的基础组件到项目中：
 
 ```bash
-npm i antd @ant-design/web3 --save
+npm i antd @levellink/web3 --save
 ```
 
 安装完成后，因为 Next.js 当前版本[已有的一个问题](https://github.com/ant-design/ant-design/issues/46053)，你需要在 `next.config.js` 中添加如下配置：
@@ -78,7 +78,7 @@ module.exports = nextConfig
 安装完成后，新建 `pages/web3.tsx` 的文件，填充内容如下：
 
 ```tsx | pure
-import { Address } from '@ant-design/web3';
+import { Address } from '@levellink/web3';
 
 export default () => {
   return (

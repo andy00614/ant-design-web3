@@ -1,6 +1,6 @@
 import * as React from 'react';
 import type { CustomIconComponentProps } from '@ant-design/icons/es/components/Icon';
-import { BitcoinCircleColorful, MetaMaskColorful } from '@ant-design/web3-icons';
+import { BitcoinCircleColorful, MetaMaskColorful } from '@levellink/web3-icons';
 
 type CustomIconComponent = React.ComponentType<
   CustomIconComponentProps | React.SVGProps<SVGSVGElement>

@@ -1,7 +1,7 @@
 import EventEmitter from 'events';
 import React, { useEffect } from 'react';
-import { ConnectButton, Connector } from '@ant-design/web3';
-import { Mainnet, Polygon } from '@ant-design/web3-assets';
+import { ConnectButton, Connector } from '@levellink/web3';
+import { Mainnet, Polygon } from '@levellink/web3-assets';
 import { fireEvent, render } from '@testing-library/react';
 import { describe, expect, it, vi } from 'vitest';
 import type { Chain as WagmiChain } from 'wagmi/chains';

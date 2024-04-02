@@ -1,4 +1,4 @@
-import { Polygon } from '@ant-design/web3-assets';
+import { Polygon } from '@levellink/web3-assets';
 import { fireEvent, render } from '@testing-library/react';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 

@@ -1,5 +1,5 @@
-import { metadata_CoinbaseWallet } from '@ant-design/web3-assets';
-import { type Wallet } from '@ant-design/web3-common';
+import { metadata_CoinbaseWallet } from '@levellink/web3-assets';
+import { type Wallet } from '@levellink/web3-common';
 
 import type { WalletFactory } from '../interface';
 

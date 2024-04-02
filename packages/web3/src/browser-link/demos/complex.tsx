@@ -1,5 +1,5 @@
-import { BrowserLink } from '@ant-design/web3';
-import { Mainnet } from '@ant-design/web3-assets';
+import { BrowserLink } from '@levellink/web3';
+import { Mainnet } from '@levellink/web3-assets';
 import { Space } from 'antd';
 
 const App: React.FC = () => {
