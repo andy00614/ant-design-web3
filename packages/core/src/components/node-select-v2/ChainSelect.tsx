@@ -29,7 +29,7 @@ export const ChainSelectV2: React.FC<{
   className?: string;
   env?: 'dev' | 'prod';
   onChange?: (v: ChainWithURL) => void;
-}> = ({ className, onChange }) => {
+}> = ({ className, onChange, env }) => {
   const [nodes, setNodes] = useState<ChainWithURL[]>();
   const [selectId, setSelectId] = useState('');
 

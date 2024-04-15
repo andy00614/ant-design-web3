@@ -1,5 +1,11 @@
 # @levellink/core
 
+## 2.0.3
+
+### Patch Changes
+
+- ChainSelectV2
+
 ## 2.0.2
 
 ### Patch Changes

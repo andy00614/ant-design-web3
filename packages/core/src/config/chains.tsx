@@ -96,6 +96,7 @@ const chainConfigWithDevChain = defineChain({
 });
 
 export const CHAINS_FOR_PROVIDER = [DEVELOP_CHAIN, Sepolia, BSCTestNet];
+export const CHAINS_FOR_PROVIDER_Mainnet = [BSC];
 
 export const CHAINS_FOR_WAGMI: Chain[] = [
   chainConfigWithDevChain,
