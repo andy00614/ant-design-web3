@@ -85,7 +85,9 @@ export function createRequest(config: TConfig) {
         if (response.data.code === STATUS_CODE.SYSTEM_ERROR) {
           toast?.('系统错误，请联系管理员', 'error');
         } else {
-          toast?.(response.data.message, 'error');
+          if (response.data.code !== 409) {
+            toast?.(response.data.message, 'error');
+          }
         }
         throw new Error(response.data.message);
       }
