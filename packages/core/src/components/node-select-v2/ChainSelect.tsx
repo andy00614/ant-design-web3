@@ -2,29 +2,32 @@ import React, { useEffect, useState } from 'react';
 import { ChainSelect } from '@levellink/web3';
 import type { Chain } from '@levellink/web3-common';
 
-import { chain2URL, CHAINS_FOR_PROVIDER } from '../../config';
+import { chain2URL, CHAINS_FOR_PROVIDER, CHAINS_FOR_PROVIDER_Mainnet } from '../../config';
 
 type ChainWithURL = Chain & {
   url: string;
 };
 
-function fetchData(): ChainWithURL[] {
-  const response = CHAINS_FOR_PROVIDER.map((item) => {
-    return {
-      id: item.id,
-      name: item.name,
-      icon: item.icon,
-      browser: {
+function fetchData(env: 'dev' | 'prod'): ChainWithURL[] {
+  const response = (env === 'prod' ? CHAINS_FOR_PROVIDER_Mainnet : CHAINS_FOR_PROVIDER).map(
+    (item) => {
+      return {
+        id: item.id,
+        name: item.name,
         icon: item.icon,
-      },
-      url: chain2URL[item.id as keyof typeof chain2URL],
-    };
-  }) as ChainWithURL[];
+        browser: {
+          icon: item.icon,
+        },
+        url: chain2URL[item.id as keyof typeof chain2URL],
+      };
+    },
+  ) as ChainWithURL[];
   return response;
 }
 
 export const ChainSelectV2: React.FC<{
   className?: string;
+  env?: 'dev' | 'prod';
   onChange?: (v: ChainWithURL) => void;
 }> = ({ className, onChange }) => {
   const [nodes, setNodes] = useState<ChainWithURL[]>();
@@ -40,7 +43,7 @@ export const ChainSelectV2: React.FC<{
 
   useEffect(() => {
     async function fetchNodes() {
-      const _nodes = await fetchData();
+      const _nodes = await fetchData(env || 'dev');
       setNodes(_nodes);
       const nodeIdFromStorage = typeof window !== 'undefined' && localStorage?.getItem('nodeId');
       if (nodeIdFromStorage) {

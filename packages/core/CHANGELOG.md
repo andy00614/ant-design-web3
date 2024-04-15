@@ -1,5 +1,11 @@
 # @levellink/core
 
+## 2.0.2
+
+### Patch Changes
+
+- 409 problem
+
 ## 2.0.1
 
 ### Patch Changes
