@@ -21,4 +21,10 @@ export const contractAddresses: Record<number, TAddressObj> = {
     GGC: '0x59Baa2B74900Cc72cBD5a4650f338bE707693fb7',
     CrossChain: '0x4F80970b19a52EDB42691F6Abbc2197c68Cf983B',
   },
+  [ChainIds.BSC]: {
+    Node: '0x7Aa858A3Dc72caDDe3D52Fe791Bd9f0BdC7C4304',
+    Item: '0x0862f28Ca9905Dc47F67Efc41cC910cF8cBF0CC6',
+    GGC: '0xf4B1Bff3BCfd0b394e8eD7D348Cb5d79A53840FD',
+    CrossChain: '0x5552164cD27c3321ADa14C5dBf34d8B6d4f6c8d5',
+  },
 };
