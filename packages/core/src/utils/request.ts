@@ -9,7 +9,7 @@ export interface TConfig {
   baseURL: string;
   tokenName: string;
   encryptBlackList: string[];
-  publicKey: string;
+  publicKey: string; // 更正拼写
   noAuthCallback?: () => void;
   toast?: (text: string, type: 'success' | 'error' | 'info' | 'warning') => void;
 }
@@ -27,15 +27,16 @@ export function getAuthorizationAndToken(token: string) {
     console.error('Invalid token format');
     return { jwtToken: '', authentication: '' };
   }
+
   const parts = token.split('.');
   const authentication = parts.length > 0 ? decodeURIComponent(parts[0]) : '';
   const jwtToken = parts.length > 1 ? decodeURIComponent(parts.slice(1).join('.')) : '';
-  return { jwtToken, authentication };
-}
 
-const requestCache: Record<string, { requestId: string; timestamp: number }> = {};
-const MAX_CACHE_SIZE = 100; // 请求缓存的最大大小
-const CACHE_EXPIRATION_TIME = 5000; // 请求缓存的过期时间（毫秒）
+  return {
+    jwtToken,
+    authentication,
+  };
+}
 
 export function createRequest(config: TConfig) {
   const { baseURL, publicKey, tokenName, toast } = config;
@@ -52,40 +53,11 @@ export function createRequest(config: TConfig) {
     const encryptAuthorization = jwtToken
       ? await encrypt(`${authentication}_${Date.now()}`, publicKey)
       : '';
-    const headerWithAuth = { ...headers, token: jwtToken };
 
+    const headerWithAuth = { ...headers, token: jwtToken };
     if (!config.encryptBlackList.includes(url)) {
       // @ts-ignore
       headerWithAuth.Authorization = encryptAuthorization;
-    }
-
-    const requestId = getNaMs().toString();
-    const cacheKey = `${completeUrl}_${JSON.stringify(data)}_${JSON.stringify(headers)}`;
-
-    // 检查请求缓存中是否已存在相同的请求地址和 requestId
-    if (requestCache[cacheKey] && requestCache[cacheKey].requestId === requestId) {
-      const currentTime = Date.now();
-      const cachedTime = requestCache[cacheKey].timestamp;
-
-      if (currentTime - cachedTime <= CACHE_EXPIRATION_TIME) {
-        // 如果请求缓存中的请求未过期，则跳过该请求
-        console.warn(
-          `Duplicate request detected for ${cacheKey} with requestId: ${requestId}. Skipping the request.`,
-        );
-        return Promise.resolve(null as any);
-      } else {
-        // 如果请求缓存中的请求已过期，则从缓存中移除
-        delete requestCache[cacheKey];
-      }
-    }
-
-    // 将请求添加到请求缓存中
-    requestCache[cacheKey] = { requestId, timestamp: Date.now() };
-
-    // 如果请求缓存的大小超过了最大限制，则移除最早添加的请求缓存
-    if (Object.keys(requestCache).length > MAX_CACHE_SIZE) {
-      const oldestCacheKey = Object.keys(requestCache)[0];
-      delete requestCache[oldestCacheKey];
     }
 
     const options: AxiosRequestConfig = {
@@ -94,7 +66,7 @@ export function createRequest(config: TConfig) {
       headers: {
         ...headerWithAuth,
         networkId: localStorage.getItem('nodeId'),
-        requestId,
+        requestId: getNaMs().toString(),
       },
       withCredentials: false,
     };
@@ -124,11 +96,12 @@ export function createRequest(config: TConfig) {
         config.noAuthCallback?.();
       } else if (status >= 400 && status < 600) {
         const message = (error as any)?.response?.data?.message || '未知错误';
-        console.log(completeUrl, message);
+        console.log({ completeUrl, method, data, headers, message, status });
         if (status !== 409) {
           toast?.(`错误 ${status}: ${message}`, 'error');
         }
       }
+
       console.error(error);
       throw error;
     }
