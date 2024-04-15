@@ -124,7 +124,10 @@ export function createRequest(config: TConfig) {
         config.noAuthCallback?.();
       } else if (status >= 400 && status < 600) {
         const message = (error as any)?.response?.data?.message || '未知错误';
-        toast?.(`错误 ${status}: ${message}`, 'error');
+        console.log(completeUrl, message);
+        if (status !== 409) {
+          toast?.(`错误 ${status}: ${message}`, 'error');
+        }
       }
       console.error(error);
       throw error;
