@@ -1,5 +1,11 @@
 # @levellink/core
 
+## 2.0.4
+
+### Patch Changes
+
+- chain button style
+
 ## 2.0.3
 
 ### Patch Changes
