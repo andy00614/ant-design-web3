@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { getWallet } from '../api';
+import { createRequest } from '../utils';
 import type { ContextProps } from './';
 import { AccountProvider } from './';
 
@@ -11,6 +11,8 @@ type TProviderProps = {
   getWallet?: () => void;
   onLineWalletProps?: ContextProps;
   walletURL: string;
+  publicKey: string;
+  walletServiceURL: string;
 };
 
 export const Provider: React.FC<TProviderProps> = ({
@@ -18,12 +20,24 @@ export const Provider: React.FC<TProviderProps> = ({
   applicationName,
   onLineWalletProps,
   walletURL,
+  walletServiceURL,
+  publicKey,
 }) => {
+  const _getWallet = async () => {
+    const request = createRequest({
+      baseURL: `${walletServiceURL}/wallet`,
+      tokenName: 'token',
+      encryptBlackList: [],
+      publicKey: publicKey,
+    });
+    const data = await request('/blockchain/wallet', 'GET');
+    return (data as any)?.data;
+  };
   return (
     <AccountProvider
       applicationName={applicationName || ''}
       customToast={() => {}}
-      getWallet={getWallet}
+      getWallet={_getWallet}
       walletURL={walletURL}
       {...onLineWalletProps}
     >
