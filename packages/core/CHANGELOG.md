@@ -1,5 +1,11 @@
 # @levellink/core
 
+## 2.0.5
+
+### Patch Changes
+
+- main使用钱包调用testnet接口问题修复
+
 ## 2.0.4
 
 ### Patch Changes
