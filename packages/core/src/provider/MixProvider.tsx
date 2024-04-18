@@ -25,7 +25,7 @@ export const Provider: React.FC<TProviderProps> = ({
 }) => {
   const _getWallet = async () => {
     const request = createRequest({
-      baseURL: `${walletServiceURL}/wallet`,
+      baseURL: `${walletServiceURL}`,
       tokenName: 'token',
       encryptBlackList: [],
       publicKey: publicKey,
