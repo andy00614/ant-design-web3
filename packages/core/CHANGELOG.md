@@ -1,5 +1,11 @@
 # @levellink/core
 
+## 2.0.9
+
+### Patch Changes
+
+- 更新地址
+
 ## 2.0.8
 
 ### Patch Changes
