@@ -1,5 +1,11 @@
 # @levellink/core
 
+## 2.0.10
+
+### Patch Changes
+
+- 450811d: update address
+
 ## 2.0.9
 
 ### Patch Changes
