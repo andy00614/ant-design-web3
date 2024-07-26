@@ -2,6 +2,7 @@ import type { FC } from 'react';
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import { InfoCircleOutlined } from '@ant-design/icons';
 import { Modal } from 'antd';
+import Cookies from 'js-cookie';
 
 import { connectWalletForURL, deCrypto } from '../../../utils';
 import { CommunicationAppProvider } from './CommunicationAppProvider';
@@ -74,6 +75,15 @@ export const AccountProvider: FC<ContextProps> = ({
 
   const initialize = async () => {
     try {
+      if (
+        Cookies.get('MAGAPE_TYPE') === '3' &&
+        Cookies.get('MAGAPE_TOKEN') &&
+        Cookies.get('MAGAPE_AUTHORIZATION')
+      ) {
+        updateWalletInfo();
+        return;
+      }
+
       const urlParams = new URLSearchParams(window.location.search);
       const token = urlParams.get(TOKEN_NAME) && decodeURIComponent(urlParams.get(TOKEN_NAME)!);
       const nodeId =

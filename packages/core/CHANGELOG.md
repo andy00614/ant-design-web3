@@ -1,5 +1,11 @@
 # @levellink/core
 
+## 2.0.14
+
+### Patch Changes
+
+- update request function
+
 ## 2.0.13
 
 ### Patch Changes
