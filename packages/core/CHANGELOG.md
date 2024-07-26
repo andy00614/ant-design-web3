@@ -1,5 +1,11 @@
 # @levellink/core
 
+## 2.0.15
+
+### Patch Changes
+
+- update changset
+
 ## 2.0.14
 
 ### Patch Changes
