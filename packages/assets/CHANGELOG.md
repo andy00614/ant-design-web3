@@ -1,5 +1,12 @@
 # @levellink/web3-assets
 
+## 0.0.3
+
+### Patch Changes
+
+- Updated dependencies
+  - @levellink/web3-icons@0.0.3
+
 ## 0.0.2
 
 ### Patch Changes

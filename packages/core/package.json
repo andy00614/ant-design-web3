@@ -1,7 +1,7 @@
 {
   "name": "@levellink/core",
   "description": "the ui for levellink apps",
-  "version": "2.0.11",
+  "version": "2.0.13",
   "main": "dist/lib/index.js",
   "module": "dist/esm/index.js",
   "typings": "dist/esm/index.d.ts",
@@ -40,8 +40,8 @@
   },
   "peerDependencies": {
     "@levellink/wagmimodal": "^5.0.0",
-    "@levellink/web3": "workspace:0.0.2",
-    "@levellink/web3-wagmi": "workspace:0.0.2",
+    "@levellink/web3": "workspace:0.0.3",
+    "@levellink/web3-wagmi": "workspace:0.0.3",
     "@tanstack/react-query": "^5.22.2",
     "@web3modal/wagmi": "^4.0.5",
     "viem": "^2.7.11",

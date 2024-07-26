@@ -29,6 +29,13 @@ export const contractAddresses: Record<number, TAddressObj> = {
     Item: '0x0862f28Ca9905Dc47F67Efc41cC910cF8cBF0CC6',
     GGC: '0xf4B1Bff3BCfd0b394e8eD7D348Cb5d79A53840FD',
     CrossChain: '0x5552164cD27c3321ADa14C5dBf34d8B6d4f6c8d5',
-    MarketPlace: '',
+    MarketPlace: '0xA9bb8947F3ec9F77B332c7aE613d515544B6181c',
+  },
+  [ChainIds.ETHERLink]: {
+    Node: '0xDcD1A3DD1B07F006FB58104bFb68c773203a5f80',
+    Item: '0x078CAC61eFd58D4F4536de5B1eADfd3de0225d65',
+    GGC: '0xF2309249140bAdD55F4c207fbeDD0f53377B5a74',
+    CrossChain: '0x9C9165C1Df34cDC4964AD05624EcDD35aFa74980',
+    MarketPlace: '0x2e1e79AAb56b83777b47455388c9791c33e3E64C',
   },
 };

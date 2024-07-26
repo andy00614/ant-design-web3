@@ -1,5 +1,11 @@
 # @levellink/web3-wagmi
 
+## 0.0.3
+
+### Patch Changes
+
+- @levellink/web3-assets@0.0.3
+
 ## 0.0.2
 
 ### Patch Changes

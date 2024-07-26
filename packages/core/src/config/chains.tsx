@@ -28,6 +28,7 @@ export enum ChainIds {
   Sepolia = 11155111,
   BSCTestNet = 97,
   DEVELOP = 141319,
+  ETHERLink = 128123,
 }
 
 export const BSC: Chain = {

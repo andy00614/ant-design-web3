@@ -1,5 +1,11 @@
 # @levellink/web3-icons
 
+## 0.0.3
+
+### Patch Changes
+
+- update icon
+
 ## 0.0.2
 
 ### Patch Changes

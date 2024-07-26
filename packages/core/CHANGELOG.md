@@ -1,5 +1,18 @@
 # @levellink/core
 
+## 2.0.13
+
+### Patch Changes
+
+- @levellink/web3@0.0.3
+- @levellink/web3-wagmi@0.0.3
+
+## 2.0.12
+
+### Patch Changes
+
+- add new contract
+
 ## 2.0.11
 
 ### Patch Changes
