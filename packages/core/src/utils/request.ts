@@ -47,13 +47,23 @@ export function createRequest(config: TConfig) {
     data: any = null,
     headers: AxiosRequestConfig['headers'] = {},
   ): Promise<T> => {
-    const token = Cookies.get(tokenName) || localStorage.getItem(tokenName);
-    const { jwtToken, authentication } = getAuthorizationAndToken(token || '');
-    const completeUrl = url.includes('/root') ? url.replace('/root', '') : `${baseURL}${url}`;
-    const encryptAuthorization = jwtToken
-      ? await encrypt(`${authentication}_${Date.now()}`, publicKey)
-      : '';
+    let jwtToken;
+    let encryptAuthorization;
+    const type = Cookies.get('MAGAPE_TYPE');
+    if (type === '3') {
+      jwtToken = Cookies.get('MAGAPE_TOKEN');
+      encryptAuthorization = Cookies.get('MAGAPE_AUTHORIZATION');
+    } else {
+      const token = Cookies.get(tokenName) || localStorage.getItem(tokenName);
+      const res = getAuthorizationAndToken(token || '');
+      jwtToken = res.jwtToken;
+      const authentication = res.authentication;
+      encryptAuthorization = jwtToken
+        ? await encrypt(`${authentication}_${Date.now()}`, publicKey)
+        : '';
+    }
 
+    const completeUrl = url.includes('/root') ? url.replace('/root', '') : `${baseURL}${url}`;
     const headerWithAuth = { ...headers, token: jwtToken };
     if (!config.encryptBlackList.includes(url)) {
       // @ts-ignore
@@ -65,6 +75,7 @@ export function createRequest(config: TConfig) {
       method,
       headers: {
         ...headerWithAuth,
+        type,
         networkId: localStorage.getItem('nodeId'),
         requestId: getNaMs().toString(),
       },
