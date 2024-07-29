@@ -13,6 +13,8 @@ type TProviderProps = {
   walletURL: string;
   publicKey: string;
   walletServiceURL: string;
+  beforeLogin?: () => void;
+  afterLogin?: () => void;
 };
 
 export const Provider: React.FC<TProviderProps> = ({
@@ -22,6 +24,8 @@ export const Provider: React.FC<TProviderProps> = ({
   walletURL,
   walletServiceURL,
   publicKey,
+  beforeLogin,
+  afterLogin,
 }) => {
   const _getWallet = async () => {
     const request = createRequest({
@@ -39,6 +43,8 @@ export const Provider: React.FC<TProviderProps> = ({
       customToast={() => {}}
       getWallet={_getWallet}
       walletURL={walletURL}
+      beforeLogin={beforeLogin}
+      afterLogin={afterLogin}
       {...onLineWalletProps}
     >
       {children}
