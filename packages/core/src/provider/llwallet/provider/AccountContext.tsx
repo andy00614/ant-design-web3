@@ -31,6 +31,8 @@ interface MyContextProps {
 const MyContext = createContext<MyContextProps | undefined>(undefined);
 
 export interface ContextProps {
+  beforeLogin?: () => void;
+  afterLogin?: () => void;
   customToast: any;
   getWallet: () => Promise<WalletInfo>;
   onLogout?: () => void;
@@ -59,6 +61,8 @@ export const AccountProvider: FC<ContextProps> = ({
   applicationName,
   customToast,
   walletURL,
+  beforeLogin,
+  afterLogin,
 }) => {
   const [wallet, setWallet] = useState<WalletInfo | null>(null);
   const [showDialog, setShowDialog] = useState(false);
@@ -75,12 +79,14 @@ export const AccountProvider: FC<ContextProps> = ({
 
   const initialize = async () => {
     try {
-      if (
+      const isXallerWallet =
         Cookies.get('MAGAPE_TYPE') === '3' &&
         Cookies.get('MAGAPE_TOKEN') &&
-        Cookies.get('MAGAPE_AUTHORIZATION')
-      ) {
-        updateWalletInfo();
+        Cookies.get('MAGAPE_AUTHORIZATION');
+      if (isXallerWallet) {
+        beforeLogin?.();
+        await updateWalletInfo();
+        afterLogin?.();
         return;
       }
 

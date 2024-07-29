@@ -76,7 +76,7 @@ export function createRequest(config: TConfig) {
       headers: {
         ...headerWithAuth,
         type,
-        networkId: localStorage.getItem('nodeId'),
+        networkId: localStorage.getItem('nodeId') || Cookies.get('nodeId'),
         requestId: getNaMs().toString(),
       },
       withCredentials: false,

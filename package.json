@@ -38,6 +38,14 @@
     "husky:pre-commit": "lint-staged",
     "biome:format": "biome format --write ."
   },
+  "next-unused": {
+    "alias": {},
+    "include": [],
+    "exclude": [],
+    "entrypoints": [
+      "app"
+    ]
+  },
   "lint-staged": {
     "*.{ts,tsx,js,jsx}": [
       "biome format --write",
