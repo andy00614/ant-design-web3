@@ -49,7 +49,7 @@ export function createRequest(config: TConfig) {
   ): Promise<T> => {
     let jwtToken;
     let encryptAuthorization;
-    const type = Cookies.get('MAGAPE_TYPE');
+    const type = Cookies.get('MAGAPE_TYPE') || localStorage.getItem('MAGAPE_TYPE');
     if (type === '3') {
       jwtToken = Cookies.get('MAGAPE_TOKEN');
       encryptAuthorization = Cookies.get('MAGAPE_AUTHORIZATION');

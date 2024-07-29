@@ -98,6 +98,7 @@ export const AccountProvider: FC<ContextProps> = ({
         localStorage.setItem(NODE_ID_NAME, decodedNodeId!);
         localStorage.setItem(PUBLIC_KEY, publicKey!);
         localStorage.setItem(CHAINID, chainId!);
+        localStorage.setItem('MAGAPE_TYPE', '1');
 
         // 移除特定的查询参数，保留其他参数
         urlParams.delete(TOKEN_NAME);
