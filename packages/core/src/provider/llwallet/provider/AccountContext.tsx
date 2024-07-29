@@ -122,7 +122,9 @@ export const AccountProvider: FC<ContextProps> = ({
       }
       const tokenInStorage = localStorage.getItem(TOKEN_NAME);
       if (localStorage.getItem(TOKEN_NAME) && tokenInStorage?.split('.')[0] !== 'free') {
+        beforeLogin?.();
         updateWalletInfo();
+        afterLogin?.();
       }
     } catch (error) {
       console.error('Error during initialization:', error);

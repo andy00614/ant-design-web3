@@ -1,5 +1,11 @@
 # @levellink/core
 
+## 2.0.18
+
+### Patch Changes
+
+- 适配login
+
 ## 2.0.17
 
 ### Patch Changes
