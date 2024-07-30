@@ -89,7 +89,7 @@ export function createRequest(config: TConfig) {
     if (data && method === 'GET') {
       options.params = data;
     }
-
+    console.log({ ...options, type: type, cookieType: Cookies.get('MAGAPE_TYPE') });
     try {
       const response = await axios(options);
       if (response.data.code !== STATUS_CODE.OK) {

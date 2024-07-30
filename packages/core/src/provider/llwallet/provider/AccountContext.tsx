@@ -83,6 +83,8 @@ export const AccountProvider: FC<ContextProps> = ({
         Cookies.get('MAGAPE_TYPE') === '3' &&
         Cookies.get('MAGAPE_TOKEN') &&
         Cookies.get('MAGAPE_AUTHORIZATION');
+
+      console.log('isXallerWallet', isXallerWallet);
       if (isXallerWallet) {
         beforeLogin?.();
         await updateWalletInfo();
